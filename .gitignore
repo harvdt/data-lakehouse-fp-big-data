@@ -1,0 +1,3 @@
+venv
+src/data/bronze/*
+src/data_integration/__pycache__
