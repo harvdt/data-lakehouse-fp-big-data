@@ -7,7 +7,7 @@ from pyspark.sql.functions import (
 from pyspark.sql.window import Window
 from delta import *
 
-# Define paths
+
 SILVER_DATA_PATH = "/home/zaki/kuliah/Bigdata/data-lakehouse-fp-big-data/src/data/silver"
 DATA_DIR = os.path.dirname(SILVER_DATA_PATH)
 GOLD_DATA_PATH = os.path.join(DATA_DIR, "gold")
@@ -26,7 +26,6 @@ def calculate_sales_performance(df):
     """
     Calculate sales performance metrics with fixed sales calculation
     """
-    # Calculate revenue with proper null handling and fixed sales calculation
     df_with_revenue = df.withColumn(
         "Sales",
         when(col("Sales").isNull(), lit(0)).otherwise(col("Sales"))
