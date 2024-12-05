@@ -4,6 +4,12 @@ command_exists() {
     command -v "$1" &> /dev/null
 }
 
+# Check if Python 3.11 is installed
+if ! command_exists python3.11; then
+    echo "Python 3.11 is required but not installed. Please install Python 3.11 first."
+    exit 1
+fi
+
 # Start docker services
 echo "Starting Docker containers..."
 docker compose up --build -d
@@ -18,25 +24,19 @@ fi
 echo "Activating the virtual environment..."
 source venv/bin/activate
 
-# Check if dependencies are already installed by checking the installed packages
-echo "Checking if dependencies are already installed..."
-REQUIRED_PACKAGES=$(cat requirements.txt)
-INSTALLED_PACKAGES=$(pip freeze)
+# Install pip if not present
+python -m ensurepip --upgrade
 
-# Compare installed packages with requirements.txt
-for package in $REQUIRED_PACKAGES; do
-    if echo "$INSTALLED_PACKAGES" | grep -q "$package"; then
-        echo "$package is already installed."
-    else
-        echo "$package is not installed. Installing..."
-        pip install "$package"
-        if [ $? -ne 0 ]; then
-            echo "Failed to install $package. Please resolve the issue manually."
-            deactivate
-            exit 1
-        fi
-    fi
-done
+# Upgrade pip
+python -m pip install --upgrade pip
+
+# Install numpy explicitly first (as it's a core dependency)
+echo "Installing numpy..."
+pip install numpy
+
+# Install all requirements
+echo "Installing required packages..."
+pip install -r requirements.txt
 
 # Run the pipeline
 echo "Running pipeline..."
