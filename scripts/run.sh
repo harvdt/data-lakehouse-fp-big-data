@@ -30,13 +30,23 @@ python -m ensurepip --upgrade
 # Upgrade pip
 python -m pip install --upgrade pip
 
-# Install numpy explicitly first (as it's a core dependency)
 echo "Installing numpy..."
 pip install numpy
 
-# Install all requirements
-echo "Installing required packages..."
-pip install -r requirements.txt
+# Install core data processing packages
+echo "Installing core packages..."
+pip install pyspark==3.5.0
+pip install delta-spark==3.0.0
+pip install kafka-python-ng==2.0.2
+
+# Install additional required packages
+echo "Installing additional packages..."
+pip install pandas matplotlib seaborn scikit-learn
+
+# Create necessary directories
+echo "Creating project directories..."
+mkdir -p src/data/{bronze,silver,gold}
+mkdir -p src/data_processing/{bronze_to_silver,silver_to_gold}
 
 # Run the pipeline
 echo "Running pipeline..."

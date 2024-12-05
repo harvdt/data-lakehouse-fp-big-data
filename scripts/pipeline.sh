@@ -4,6 +4,7 @@ SPARK_INIT_SCRIPT="src/data_integration/spark_init.py"
 PRODUCER_SCRIPT="src/data_integration/producer.py"
 CONSUMER_SCRIPT="src/data_integration/consumer.py"
 BRONZE_TO_SILVER_SCRIPT="src/data_processing/bronze_to_silver/bronze_to_silver_processing.py"
+SILVER_TO_GOLD_SCRIPT="src/data_processing/silver_to_gold/silver_to_gold_processing.py"
 
 # Function to check if a process completed successfully
 check_status() {
@@ -59,7 +60,14 @@ wait_for_completion $CONSUMER_PID "Consumer"
 
 # Start bronze to silver transformation
 echo "Starting bronze to silver transformation..."
-BRONZE_TO_SILVER_SCRIPT="src/data_processing/bronze_to_silver/bronze_to_silver_processing.py"
-python3.11 $BRONZE_TO_SILVER_SCRIPT
+python3.11 $BRONZE_TO_SILVER_SCRIPT &
+BRONZE_TO_SILVER_PID=$!
+wait_for_completion $BRONZE_TO_SILVER_PID "Bronze to Silver transformation"
+
+# Start silver to gold transformation
+echo "Starting silver to gold transformation..."
+python3.11 $SILVER_TO_GOLD_SCRIPT &
+SILVER_TO_GOLD_PID=$!
+wait_for_completion $SILVER_TO_GOLD_PID "Silver to Gold transformation"
 
 echo "Pipeline execution completed successfully!"
