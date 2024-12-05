@@ -1,7 +1,6 @@
 import csv
 import json
 import os
-import time
 from kafka import KafkaProducer
 
 KAFKA_BROKER = 'localhost:9092'
@@ -17,6 +16,7 @@ producer = KafkaProducer(
 def send_data(folder):
     dataset_folder = os.path.join(folder, 'data', 'raw')
 
+    total_messages = 0
     for file_name in os.listdir(dataset_folder):
         if file_name.endswith('.csv'):
             file_path = os.path.join(dataset_folder, file_name)
@@ -45,13 +45,17 @@ def send_data(folder):
                     }
 
                     producer.send(KAFKA_TOPIC, value=data)
-                    print(f"Sent: {data}")
-                    # time.sleep(1)
+                    total_messages += 1
+
+    print(f"All {total_messages} messages have been sent.")
 
 if __name__ == "__main__":
     try:
         send_data(BASE_DIR)
-    except KeyboardInterrupt:
-        print("Stopping producer...")
+    except Exception as e:
+        print(f"Error occurred: {e}")
     finally:
+        print("Flushing remaining messages...")
+        producer.flush()
+        print("Closing producer...")
         producer.close()
