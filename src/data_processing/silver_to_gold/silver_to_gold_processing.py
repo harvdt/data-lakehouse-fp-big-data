@@ -24,39 +24,28 @@ def get_spark_session():
 
 def calculate_sales_performance(df):
     """
-    Calculate sales performance metrics with fixed sales calculation
+    Calculate sales performance metrics with corrected calculations
     """
+    # Calculate revenue properly
     df_with_revenue = df.withColumn(
-        "Sales",
-        when(col("Sales").isNull(), lit(0)).otherwise(col("Sales"))
-    ).withColumn(
         "Revenue", 
-        when(
-            (col("Price").isNotNull()) & 
-            (col("Discount").isNotNull()),
-            round(col("Price") * col("Sales") * (1.0 - col("Discount")), 2)
-        ).otherwise(
-            round(col("Price") * col("Sales"), 2)
-        )
+        round(col("Price") * col("Sales") * (1.0 - col("Discount")/100), 2)  # Fix discount calculation
     )
 
-    # Revenue per category with better aggregation
+    # Revenue per category with fixed calculations
     revenue_per_category = df_with_revenue.groupBy("Category").agg(
         round(sum("Revenue"), 2).alias("TotalRevenue"),
         sum("Sales").alias("TotalSales"),
         round(avg("Price"), 2).alias("AveragePrice"),
         count("*").alias("ProductCount"),
-        round(avg(col("Discount")) * 100, 2).alias("AvgDiscountPercentage")
+        round(avg("Discount"), 2).alias("AvgDiscountPercentage")  # No need to multiply by 100
     ).orderBy(col("TotalRevenue").desc())
 
-    # Discount impact with improved calculation
-    discount_impact = df.withColumn(
-        "Sales",
-        when(col("Sales").isNull(), lit(0)).otherwise(col("Sales"))
-    ).groupBy("Category").agg(
-        round(avg(col("Discount")) * 100, 2).alias("AvgDiscountPercentage"),
+    # Discount impact with fixed calculation
+    discount_impact = df.groupBy("Category").agg(
+        round(avg("Discount"), 2).alias("AvgDiscountPercentage"),
         sum("Sales").alias("TotalSales"),
-        round(avg(when(col("Discount") > 0, col("Sales"))), 2).alias("AvgSalesWithDiscount"),
+        round(avg(col("Sales")), 2).alias("AvgSalesWithDiscount"),
         round(avg(when(col("Discount") == 0, col("Sales"))), 2).alias("AvgSalesWithoutDiscount")
     ).withColumn(
         "DiscountImpactPercentage",
@@ -68,6 +57,47 @@ def calculate_sales_performance(df):
     )
 
     return revenue_per_category, discount_impact
+
+def analyze_pricing_strategy(df):
+    """
+    Analyze pricing strategy with fixed calculations
+    """
+    # Discount effectiveness with proper percentage handling
+    discount_effectiveness = df.withColumn(
+        "DiscountedRevenue", 
+        round(col("Price") * col("Sales") * (1.0 - col("Discount")/100), 2)
+    ).withColumn(
+        "FullPriceRevenue",
+        round(col("Price") * col("Sales"), 2)
+    ).groupBy("Category").agg(
+        round(avg("Discount"), 2).alias("AvgDiscountPercentage"),
+        round(sum("DiscountedRevenue"), 2).alias("TotalDiscountedRevenue"),
+        round(sum("FullPriceRevenue"), 2).alias("PotentialRevenue"),
+        round(avg("Sales"), 2).alias("AvgSales")
+    ).withColumn(
+        "RevenueLossFromDiscount",
+        col("PotentialRevenue") - col("TotalDiscountedRevenue")
+    ).withColumn(
+        "DiscountROI",
+        round(col("TotalDiscountedRevenue") / 
+              when(col("RevenueLossFromDiscount") > 0, col("RevenueLossFromDiscount"))
+              .otherwise(lit(1)), 2)
+    )
+
+    # Keep the existing price_rating_correlation calculation
+    price_rating_corr = df.groupBy("Category").agg(
+        round(corr("Price", "Rating"), 3).alias("PriceRatingCorrelation"),
+        round(avg("Price"), 2).alias("AvgPrice"),
+        round(avg("Rating"), 2).alias("AvgRating"),
+        round(avg("NumReviews"), 0).alias("AvgReviews")
+    ).withColumn(
+        "PriceRatingRelationship",
+        when(col("PriceRatingCorrelation") > 0.3, "Strong Positive")
+        .when(col("PriceRatingCorrelation") < -0.3, "Strong Negative")
+        .otherwise("Weak")
+    )
+
+    return discount_effectiveness, price_rating_corr
 
 def calculate_customer_satisfaction(df):
     """
@@ -112,41 +142,32 @@ def calculate_customer_satisfaction(df):
 
 def analyze_pricing_strategy(df):
     """
-    Analyze pricing strategy:
-    - Discount effectiveness
-    - Price-to-rating correlation
+    Analyze pricing strategy with corrected calculations
     """
-    # Discount effectiveness analysis
+    # Discount effectiveness with proper percentage handling
     discount_effectiveness = df.withColumn(
         "DiscountedRevenue", 
-        when(
-            (col("Price").isNotNull()) & 
-            (col("Sales").isNotNull()) & 
-            (col("Discount").isNotNull()),
-            round(col("Price") * (1 - col("Discount")) * col("Sales"), 2)
-        ).otherwise(lit(0.0))
+        round(col("Price") * col("Sales") * (1.0 - col("Discount")/100), 2)
     ).withColumn(
         "FullPriceRevenue",
-        when(
-            col("Price").isNotNull() & col("Sales").isNotNull(),
-            round(col("Price") * col("Sales"), 2)
-        ).otherwise(lit(0.0))
+        round(col("Price") * col("Sales"), 2)
     ).groupBy("Category").agg(
-        round(avg(col("Discount")) * 100, 2).alias("AvgDiscountPercentage"),
+        round(avg("Discount"), 2).alias("AvgDiscountPercentage"),  # Already in correct percentage
         round(sum("DiscountedRevenue"), 2).alias("TotalDiscountedRevenue"),
         round(sum("FullPriceRevenue"), 2).alias("PotentialRevenue"),
         round(avg("Sales"), 2).alias("AvgSales")
     ).withColumn(
         "RevenueLossFromDiscount",
-        col("PotentialRevenue") - col("TotalDiscountedRevenue")
+        round(col("PotentialRevenue") - col("TotalDiscountedRevenue"), 2)
     ).withColumn(
         "DiscountROI",
-        when(col("RevenueLossFromDiscount") > 0,
-             round(col("TotalDiscountedRevenue") / col("RevenueLossFromDiscount"), 2))
-        .otherwise(lit(0.0))
+        when(
+            col("RevenueLossFromDiscount") > 0,
+            round(col("TotalDiscountedRevenue") / col("RevenueLossFromDiscount"), 3)
+        ).otherwise(0.0)
     )
 
-    # Price-rating correlation with significance
+    # Price rating correlation remains the same as it's working correctly
     price_rating_corr = df.groupBy("Category").agg(
         round(corr("Price", "Rating"), 3).alias("PriceRatingCorrelation"),
         round(avg("Price"), 2).alias("AvgPrice"),

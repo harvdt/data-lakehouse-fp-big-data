@@ -1,0 +1,4 @@
+Usage: uvicorn [OPTIONS] APP
+Try 'uvicorn --help' for help.
+
+Error: Invalid value for '--log-level': 'INFO' is not one of 'critical', 'error', 'warning', 'info', 'debug', 'trace'.

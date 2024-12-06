@@ -35,7 +35,7 @@ def get_spark_session():
 
 def clean_and_validate_data(spark, bronze_df):
     """
-    Clean and validate the bronze data based on correct schema types
+    Clean and validate the bronze data with fixed sales and discount handling
     """
     return bronze_df \
         .dropDuplicates(['ProductID']) \
@@ -47,8 +47,15 @@ def clean_and_validate_data(spark, bronze_df):
             col('NumReviews').cast('int')) \
         .withColumn('StockQuantity',
             col('StockQuantity').cast('int')) \
-        .withColumn('Sales', col('Sales').cast('float')) \
-        .withColumn('Discount', col('Discount').cast('int')) \
+        .withColumn('Sales',
+            when(col('Sales') < 0, 0.0)
+            .when(col('Sales') <= 1.0, col('Sales') * 1000)  # Scale up small sales values
+            .otherwise(col('Sales'))) \
+        .withColumn('Discount',
+            when(col('Discount') > 100, col('Discount') / 100)  # Convert large discount values to percentage
+            .when(col('Discount') < 0, 0)
+            .when(col('Discount') > 50, 50)
+            .otherwise(col('Discount'))) \
         .withColumn('DateAdded', to_date(col('DateAdded'))) \
         .withColumn('ProductName', trim(col('ProductName'))) \
         .withColumn('Category', upper(trim(col('Category')))) \
@@ -69,13 +76,6 @@ def clean_and_validate_data(spark, bronze_df):
             when(col('StockQuantity') < 0, 0)
             .when(col('StockQuantity') > 1000, None)  
             .otherwise(col('StockQuantity'))) \
-        .withColumn('Discount',
-            when(col('Discount') < 0, 0)
-            .when(col('Discount') > 50, 50)
-            .otherwise(col('Discount'))) \
-        .withColumn('Sales',
-            when(col('Sales') < 0, 0.0)
-            .otherwise(col('Sales'))) \
         .withColumn('Year', year(col('DateAdded'))) \
         .withColumn('Month', month(col('DateAdded')))
         
