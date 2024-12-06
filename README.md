@@ -14,85 +14,172 @@ Proyek ini merupakan implementasi data lakehouse untuk menganalisis data penjual
 
 ## Deskripsi Proyek
 
-Proyek ini bertujuan untuk membangun data lakehouse yang memproses data e-commerce untuk menghasilkan beberapa analisis:
+Proyek ini bertujuan untuk membangun sistem analisis data e-commerce yang dilengkapi dengan machine learning untuk memprediksi penjualan. Sistem ini mengintegrasikan berbagai metrik untuk memberikan wawasan komprehensif tentang performa bisnis.
 
-### Output Analisis
-1. **Analisis Performa Penjualan**
-   - Revenue per kategori produk
-   - Impact discount terhadap sales volume
+## API Endpoints
 
-2. **Analisis Strategi Harga**
-   - Analisis efektivitas diskon
-   - Korelasi harga dengan rating
-
-3. **Metrik Kepuasan Pelanggan**
-   - Korelasi harga dengan kepuasan
-   - Rasio review terhadap penjualan
-
-### Arsitektur
-Proyek ini menggunakan beberapa komponen utama:
-- **Apache Kafka**: Untuk mengumpulkan dan mentransfer data secara real-time dan batch
-- **Delta Lake**: Untuk menyimpan data dalam berbagai tahap processing:
-  - Bronze: Raw data tanpa modifikasi
-  - Silver: Data yang sudah dibersihkan dan divalidasi
-  - Gold: Data yang sudah diagregasi dan siap untuk analisis
-- **Apache Spark**: Untuk transformasi dan analisis data
-- **Web Layer**: Frontend menggunakan ReactJS dan Backend menggunakan Python + FastAPI
-
-## Prasyarat
-
-Sebelum menjalankan proyek, pastikan sistem Anda memiliki:
-1. Python 3.11
-2. Docker dan Docker Compose
-3. Java Runtime Environment (JRE)
-4. pip (Python package manager)
-
-## Cara Menjalankan Proyek
-
-### 1. Install Python 3.11 (Jika belum terinstall)
+### 1. Health Check
 ```bash
-bash scripts/python.sh
+GET /health
+```
+Mengecek status API.
+- Response: Status dan timestamp server
+
+### 2. Prediksi Penjualan
+```bash
+POST /predict/sales
+```
+Memprediksi jumlah penjualan berdasarkan parameter produk.
+
+**Request Body:**
+```json
+{
+    "price": 299.99,           // Harga produk
+    "discount_percentage": 15,  // Persentase diskon (0-100)
+    "rating": 4.5,             // Rating produk (1-5)
+    "num_reviews": 100,        // Jumlah review
+    "category": "ELECTRONICS"   // Kategori produk
+}
 ```
 
-### 2. Menjalankan Seluruh Pipeline
-```bash
-bash scripts/run.sh
-```
-Script ini akan:
-- Membuat virtual environment Python
-- Menginstall semua dependencies yang diperlukan
-- Menjalankan container Docker yang dibutuhkan
-- Memproses data melalui layer bronze, silver, dan gold
-
-### 3. Memulai Training Model dan API endpoints
-```bash
-bash scripts/run_ml.sh
+**Response:**
+```json
+{
+    "predicted_sales": 10046.66,    // Prediksi jumlah penjualan
+    "confidence_score": 0.9832      // Skor kepercayaan prediksi (0-1)
+}
 ```
 
-### 3. Monitoring
-Setelah pipeline berjalan, Anda dapat memonitor:
-- Proses ingestion data di Kafka
-- Transformasi data di setiap layer
-- Metrik kualitas data
-- Output analisis
+### 3. Analisis Performa Penjualan
+```bash
+GET /analytics/revenue
+GET /analytics/revenue?category=ELECTRONICS
+```
+Menampilkan analisis revenue per kategori.
 
-### Deskripsi Endpoint (Not Fixed)
-```r
-# Frontend example (React)
-const getPrediction = async (productData) => {
+### 4. Analisis Diskon
+```bash
+GET /analytics/discount
+GET /analytics/discount?category=ELECTRONICS
+```
+Menampilkan efektivitas diskon dan dampaknya terhadap volume penjualan.
+
+### 5. Analisis Harga-Rating
+```bash
+GET /analytics/price-rating
+GET /analytics/price-rating?category=ELECTRONICS
+```
+Menampilkan korelasi antara harga dan rating produk.
+
+### 6. Metrik Kepuasan Pelanggan
+```bash
+GET /analytics/customer-satisfaction
+GET /analytics/customer-satisfaction?category=ELECTRONICS
+```
+Menampilkan metrik kepuasan pelanggan dan rasio review terhadap penjualan.
+
+### 7. Daftar Kategori
+```bash
+GET /categories
+```
+Menampilkan seluruh kategori produk yang tersedia.
+
+## Penggunaan API untuk Frontend
+
+### Contoh Penggunaan dengan JavaScript/React
+```javascript
+// Fungsi untuk mendapatkan prediksi penjualan
+const getPredictionSales = async (productData) => {
   const response = await fetch('http://localhost:8000/predict/sales', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(productData)
+    body: JSON.stringify({
+      price: productData.price,
+      discount_percentage: productData.discount,
+      rating: productData.rating,
+      num_reviews: productData.reviews,
+      category: productData.category
+    })
   });
-  return await response.json();
+  
+  const data = await response.json();
+  return {
+    predictedSales: data.predicted_sales,
+    confidence: data.confidence_score
+  };
 };
 
-// Category analytics
+// Fungsi untuk mendapatkan analisis kategori
 const getCategoryAnalytics = async (category) => {
-  const response = await fetch(`http://localhost:8000/analytics/category/${category}`);
-  return await response.json();
+  const endpoints = [
+    'revenue',
+    'discount',
+    'price-rating',
+    'customer-satisfaction'
+  ];
+
+  const analytics = {};
+  
+  for (const endpoint of endpoints) {
+    const url = category 
+      ? `http://localhost:8000/analytics/${endpoint}?category=${category}`
+      : `http://localhost:8000/analytics/${endpoint}`;
+      
+    const response = await fetch(url);
+    analytics[endpoint] = await response.json();
+  }
+  
+  return analytics;
 };
 ```
+
+## Notes untuk Pengembang Frontend
+
+1. **Model Confidence Score**
+   - Score > 0.9: Prediksi sangat akurat
+   - Score 0.7-0.9: Prediksi cukup akurat
+   - Score < 0.7: Prediksi kurang akurat
+
+2. **Batasan Input**
+   - Price: Harus positif
+   - Discount: 0-100%
+   - Rating: 1-5
+   - Reviews: Harus positif
+   - Category: Harus sesuai dengan daftar kategori yang tersedia
+
+3. **Error Handling**
+   - Selalu periksa status response
+   - Implementasikan retry mechanism untuk kegagalan network
+   - Tampilkan pesan error yang user-friendly
+
+4. **Performa**
+   - Implementasikan caching untuk data analitik
+   - Batasi frekuensi request prediksi
+   - Gunakan loading state untuk request yang sedang berjalan
+
+## Setup Development Environment
+
+1. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+2. Install Python 3.11
+```bash
+bash scripts/python.sh
+```
+
+3. Run Pipeline
+```bash
+bash scripts/run.sh
+```
+
+4. Jalankan API server
+```bash
+bash scripts/run_ml.sh
+```
+
+API akan tersedia di `http://localhost:8000` dengan dokumentasi Swagger UI di `/docs`.
+![swagger api](image.png)

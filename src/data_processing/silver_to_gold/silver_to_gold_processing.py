@@ -7,7 +7,7 @@ from pyspark.sql.functions import (
 from pyspark.sql.window import Window
 from delta import *
 
-
+# Configuration
 SILVER_DATA_PATH = "/home/zaki/kuliah/Bigdata/data-lakehouse-fp-big-data/src/data/silver"
 DATA_DIR = os.path.dirname(SILVER_DATA_PATH)
 GOLD_DATA_PATH = os.path.join(DATA_DIR, "gold")
@@ -18,30 +18,30 @@ def get_spark_session():
         .appName("XYZEcommerceDataGold") \
         .config("spark.jars.packages", "io.delta:delta-core_2.12:2.1.0") \
         .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension") \
-        .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog")
+        .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog") \
+        .config("spark.driver.memory", "2g") \
+        .config("spark.executor.memory", "2g")
 
     return configure_spark_with_delta_pip(builder).getOrCreate()
 
 def calculate_sales_performance(df):
-    """
-    Calculate sales performance metrics with corrected calculations
-    """
+    """Calculate sales performance metrics with corrected calculations"""
     # Calculate revenue properly
     df_with_revenue = df.withColumn(
         "Revenue", 
-        round(col("Price") * col("Sales") * (1.0 - col("Discount")/100), 2)  # Fix discount calculation
+        round(col("Price") * col("Sales") * (1.0 - col("Discount")/100), 2)
     )
 
-    # Revenue per category with fixed calculations
+    # Revenue per category
     revenue_per_category = df_with_revenue.groupBy("Category").agg(
         round(sum("Revenue"), 2).alias("TotalRevenue"),
         sum("Sales").alias("TotalSales"),
         round(avg("Price"), 2).alias("AveragePrice"),
         count("*").alias("ProductCount"),
-        round(avg("Discount"), 2).alias("AvgDiscountPercentage")  # No need to multiply by 100
+        round(avg("Discount"), 2).alias("AvgDiscountPercentage")
     ).orderBy(col("TotalRevenue").desc())
 
-    # Discount impact with fixed calculation
+    # Discount impact
     discount_impact = df.groupBy("Category").agg(
         round(avg("Discount"), 2).alias("AvgDiscountPercentage"),
         sum("Sales").alias("TotalSales"),
@@ -59,10 +59,8 @@ def calculate_sales_performance(df):
     return revenue_per_category, discount_impact
 
 def analyze_pricing_strategy(df):
-    """
-    Analyze pricing strategy with fixed calculations
-    """
-    # Discount effectiveness with proper percentage handling
+    """Analyze pricing strategy"""
+    # Discount effectiveness
     discount_effectiveness = df.withColumn(
         "DiscountedRevenue", 
         round(col("Price") * col("Sales") * (1.0 - col("Discount")/100), 2)
@@ -76,15 +74,16 @@ def analyze_pricing_strategy(df):
         round(avg("Sales"), 2).alias("AvgSales")
     ).withColumn(
         "RevenueLossFromDiscount",
-        col("PotentialRevenue") - col("TotalDiscountedRevenue")
+        round(col("PotentialRevenue") - col("TotalDiscountedRevenue"), 2)
     ).withColumn(
         "DiscountROI",
-        round(col("TotalDiscountedRevenue") / 
-              when(col("RevenueLossFromDiscount") > 0, col("RevenueLossFromDiscount"))
-              .otherwise(lit(1)), 2)
+        when(
+            col("RevenueLossFromDiscount") > 0,
+            round(col("TotalDiscountedRevenue") / col("RevenueLossFromDiscount"), 3)
+        ).otherwise(0.0)
     )
 
-    # Keep the existing price_rating_correlation calculation
+    # Price rating correlation
     price_rating_corr = df.groupBy("Category").agg(
         round(corr("Price", "Rating"), 3).alias("PriceRatingCorrelation"),
         round(avg("Price"), 2).alias("AvgPrice"),
@@ -100,12 +99,10 @@ def analyze_pricing_strategy(df):
     return discount_effectiveness, price_rating_corr
 
 def calculate_customer_satisfaction(df):
-    """
-    Calculate customer satisfaction metrics with improved calculations
-    """
+    """Calculate customer satisfaction metrics"""
     avg_price = df.agg(avg("Price")).first()[0]
 
-    # Price satisfaction analysis with better aggregation
+    # Price satisfaction analysis
     price_satisfaction = df.withColumn(
         "PriceRange",
         when(col("Price") < avg_price * 0.5, "Budget")
@@ -120,7 +117,7 @@ def calculate_customer_satisfaction(df):
         round(avg("NumReviews"), 0).alias("AvgReviews")
     ).orderBy("Category", "PriceRange")
 
-    # Review-to-sales ratio with null handling
+    # Review-to-sales ratio
     review_sales_ratio = df.groupBy("Category").agg(
         sum("NumReviews").alias("TotalReviews"),
         sum(when(col("Sales").isNotNull(), col("Sales")).otherwise(lit(0))).alias("TotalSales"),
@@ -140,65 +137,30 @@ def calculate_customer_satisfaction(df):
 
     return price_satisfaction, review_sales_ratio
 
-def analyze_pricing_strategy(df):
-    """
-    Analyze pricing strategy with corrected calculations
-    """
-    # Discount effectiveness with proper percentage handling
-    discount_effectiveness = df.withColumn(
-        "DiscountedRevenue", 
-        round(col("Price") * col("Sales") * (1.0 - col("Discount")/100), 2)
-    ).withColumn(
-        "FullPriceRevenue",
-        round(col("Price") * col("Sales"), 2)
-    ).groupBy("Category").agg(
-        round(avg("Discount"), 2).alias("AvgDiscountPercentage"),  # Already in correct percentage
-        round(sum("DiscountedRevenue"), 2).alias("TotalDiscountedRevenue"),
-        round(sum("FullPriceRevenue"), 2).alias("PotentialRevenue"),
-        round(avg("Sales"), 2).alias("AvgSales")
-    ).withColumn(
-        "RevenueLossFromDiscount",
-        round(col("PotentialRevenue") - col("TotalDiscountedRevenue"), 2)
-    ).withColumn(
-        "DiscountROI",
-        when(
-            col("RevenueLossFromDiscount") > 0,
-            round(col("TotalDiscountedRevenue") / col("RevenueLossFromDiscount"), 3)
-        ).otherwise(0.0)
-    )
-
-    # Price rating correlation remains the same as it's working correctly
-    price_rating_corr = df.groupBy("Category").agg(
-        round(corr("Price", "Rating"), 3).alias("PriceRatingCorrelation"),
-        round(avg("Price"), 2).alias("AvgPrice"),
-        round(avg("Rating"), 2).alias("AvgRating"),
-        round(avg("NumReviews"), 0).alias("AvgReviews")
-    ).withColumn(
-        "PriceRatingRelationship",
-        when(col("PriceRatingCorrelation") > 0.3, "Strong Positive")
-        .when(col("PriceRatingCorrelation") < -0.3, "Strong Negative")
-        .otherwise("Weak")
-    )
-
-    return discount_effectiveness, price_rating_corr
-
 def save_analytics(data, name, path):
     """Save analytics in both Delta and Parquet format"""
     # Save as Delta
+    delta_path = os.path.join(path, name)
     data.write \
         .format("delta") \
         .mode("overwrite") \
         .option("mergeSchema", "true") \
         .option("overwriteSchema", "true") \
-        .save(os.path.join(path, name))
+        .save(delta_path)
     
     # Save as Parquet
+    parquet_path = os.path.join(path, f"{name}_parquet")
     data.write \
         .mode("overwrite") \
-        .parquet(os.path.join(path, f"{name}_parquet"))
+        .parquet(parquet_path)
+    
+    print(f"Saved {name} to:")
+    print(f"  Delta: {delta_path}")
+    print(f"  Parquet: {parquet_path}")
 
 def process_silver_to_gold():
     """Main function with enhanced error handling and validation"""
+    spark = None
     try:
         print(f"Starting silver to gold transformation...")
         print(f"Reading from: {SILVER_DATA_PATH}")
@@ -212,8 +174,6 @@ def process_silver_to_gold():
         
         # Validate data
         total_records = silver_df.count()
-        
-        # Fixed the column name conflict
         null_counts = {column_name: silver_df.filter(col(column_name).isNull()).count() 
                       for column_name in silver_df.columns}
         
@@ -223,16 +183,15 @@ def process_silver_to_gold():
         for column_name, count in null_counts.items():
             print(f"{column_name}: {count}")
             
-        # Add this before calculating metrics in process_silver_to_gold
         print("\nSales Data Sample:")
         silver_df.select("Category", "Sales", "Price", "Discount").show(5)
         
-        # Calculate metrics
+        # Calculate all metrics
         revenue_per_category, discount_impact = calculate_sales_performance(silver_df)
         discount_effectiveness, price_rating_corr = analyze_pricing_strategy(silver_df)
         price_satisfaction, review_sales_ratio = calculate_customer_satisfaction(silver_df)
         
-        # Save analytics with metadata
+        # Save all analytics using the save_analytics function
         analytics = {
             "revenue_per_category": revenue_per_category,
             "discount_impact": discount_impact,
@@ -243,15 +202,8 @@ def process_silver_to_gold():
         }
         
         for name, data in analytics.items():
-            output_path = os.path.join(GOLD_DATA_PATH, name)
-            # Added mergeSchema and overwriteSchema options
-            data.write.format("delta") \
-                .mode("overwrite") \
-                .option("mergeSchema", "true") \
-                .option("overwriteSchema", "true") \
-                .save(output_path)
-            print(f"\nSaved {name} analysis to {output_path}")
-            print("Sample data:")
+            save_analytics(data, name, GOLD_DATA_PATH)
+            print(f"\nSample data for {name}:")
             data.show(3, truncate=False)
         
         print("\nSuccessfully processed silver data to gold layer")
@@ -260,7 +212,7 @@ def process_silver_to_gold():
         print(f"Error processing silver to gold: {e}")
         raise
     finally:
-        if 'spark' in locals():
+        if spark:
             spark.stop()
 
 if __name__ == "__main__":
