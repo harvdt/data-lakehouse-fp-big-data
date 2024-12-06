@@ -2,4 +2,5 @@ venv
 src/data/bronze/*
 src/data/silver/*
 src/data/gold/*
+logs/*
 src/data_integration/__pycache__
