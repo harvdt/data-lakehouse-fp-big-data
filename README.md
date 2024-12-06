@@ -64,9 +64,35 @@ Script ini akan:
 - Menjalankan container Docker yang dibutuhkan
 - Memproses data melalui layer bronze, silver, dan gold
 
+### 3. Memulai Training Model dan API endpoints
+```bash
+bash scripts/run_ml.sh
+```
+
 ### 3. Monitoring
 Setelah pipeline berjalan, Anda dapat memonitor:
 - Proses ingestion data di Kafka
 - Transformasi data di setiap layer
 - Metrik kualitas data
 - Output analisis
+
+### Deskripsi Endpoint (Not Fixed)
+```r
+# Frontend example (React)
+const getPrediction = async (productData) => {
+  const response = await fetch('http://localhost:8000/predict/sales', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(productData)
+  });
+  return await response.json();
+};
+
+// Category analytics
+const getCategoryAnalytics = async (category) => {
+  const response = await fetch(`http://localhost:8000/analytics/category/${category}`);
+  return await response.json();
+};
+```

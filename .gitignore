@@ -2,5 +2,6 @@ venv
 src/data/bronze/*
 src/data/silver/*
 src/data/gold/*
+src/models/training/trained_models/*
 logs/*
 src/data_integration/__pycache__

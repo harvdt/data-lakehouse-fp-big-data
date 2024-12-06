@@ -182,6 +182,21 @@ def analyze_pricing_strategy(df):
 
     return discount_effectiveness, price_rating_corr
 
+def save_analytics(data, name, path):
+    """Save analytics in both Delta and Parquet format"""
+    # Save as Delta
+    data.write \
+        .format("delta") \
+        .mode("overwrite") \
+        .option("mergeSchema", "true") \
+        .option("overwriteSchema", "true") \
+        .save(os.path.join(path, name))
+    
+    # Save as Parquet
+    data.write \
+        .mode("overwrite") \
+        .parquet(os.path.join(path, f"{name}_parquet"))
+
 def process_silver_to_gold():
     """Main function with enhanced error handling and validation"""
     try:
