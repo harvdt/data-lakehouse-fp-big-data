@@ -1,14 +1,30 @@
 #!/bin/bash
 
-# Set path variables - Fixing the paths to be relative to project root
-SCRIPTS_DIR="$(pwd)"
-PROJECT_ROOT="$(dirname "$SCRIPTS_DIR")"  # Go up one level from scripts
+# Set path variables
+PROJECT_ROOT="$(dirname "$(pwd)")"  # Go up one level from scripts
 SRC_DIR="$PROJECT_ROOT/src"
 MODEL_DIR="$SRC_DIR/models"
 TRAINING_DIR="$MODEL_DIR/training"
 API_DIR="$MODEL_DIR/api"
 LOG_DIR="$PROJECT_ROOT/logs"
-BACKUP_PATH="$PROJECT_ROOT/backups"
+DATA_DIR="$SRC_DIR/data"
+GOLD_DIR="$DATA_DIR/gold"
+
+# Create all necessary directories
+echo "Creating directory structure..."
+mkdir -p "$TRAINING_DIR/trained_models"
+mkdir -p "$API_DIR"
+mkdir -p "$LOG_DIR"
+mkdir -p "$GOLD_DIR"
+
+# Check if gold data exists
+check_gold_data() {
+    if [ ! -d "$GOLD_DIR/revenue_per_category" ]; then
+        echo "Error: Gold layer data not found at $GOLD_DIR"
+        echo "Please run the silver to gold transformation first."
+        exit 1
+    fi
+}
 
 # Configuration
 API_PORT=8000
