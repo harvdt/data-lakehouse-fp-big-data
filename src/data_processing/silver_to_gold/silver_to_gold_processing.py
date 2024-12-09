@@ -8,7 +8,8 @@ from pyspark.sql.window import Window
 from delta import *
 
 # Configuration
-SILVER_DATA_PATH = "/home/zaki/kuliah/Bigdata/data-lakehouse-fp-big-data/src/data/silver"
+#SILVER_DATA_PATH = "/home/zaki/kuliah/Bigdata/data-lakehouse-fp-big-data/src/data/silver"
+SILVER_DATA_PATH = "/home/aveee/data-lakehouse-fp-big-data/src/data/silver"
 DATA_DIR = os.path.dirname(SILVER_DATA_PATH)
 GOLD_DATA_PATH = os.path.join(DATA_DIR, "gold")
 

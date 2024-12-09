@@ -37,7 +37,7 @@ pip install numpy
 echo "Installing core packages..."
 pip install pyspark==3.5.0
 pip install delta-spark==3.0.0
-pip install kafka-python-ng==2.0.2
+pip install kafka-python-ng==2.0.3
 
 # Install additional required packages
 echo "Installing additional packages..."

@@ -64,7 +64,8 @@ class SalesPredictor:
             spark = configure_spark_with_delta_pip(spark).getOrCreate()
 
             # Set paths
-            gold_path = "/home/zaki/kuliah/Bigdata/data-lakehouse-fp-big-data/src/data/gold"
+            #gold_path = "/home/zaki/kuliah/Bigdata/data-lakehouse-fp-big-data/src/data/gold"
+            gold_path = "/home/aveee/data-lakehouse-fp-big-data/src/data/gold"
             
             try:
                 # First try reading as Delta format

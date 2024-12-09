@@ -627,3 +627,525 @@ You can drop duplicate edges by setting the 'duplicates' kwarg
 2024-12-07 00:29:17,355 - main - INFO - ML model loaded successfully
 2024-12-07 00:29:17,371 - main - INFO - ML model loaded successfully
 2024-12-07 00:29:17,398 - main - INFO - ML model loaded successfully
+2024-12-08 10:54:26,689 - main - INFO - ML model loaded successfully
+2024-12-08 10:54:26,697 - main - INFO - ML model loaded successfully
+2024-12-08 10:54:26,707 - main - INFO - ML model loaded successfully
+2024-12-08 10:54:26,708 - main - INFO - ML model loaded successfully
+2024-12-08 20:04:00,187 - py4j.clientserver - INFO - Error while receiving.
+Traceback (most recent call last):
+  File "/home/aveee/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2024-12-08 20:04:00,192 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,197 - root - ERROR - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/aveee/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aveee/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aveee/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2024-12-08 20:04:00,199 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,199 - main - ERROR - Error creating Spark session: SparkConf does not exist in the JVM
+2024-12-08 20:04:00,199 - main - ERROR - Error reading data for discount_effectiveness: Failed to initialize Spark: SparkConf does not exist in the JVM
+2024-12-08 20:04:00,801 - py4j.clientserver - INFO - Error while receiving.
+Traceback (most recent call last):
+  File "/home/aveee/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2024-12-08 20:04:00,801 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,802 - root - ERROR - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/aveee/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aveee/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aveee/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2024-12-08 20:04:00,802 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,802 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,802 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,802 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,802 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,802 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,802 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,803 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,803 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,803 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,803 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,803 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,803 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,803 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,803 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,803 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,803 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,803 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,803 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,803 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,803 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,803 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,803 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,803 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,805 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,805 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,805 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,805 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,805 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,805 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,805 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,805 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,805 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,805 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,805 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,805 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,805 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,805 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,805 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,954 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:04:00,954 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:04:00,954 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:06:10,180 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:06:10,193 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:06:10,194 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:06:10,194 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:06:10,194 - main - ERROR - Error fetching categories: 
+2024-12-08 20:06:10,199 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:06:10,226 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:06:10,226 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:06:10,226 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:06:10,226 - main - ERROR - Error fetching categories: 
+2024-12-08 20:07:17,673 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:17,873 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:17,873 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:07:17,873 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:07:17,873 - main - ERROR - Error fetching categories: 
+2024-12-08 20:07:17,876 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:17,901 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:17,902 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:07:17,902 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:07:17,902 - main - ERROR - Error fetching categories: 
+2024-12-08 20:07:17,990 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,013 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,013 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:07:18,013 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:07:18,014 - main - ERROR - Error fetching categories: 
+2024-12-08 20:07:18,016 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,041 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,041 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:07:18,041 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:07:18,043 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,071 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,071 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:07:18,071 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:07:18,071 - main - ERROR - Error fetching categories: 
+2024-12-08 20:07:18,072 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,099 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,099 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:07:18,099 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:07:18,145 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,145 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,145 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,145 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,145 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,145 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,145 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,145 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,145 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,145 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,146 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,147 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,147 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,147 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,147 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,147 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,147 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,327 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,347 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:18,347 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:07:18,347 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:07:19,795 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:19,822 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:19,822 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:07:19,822 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:07:19,825 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:19,857 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:07:19,857 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:07:19,857 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:08:32,876 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:08:32,921 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:08:32,921 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:08:32,921 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:08:32,922 - main - ERROR - Error fetching categories: 
+2024-12-08 20:08:37,916 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:08:38,097 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:08:38,097 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:08:38,097 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:08:38,100 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:08:38,132 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:08:38,132 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:08:38,132 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:08:52,612 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:08:52,654 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:08:52,654 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:08:52,654 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:08:57,213 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:08:57,240 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:08:57,240 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:08:57,240 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:09:00,583 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:09:00,619 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:09:00,620 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:09:00,620 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:09:08,076 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:09:08,102 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:09:08,102 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:09:08,102 - main - ERROR - Error reading data for discount_effectiveness: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:09:39,603 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:09:39,632 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:09:39,632 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:09:39,632 - main - ERROR - Error reading data for discount_effectiveness: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:09:56,753 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:09:56,778 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:09:56,778 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:09:56,778 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:10:21,463 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:10:21,487 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:10:21,487 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:10:21,488 - main - ERROR - Error reading data for discount_effectiveness: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:12:20,908 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:12:20,934 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:12:20,934 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:12:20,934 - main - ERROR - Error reading data for discount_effectiveness: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:12:39,331 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:12:39,383 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:12:39,383 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:12:39,383 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:12:55,021 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:12:55,046 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:12:55,046 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:12:55,046 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:12:55,046 - main - ERROR - Error fetching categories: 
+2024-12-08 20:12:59,195 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:12:59,220 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:12:59,220 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:12:59,220 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:12:59,224 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:12:59,259 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:12:59,259 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:12:59,259 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:13:14,926 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:13:14,953 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:13:14,953 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:13:14,953 - main - ERROR - Error reading data for discount_effectiveness: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:14:27,284 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:14:27,313 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:14:27,313 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:14:27,313 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:14:27,313 - main - ERROR - Error fetching categories: 
+2024-12-08 20:14:30,698 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:14:30,724 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:14:30,724 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:14:30,724 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:14:34,583 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:14:34,614 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:14:34,614 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:14:34,614 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:14:34,616 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:14:34,646 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:14:34,646 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:14:34,646 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:14:54,000 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:14:54,117 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:14:54,118 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:14:54,118 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:14:54,118 - main - ERROR - Error fetching categories: 
+2024-12-08 20:14:54,121 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:14:54,162 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:14:54,162 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:14:54,162 - main - ERROR - Error reading data for discount_effectiveness: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:14:54,212 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:14:54,246 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:14:54,247 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:14:54,247 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:14:58,468 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:14:58,496 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:14:58,496 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:14:58,496 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:14:58,496 - main - ERROR - Error fetching categories: 
+2024-12-08 20:14:58,498 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:14:58,524 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:14:58,525 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:14:58,525 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:14:58,525 - main - ERROR - Error fetching categories: 
+2024-12-08 20:15:02,538 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:15:02,569 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:15:02,569 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:15:02,569 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:15:02,572 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:15:02,599 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:15:02,599 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:15:02,599 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:15:13,827 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:15:13,861 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:15:13,861 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:15:13,861 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:15:18,216 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:15:18,246 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:15:18,246 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:15:18,246 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:15:32,797 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:15:32,827 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:15:32,827 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:15:32,827 - main - ERROR - Error reading data for discount_effectiveness: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:15:49,523 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:15:49,660 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:15:49,660 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:15:49,660 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:15:49,660 - main - ERROR - Error fetching categories: 
+2024-12-08 20:15:50,901 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:15:50,929 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:15:50,930 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:15:50,930 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:15:50,932 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:15:50,962 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:15:50,962 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:15:50,963 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:16:15,122 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:16:15,147 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:16:15,147 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:16:15,147 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:17:55,567 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:17:55,593 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:17:55,593 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:17:55,593 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:17:55,593 - main - ERROR - Error fetching categories: 
+2024-12-08 20:17:55,595 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:17:55,629 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:17:55,629 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:17:55,629 - main - ERROR - Error reading data for discount_effectiveness: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:19:15,525 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:15,558 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:15,558 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:19:15,558 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:19:15,558 - main - ERROR - Error fetching categories: 
+2024-12-08 20:19:20,221 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:20,242 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:20,242 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:19:20,242 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:19:20,243 - main - ERROR - Error fetching categories: 
+2024-12-08 20:19:23,073 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:23,117 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:23,117 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:19:23,118 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:19:23,120 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:23,265 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:23,265 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:19:23,265 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:19:29,052 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:29,082 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:29,082 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:19:29,082 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:19:29,133 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:29,160 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:29,160 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:19:29,160 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:19:29,165 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:29,194 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:29,194 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:19:29,194 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:19:29,818 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:29,844 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:29,844 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:19:29,844 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:19:29,844 - main - ERROR - Error fetching categories: 
+2024-12-08 20:19:47,558 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:47,584 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:47,584 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:19:47,584 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:19:47,584 - main - ERROR - Error fetching categories: 
+2024-12-08 20:19:50,703 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:50,741 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:50,741 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:19:50,741 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:19:50,744 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:50,771 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:19:50,771 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:19:50,771 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:20:41,764 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:20:41,793 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:20:41,793 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:20:41,793 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:21:35,028 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:21:35,050 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:21:35,051 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:21:35,051 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:22:08,322 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:22:08,474 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:22:08,474 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:22:08,474 - main - ERROR - Error reading data for discount_effectiveness: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:22:08,477 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:22:08,505 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:22:08,505 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:22:08,505 - main - ERROR - Error reading data for discount_effectiveness: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:22:19,252 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:22:19,275 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:22:19,275 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:22:19,275 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:22:19,275 - main - ERROR - Error fetching categories: 
+2024-12-08 20:23:54,325 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:23:54,361 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:23:54,361 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:23:54,361 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:23:54,365 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:23:54,402 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:23:54,402 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:23:54,402 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:24:13,292 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:24:13,326 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:24:13,326 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:24:13,326 - main - ERROR - Error reading data for discount_effectiveness: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:24:13,332 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:24:13,365 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:24:13,365 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:24:13,365 - main - ERROR - Error reading data for discount_effectiveness: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:24:43,776 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:24:43,801 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:24:43,801 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:24:43,801 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:24:43,801 - main - ERROR - Error fetching categories: 
+2024-12-08 20:24:43,803 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:24:43,832 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:24:43,832 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:24:43,832 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:24:54,340 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:24:54,360 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:24:54,360 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:24:54,360 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:24:54,360 - main - ERROR - Error fetching categories: 
+2024-12-08 20:25:00,695 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:00,844 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:00,844 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:25:00,844 - main - ERROR - Error reading data for discount_effectiveness: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:25:02,166 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:02,204 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:02,204 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:25:02,204 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:25:02,206 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:02,240 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:02,240 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:25:02,240 - main - ERROR - Error reading data for price_rating_correlation: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:25:18,733 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:18,755 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:18,756 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:25:18,756 - main - ERROR - Error reading data for discount_effectiveness: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:25:34,121 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:34,147 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:34,148 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:25:34,148 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:25:34,148 - main - ERROR - Error fetching categories: 
+2024-12-08 20:25:34,151 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:34,184 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:34,184 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:25:34,184 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:25:34,184 - main - ERROR - Error fetching categories: 
+2024-12-08 20:25:46,214 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:46,237 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:46,237 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:25:46,237 - main - ERROR - Error reading data for discount_effectiveness: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:25:46,240 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:46,267 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:46,267 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:25:46,267 - main - ERROR - Error reading data for discount_effectiveness: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:25:58,668 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:58,689 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:58,689 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:25:58,689 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:25:58,692 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:58,826 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:25:58,826 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:25:58,826 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:26:08,160 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:26:08,185 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:26:08,185 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:26:08,185 - main - ERROR - Error reading data for revenue_per_category: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:26:19,864 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:26:19,889 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:26:19,889 - main - ERROR - Error creating Spark session: [Errno 111] Connection refused
+2024-12-08 20:26:19,889 - main - ERROR - Error reading data for discount_effectiveness: Failed to initialize Spark: [Errno 111] Connection refused
+2024-12-08 20:26:36,365 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:26:36,365 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:26:36,366 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:26:36,455 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 20:32:57,766 - main - INFO - ML model loaded successfully
+2024-12-08 20:32:57,788 - main - INFO - ML model loaded successfully
+2024-12-08 20:32:57,794 - main - INFO - ML model loaded successfully
+2024-12-08 20:32:57,794 - main - INFO - ML model loaded successfully
+2024-12-08 21:12:02,974 - main - INFO - ML model loaded successfully
+2024-12-08 21:12:02,980 - main - INFO - ML model loaded successfully
+2024-12-08 21:12:02,999 - main - INFO - ML model loaded successfully
+2024-12-08 21:12:03,007 - main - INFO - ML model loaded successfully
+2024-12-08 23:53:49,300 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 23:53:49,300 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 23:53:49,300 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-08 23:53:49,300 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-09 09:11:05,195 - main - INFO - ML model loaded successfully
+2024-12-09 09:11:05,196 - main - INFO - ML model loaded successfully
+2024-12-09 09:11:05,214 - main - INFO - ML model loaded successfully
+2024-12-09 09:11:05,225 - main - INFO - ML model loaded successfully

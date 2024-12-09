@@ -91,12 +91,14 @@ train_model() {
     fi
     
     python model_training.py 2>&1 | tee "$LOG_DIR/training.log"
-    if [ ${PIPESTATUS[0]} -eq 0 ]; then
+    
+    if [[ ${PIPESTATUS[0]} -eq 0 ]]; then
         echo "Model training completed successfully"
     else
         handle_error "Model training failed. Check $LOG_DIR/training.log for details"
     fi
 }
+
 
 # Start API
 start_api() {
@@ -144,6 +146,9 @@ main() {
     echo "Starting ML Pipeline Setup and API Deployment..."
     echo "Project root: $PROJECT_ROOT"
     
+    echo "Activating virtual environment..."
+    source venv/bin/activate
+
     # Check if gold data exists
     check_gold_data
     
