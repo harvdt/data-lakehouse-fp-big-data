@@ -1,7 +1,19 @@
 venv
+
+# Data Storage
 src/data/bronze/*
 src/data/silver/*
 src/data/gold/*
+
+# Trained Models
 src/models/training/trained_models/*
+
+# Log Files
 logs/*
+src/models/api/api.log
+src/models/training/model_training.log
+scripts/logs
+
+# pycache
 src/data_integration/__pycache__
+src/models/api/__pycache__

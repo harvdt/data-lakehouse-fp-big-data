@@ -3,8 +3,8 @@
 SPARK_INIT_SCRIPT="src/data_integration/spark_init.py"
 PRODUCER_SCRIPT="src/data_integration/producer.py"
 CONSUMER_SCRIPT="src/data_integration/consumer.py"
-BRONZE_TO_SILVER_SCRIPT="src/data_processing/bronze_to_silver/bronze_to_silver_processing.py"
-SILVER_TO_GOLD_SCRIPT="src/data_processing/silver_to_gold/silver_to_gold_processing.py"
+BRONZE_TO_SILVER_SCRIPT="src/data_processing/bronze_to_silver_processing.py"
+SILVER_TO_GOLD_SCRIPT="src/data_processing/silver_to_gold_processing.py"
 
 # Function to check if a process completed successfully
 check_status() {
@@ -22,18 +22,18 @@ wait_for_completion() {
     local process_name=$2
     local timeout=300  # 5 minutes timeout
     local counter=0
-    
+
     while kill -0 $pid 2>/dev/null; do
         sleep 10
         counter=$((counter + 10))
-        
+
         if [ $counter -ge $timeout ]; then
             echo "$process_name is taking too long. Killing process..."
             kill -9 $pid
             exit 1
         fi
     done
-    
+
     wait $pid
     check_status "$process_name"
 }
