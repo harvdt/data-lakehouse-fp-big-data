@@ -16,6 +16,18 @@ Proyek ini merupakan implementasi data lakehouse untuk menganalisis data penjual
 
 Proyek ini bertujuan untuk membangun sistem analisis data e-commerce yang dilengkapi dengan machine learning untuk memprediksi penjualan. Sistem ini mengintegrasikan berbagai metrik untuk memberikan wawasan komprehensif tentang performa bisnis.
 
+## Architecture
+
+![architecture](image/architecture.png)
+
+## Data Flow
+
+![data-flow](image/data-flow.png)
+
+## Output
+
+![output](image/output.png)
+
 ## Setup Development Environment
 
 1. Instal Python 3.11
@@ -37,7 +49,7 @@ bash scripts/simulation.sh 1|2|all
 ```
 
 API akan tersedia di `http://localhost:8000` dengan dokumentasi Swagger UI di `/docs`.
-![swagger api](image.png)
+![swagger api](image/api-docs.png)
 
 ## API Endpoints
 
@@ -49,7 +61,7 @@ GET /health
 
 Mengecek status API.
 
--   Response: Status dan timestamp server
+- Response: Status dan timestamp server
 
 ### 2. Prediksi Penjualan
 
@@ -124,7 +136,7 @@ GET /categories
 
 Menampilkan seluruh kategori produk yang tersedia.
 
-## Penggunaan API untuk Frontend
+<!-- ## Penggunaan API untuk Frontend
 
 ### Contoh Penggunaan dengan JavaScript/React
 
@@ -167,31 +179,53 @@ const getCategoryAnalytics = async (category) => {
 
 	return analytics;
 };
-```
+``` -->
 
 ## Notes untuk Pengembang Frontend
 
 1. **Model Confidence Score**
 
-    - Score > 0.9: Prediksi sangat akurat
-    - Score 0.7-0.9: Prediksi cukup akurat
-    - Score < 0.7: Prediksi kurang akurat
+   - Score > 0.9: Prediksi sangat akurat
+   - Score 0.7-0.9: Prediksi cukup akurat
+   - Score < 0.7: Prediksi kurang akurat
 
 2. **Batasan Input**
 
-    - Price: Harus positif
-    - Discount: 0-100%
-    - Rating: 1-5
-    - Reviews: Harus positif
-    - Category: Harus sesuai dengan daftar kategori yang tersedia
+   - Price: Harus positif
+   - Discount: 0-100%
+   - Rating: 1-5
+   - Reviews: Harus positif
+   - Category: Harus sesuai dengan daftar kategori yang tersedia
 
 3. **Error Handling**
 
-    - Selalu periksa status response
-    - Implementasikan retry mechanism untuk kegagalan network
-    - Tampilkan pesan error yang user-friendly
+   - Selalu periksa status response
+   - Implementasikan retry mechanism untuk kegagalan network
+   - Tampilkan pesan error yang user-friendly
 
 4. **Performa**
-    - Implementasikan caching untuk data analitik
-    - Batasi frekuensi request prediksi
-    - Gunakan loading state untuk request yang sedang berjalan
+   - Implementasikan caching untuk data analitik
+   - Batasi frekuensi request prediksi
+   - Gunakan loading state untuk request yang sedang berjalan
+
+## Frontend
+
+Pengembangan Frontend menggunakan Tech Stack Framework React JS dan Tailwind CSS serta component ShadCN. Halaman yang tersedia terdiri dari 3 page yaitu:
+
+### Sales Analysis Performance
+
+Halaman ini berfungsi untuk memberikan informasi mengenai performa penjualan dari berdasarkan masing-masing kategori serta terdapat fitur prediction penjualan mendatang berdasarkan beberapa faktor.
+
+![sales-page](image/sales-page.png)
+
+### Pricing Strategy Analysis
+
+Halaman ini berfungsi untuk menampilkan hasil analisis keberhasilan harga serta strateginya seperti penerapan diskon. Pada section pertama terdapat analisis diskon dan pada section kedua terdapat analisis relasi antara harga dan rating yang diberi oleh customer.
+
+![pricing-page](image/pricing-page.png)
+
+### Customer Satisfaction Metrics
+
+Halaman ini berfungsi untuk menampilkan hasil analisis dari kepuasan pelanggan berdasarkan rating yang diberikan. Terdapat beberapa metrics yang digunakan sebagai indikator tingkat kepuasa pelanggan.
+
+![customer-page](image/customer-page.png)
