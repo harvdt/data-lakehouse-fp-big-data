@@ -9,7 +9,7 @@ from delta import *
 
 # Configuration
 #SILVER_DATA_PATH = "/home/zaki/kuliah/Bigdata/data-lakehouse-fp-big-data/src/data/silver"
-SILVER_DATA_PATH = "/home/aveee/data-lakehouse-fp-big-data/src/data/silver"
+SILVER_DATA_PATH = "/home/yumx/data-lakehouse-fp-big-data/src/data/silver"
 DATA_DIR = os.path.dirname(SILVER_DATA_PATH)
 GOLD_DATA_PATH = os.path.join(DATA_DIR, "gold")
 
@@ -29,7 +29,7 @@ def calculate_sales_performance(df):
     """Calculate sales performance metrics with corrected calculations"""
     # Calculate revenue properly
     df_with_revenue = df.withColumn(
-        "Revenue", 
+        "Revenue",
         round(col("Price") * col("Sales") * (1.0 - col("Discount")/100), 2)
     )
 
@@ -52,7 +52,7 @@ def calculate_sales_performance(df):
         "DiscountImpactPercentage",
         when(
             col("AvgSalesWithoutDiscount") > 0,
-            round((col("AvgSalesWithDiscount") - col("AvgSalesWithoutDiscount")) / 
+            round((col("AvgSalesWithDiscount") - col("AvgSalesWithoutDiscount")) /
                   col("AvgSalesWithoutDiscount") * 100, 2)
         ).otherwise(lit(0.0))
     )
@@ -63,7 +63,7 @@ def analyze_pricing_strategy(df):
     """Analyze pricing strategy"""
     # Discount effectiveness
     discount_effectiveness = df.withColumn(
-        "DiscountedRevenue", 
+        "DiscountedRevenue",
         round(col("Price") * col("Sales") * (1.0 - col("Discount")/100), 2)
     ).withColumn(
         "FullPriceRevenue",
@@ -126,7 +126,7 @@ def calculate_customer_satisfaction(df):
         count(when(col("Rating") >= 4.0, True)).alias("HighRatingCount")
     ).withColumn(
         "ReviewToSalesRatio",
-        when(col("TotalSales") > 0, 
+        when(col("TotalSales") > 0,
              round(col("TotalReviews") / col("TotalSales"), 4))
         .otherwise(lit(0.0))
     ).withColumn(
@@ -148,13 +148,13 @@ def save_analytics(data, name, path):
         .option("mergeSchema", "true") \
         .option("overwriteSchema", "true") \
         .save(delta_path)
-    
+
     # Save as Parquet
     parquet_path = os.path.join(path, f"{name}_parquet")
     data.write \
         .mode("overwrite") \
         .parquet(parquet_path)
-    
+
     print(f"Saved {name} to:")
     print(f"  Delta: {delta_path}")
     print(f"  Parquet: {parquet_path}")
@@ -166,32 +166,32 @@ def process_silver_to_gold():
         print(f"Starting silver to gold transformation...")
         print(f"Reading from: {SILVER_DATA_PATH}")
         print(f"Writing to: {GOLD_DATA_PATH}")
-        
+
         os.makedirs(GOLD_DATA_PATH, exist_ok=True)
         spark = get_spark_session()
-        
+
         # Read and validate silver data
         silver_df = spark.read.format("delta").load(SILVER_DATA_PATH)
-        
+
         # Validate data
         total_records = silver_df.count()
-        null_counts = {column_name: silver_df.filter(col(column_name).isNull()).count() 
+        null_counts = {column_name: silver_df.filter(col(column_name).isNull()).count()
                       for column_name in silver_df.columns}
-        
+
         print(f"\nData Validation:")
         print(f"Total Records: {total_records}")
         print("Null counts per column:")
         for column_name, count in null_counts.items():
             print(f"{column_name}: {count}")
-            
+
         print("\nSales Data Sample:")
         silver_df.select("Category", "Sales", "Price", "Discount").show(5)
-        
+
         # Calculate all metrics
         revenue_per_category, discount_impact = calculate_sales_performance(silver_df)
         discount_effectiveness, price_rating_corr = analyze_pricing_strategy(silver_df)
         price_satisfaction, review_sales_ratio = calculate_customer_satisfaction(silver_df)
-        
+
         # Save all analytics using the save_analytics function
         analytics = {
             "revenue_per_category": revenue_per_category,
@@ -201,14 +201,14 @@ def process_silver_to_gold():
             "price_satisfaction": price_satisfaction,
             "review_sales_ratio": review_sales_ratio
         }
-        
+
         for name, data in analytics.items():
             save_analytics(data, name, GOLD_DATA_PATH)
             print(f"\nSample data for {name}:")
             data.show(3, truncate=False)
-        
+
         print("\nSuccessfully processed silver data to gold layer")
-        
+
     except Exception as e:
         print(f"Error processing silver to gold: {e}")
         raise

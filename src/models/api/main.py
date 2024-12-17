@@ -39,7 +39,7 @@ app.add_middleware(
 
 # Global variables for paths
 #BASE_PATH = "/home/zaki/kuliah/Bigdata/data-lakehouse-fp-big-data"
-BASE_PATH = "/home/aveee/data-lakehouse-fp-big-data"
+BASE_PATH = "/home/yumx/data-lakehouse-fp-big-data"
 GOLD_PATH = os.path.join(BASE_PATH, "src/data/gold")
 MODEL_PATH = os.path.join(BASE_PATH, "src/models/training/trained_models/sales_predictor.joblib")
 
@@ -66,7 +66,7 @@ def read_analytics_data(table_name: str) -> pd.DataFrame:
         parquet_path = os.path.join(GOLD_PATH, f"{table_name}_parquet")
         if not os.path.exists(parquet_path):
             raise FileNotFoundError(f"Data not found at {parquet_path}")
-        
+
         spark = get_spark_session()
         df = spark.read.parquet(parquet_path)
         pdf = df.toPandas()
@@ -239,7 +239,7 @@ async def get_customer_satisfaction_analytics(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Error fetching customer satisfaction analytics: {str(e)}"
         )
-        
+
 @app.post("/predict/sales", response_model=Dict[str, float])
 async def predict_sales(request: PredictionRequest):
     """Predict sales based on product features"""
@@ -267,7 +267,7 @@ async def predict_sales(request: PredictionRequest):
             'High': 400,
             'VeryHigh': float('inf')
         }
-        
+
         price_category = 'VeryHigh'
         for category, threshold in price_thresholds.items():
             if request.price <= threshold:
@@ -319,7 +319,7 @@ async def predict_sales(request: PredictionRequest):
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Error making prediction: {str(e)}"
         )
-        
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)

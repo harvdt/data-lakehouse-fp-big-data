@@ -16,6 +16,29 @@ Proyek ini merupakan implementasi data lakehouse untuk menganalisis data penjual
 
 Proyek ini bertujuan untuk membangun sistem analisis data e-commerce yang dilengkapi dengan machine learning untuk memprediksi penjualan. Sistem ini mengintegrasikan berbagai metrik untuk memberikan wawasan komprehensif tentang performa bisnis.
 
+## Setup Development Environment
+
+1. Instal Python 3.11
+
+```bash
+bash scripts/python.sh
+```
+
+2. Jalankan pipeline
+
+```bash
+bash run.sh
+```
+
+3. Simulasi pemrosesan data secara real-time (jalankan setelah selesai memproses 2 dataset yang tersedia)
+
+```bash
+bash scripts/simulation.sh 1|2|all
+```
+
+API akan tersedia di `http://localhost:8000` dengan dokumentasi Swagger UI di `/docs`.
+![swagger api](image.png)
+
 ## API Endpoints
 
 ### 1. Health Check
@@ -26,7 +49,7 @@ GET /health
 
 Mengecek status API.
 
-- Response: Status dan timestamp server
+-   Response: Status dan timestamp server
 
 ### 2. Prediksi Penjualan
 
@@ -131,19 +154,12 @@ const getPredictionSales = async (productData) => {
 
 // Fungsi untuk mendapatkan analisis kategori
 const getCategoryAnalytics = async (category) => {
-	const endpoints = [
-		"revenue",
-		"discount",
-		"price-rating",
-		"customer-satisfaction",
-	];
+	const endpoints = ["revenue", "discount", "price-rating", "customer-satisfaction"];
 
 	const analytics = {};
 
 	for (const endpoint of endpoints) {
-		const url = category
-			? `http://localhost:8000/analytics/${endpoint}?category=${category}`
-			: `http://localhost:8000/analytics/${endpoint}`;
+		const url = category ? `http://localhost:8000/analytics/${endpoint}?category=${category}` : `http://localhost:8000/analytics/${endpoint}`;
 
 		const response = await fetch(url);
 		analytics[endpoint] = await response.json();
@@ -157,60 +173,25 @@ const getCategoryAnalytics = async (category) => {
 
 1. **Model Confidence Score**
 
-   - Score > 0.9: Prediksi sangat akurat
-   - Score 0.7-0.9: Prediksi cukup akurat
-   - Score < 0.7: Prediksi kurang akurat
+    - Score > 0.9: Prediksi sangat akurat
+    - Score 0.7-0.9: Prediksi cukup akurat
+    - Score < 0.7: Prediksi kurang akurat
 
 2. **Batasan Input**
 
-   - Price: Harus positif
-   - Discount: 0-100%
-   - Rating: 1-5
-   - Reviews: Harus positif
-   - Category: Harus sesuai dengan daftar kategori yang tersedia
+    - Price: Harus positif
+    - Discount: 0-100%
+    - Rating: 1-5
+    - Reviews: Harus positif
+    - Category: Harus sesuai dengan daftar kategori yang tersedia
 
 3. **Error Handling**
 
-   - Selalu periksa status response
-   - Implementasikan retry mechanism untuk kegagalan network
-   - Tampilkan pesan error yang user-friendly
+    - Selalu periksa status response
+    - Implementasikan retry mechanism untuk kegagalan network
+    - Tampilkan pesan error yang user-friendly
 
 4. **Performa**
-   - Implementasikan caching untuk data analitik
-   - Batasi frekuensi request prediksi
-   - Gunakan loading state untuk request yang sedang berjalan
-
-## Setup Development Environment
-
-1. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-2. Install Python 3.11
-
-```bash
-bash scripts/python.sh
-```
-
-3. Run Pipeline
-
-```bash
-bash scripts/run.sh
-```
-
-4. Jalankan API server
-
-```bash
-bash scripts/run_ml.sh
-```
-
-5. Jalankan Website
-
-```bash
-bash scripts/run_web.sh
-```
-
-API akan tersedia di `http://localhost:8000` dengan dokumentasi Swagger UI di `/docs`.
-![swagger api](image.png)
+    - Implementasikan caching untuk data analitik
+    - Batasi frekuensi request prediksi
+    - Gunakan loading state untuk request yang sedang berjalan

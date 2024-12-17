@@ -1,24 +1,21 @@
-import json
 import os
-import time
+import json
+from datetime import datetime
 from kafka import KafkaConsumer
+from pyspark.sql import DataFrame
 from schemas import bronze_schema
 from spark_init import get_spark_session
-from datetime import datetime
-from pyspark.sql.functions import *
-from pyspark.sql.types import *
 
 KAFKA_BROKER = 'localhost:9092'
 KAFKA_TOPIC = 'kafka-server'
+BATCH_SIZE = 100
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BRONZE_DATA_PATH = os.path.join(BASE_DIR, 'data', 'bronze')
-
 os.makedirs(BRONZE_DATA_PATH, exist_ok=True)
 
-spark = get_spark_session()
 
-def create_dataframe_from_messages(messages):
+def create_dataframe_from_messages(messages, spark):
     rows = []
     for msg in messages:
         current_time = datetime.now()
@@ -26,7 +23,24 @@ def create_dataframe_from_messages(messages):
         rows.append(msg)
     return spark.createDataFrame(rows, schema=bronze_schema)
 
+
+def save_batch(batch, spark):
+    if not batch:
+        return
+
+    try:
+        df = create_dataframe_from_messages(batch, spark)
+        df.write.format("delta") \
+            .mode("append") \
+            .option("mergeSchema", "true") \
+            .save(BRONZE_DATA_PATH)
+    except Exception as e:
+        print(f"[CONSUMER] Error saving batch: {str(e)}")
+
+
 def main():
+    spark = get_spark_session()
+
     consumer = KafkaConsumer(
         KAFKA_TOPIC,
         bootstrap_servers=[KAFKA_BROKER],
@@ -36,61 +50,30 @@ def main():
         group_id='bronze-data-group'
     )
 
-    batch_size = 100
-    current_batch = []
-    last_save_time = time.time()
-    no_message_timeout = 60
-    last_message_time = time.time()
+    message_batch = []
+    total_processed = 0
 
     try:
-        while True:
-            raw_message = consumer.poll(timeout_ms=1000)
-            if raw_message:
-                last_message_time = time.time()
-                for _, messages in raw_message.items():
-                    for message in messages:
-                        data = message.value
-                        try:
-                            current_batch.append(data)
-                            # print(f"Processed message ID: {data.get('ProductID', 'Unknown')}")
-                            current_time = time.time()
+        for message in consumer:
+            message_batch.append(message.value)
 
-                            if len(current_batch) >= batch_size or (current_time - last_save_time) >= 60:
+            if len(message_batch) >= BATCH_SIZE:
+                save_batch(message_batch, spark)
+                total_processed += len(message_batch)
+                message_batch = []
 
-                                df = create_dataframe_from_messages(current_batch)
-                                df.write.format("delta") \
-                                    .mode("append") \
-                                    .option("mergeSchema", "true") \
-                                    .save(BRONZE_DATA_PATH)
+                if total_processed % 1000 == 0:
+                    print(f"[CONSUMER] Total records processed: {total_processed}")
 
-                                current_batch = []
-                                last_save_time = current_time
+    except KeyboardInterrupt:
+        if message_batch:
+            save_batch(message_batch, spark)
+            total_processed += len(message_batch)
 
-                        except Exception as e:
-                            print(f"Error processing message with ID {data.get('ProductID', 'Unknown')}: {e}")
-                            continue
-            else:
-                if time.time() - last_message_time > no_message_timeout:
-                    print("No new messages for the configured timeout. Exiting...")
-                    break
-
-    finally:
-        if current_batch:
-            try:
-                print(f"Saving final batch of {len(current_batch)} records...")
-                df = create_dataframe_from_messages(current_batch)
-                df.write.format("delta") \
-                    .mode("append") \
-                    .option("mergeSchema", "true") \
-                    .save(BRONZE_DATA_PATH)
-                print(f"Successfully saved final batch of {len(current_batch)} records")
-            except Exception as e:
-                print(f"Error saving final batch: {e}")
-
-        print("All data processed and saved to Delta Lake.")
-        print("Closing consumer and Spark session...")
+        print(f"[CONSUMER] Shutting down. Total records processed: {total_processed}")
         consumer.close()
         spark.stop()
+
 
 if __name__ == "__main__":
     main()

@@ -33,7 +33,7 @@ logger = logging.getLogger(__name__)
 
 class SalesPredictor:
     """A class for training and managing the sales prediction model."""
-    
+
     def __init__(self):
         """Initialize the SalesPredictor class."""
         self.model = None
@@ -46,7 +46,7 @@ class SalesPredictor:
         self.y_pred = None
         self.categories_ = None
         self.scaler = None
-        
+
     def load_data(self):
         """Load and combine data from gold layer."""
         spark = None
@@ -65,73 +65,73 @@ class SalesPredictor:
 
             # Set paths
             #gold_path = "/home/zaki/kuliah/Bigdata/data-lakehouse-fp-big-data/src/data/gold"
-            gold_path = "/home/aveee/data-lakehouse-fp-big-data/src/data/gold"
-            
+            gold_path = "/home/yumx/data-lakehouse-fp-big-data/src/data/gold"
+
             try:
                 # First try reading as Delta format
                 revenue_df = spark.read.parquet(f"{gold_path}/revenue_per_category_parquet").toPandas()
                 discount_df = spark.read.parquet(f"{gold_path}/discount_effectiveness_parquet").toPandas()
                 price_corr_df = spark.read.parquet(f"{gold_path}/price_rating_correlation_parquet").toPandas()
                 review_df = spark.read.parquet(f"{gold_path}/review_sales_ratio_parquet").toPandas()
-                
+
                 logger.info("Successfully loaded tables:")
                 logger.info(f"Revenue: {revenue_df.shape}")
                 logger.info(f"Discount: {discount_df.shape}")
                 logger.info(f"Price Correlation: {price_corr_df.shape}")
                 logger.info(f"Reviews: {review_df.shape}")
-                
+
             except Exception as e:
                 logger.warning(f"Error reading as Delta format: {e}")
                 logger.info("Trying to read as parquet format...")
-                
+
                 # Fallback to reading as plain parquet
                 revenue_df = pd.read_parquet(f"{gold_path}/revenue_per_category_parquet")
                 discount_df = pd.read_parquet(f"{gold_path}/discount_effectiveness_parquet")
                 price_corr_df = pd.read_parquet(f"{gold_path}/price_rating_correlation_parquet")
                 review_df = pd.read_parquet(f"{gold_path}/review_sales_ratio_parquet")
-                
+
                 logger.info("Successfully loaded tables using pandas:")
                 logger.info(f"Revenue: {revenue_df.shape}")
                 logger.info(f"Discount: {discount_df.shape}")
                 logger.info(f"Price Correlation: {price_corr_df.shape}")
                 logger.info(f"Reviews: {review_df.shape}")
-            
+
             # Store unique categories
             self.categories_ = sorted(revenue_df['Category'].unique())
             logger.info(f"Found categories: {self.categories_}")
-            
+
             # Merge datasets
             merged_df = revenue_df.merge(discount_df, on='Category', suffixes=('', '_disc'))
             merged_df = merged_df.merge(price_corr_df, on='Category', suffixes=('', '_price'))
             merged_df = merged_df.merge(review_df, on='Category', suffixes=('', '_review'))
-            
+
             logger.info(f"Final merged dataset shape: {merged_df.shape}")
             logger.info("Available columns: %s", merged_df.columns.tolist())
-            
+
             # Handle missing values
             if merged_df.isnull().sum().sum() > 0:
                 logger.warning("Found null values in merged dataset")
                 merged_df = merged_df.fillna(0)
-            
+
             return merged_df
-            
+
         except Exception as e:
             logger.error(f"Error in load_data: {str(e)}")
             raise
         finally:
             if spark:
                 spark.stop()
-            
+
     def create_advanced_features(self, df):
         """Create advanced features for prediction."""
         df = df.copy()
-        
+
         try:
             # Price-based features
             df['PriceToAvgRatio'] = df['AveragePrice'] / df['AveragePrice'].mean()
             df['PriceVariance'] = np.abs(df['AveragePrice'] - df['AveragePrice'].mean()) / df['AveragePrice'].std()
             df['PriceCategory'] = pd.qcut(df['AveragePrice'], q=5, labels=['VeryLow', 'Low', 'Medium', 'High', 'VeryHigh'])
-            
+
             # Discount features
             df['DiscountEfficiency'] = np.where(
                 df['RevenueLossFromDiscount'] > 0,
@@ -140,33 +140,33 @@ class SalesPredictor:
             )
             df['DiscountROICategory'] = pd.qcut(df['DiscountROI'].clip(lower=0), q=3, labels=['Low', 'Medium', 'High'])
             df['DiscountEffectiveness'] = df['TotalDiscountedRevenue'] / df['PotentialRevenue']
-            
+
             # Engagement features
             df['ReviewsPerSale'] = df['TotalReviews'] / df['TotalSales'].replace(0, 1)
             df['HighRatingRatio'] = df['HighRatingCount'] / df['ProductCount'].replace(0, 1)
             df['EngagementScore'] = (df['ReviewsPerSale'] * df['HighRatingRatio'] * df['AvgRating'])
             df['CustomerSatisfaction'] = (df['AvgRating'] * df['HighRatingRatio']) / (df['DiscountEffectiveness'] + 1)
-            
+
             # Revenue and sales metrics
             df['RevenuePerProduct'] = df['TotalRevenue'] / df['ProductCount']
             df['SalesEfficiency'] = df['TotalSales'] / (df['ProductCount'] * df['AvgDiscountPercentage'] + 1)
-            
+
             # Interaction features
             df['PriceRatingInteraction'] = df['AveragePrice'] * df['AvgRating']
             df['DiscountRatingInteraction'] = df['AvgDiscountPercentage'] * df['AvgRating']
             df['PriceDiscountInteraction'] = df['AveragePrice'] * df['AvgDiscountPercentage']
-            
+
             # Performance metrics
             df['MarketPerformance'] = df['TotalRevenue'] / (df['ProductCount'] * df['AveragePrice'])
             df['CustomerEngagementIndex'] = (df['TotalReviews'] * df['AvgRating']) / df['TotalSales']
             df['ProfitabilityScore'] = df['TotalRevenue'] * (1 - df['AvgDiscountPercentage']/100)
-            
+
             # Normalized features
             for col in ['TotalRevenue', 'TotalSales', 'AveragePrice']:
                 df[f'Normalized_{col}'] = (df[col] - df[col].mean()) / df[col].std()
-            
+
             return df
-            
+
         except Exception as e:
             logger.error(f"Error in feature creation: {str(e)}")
             raise
@@ -211,14 +211,14 @@ class SalesPredictor:
                 random_state=42
             ))
         ]
-        
+
         final_estimator = GradientBoostingRegressor(
             n_estimators=100,
             learning_rate=0.1,
             max_depth=3,
             random_state=42
         )
-        
+
         return StackingRegressor(
             estimators=estimators,
             final_estimator=final_estimator,
@@ -237,7 +237,7 @@ class SalesPredictor:
             # Get transformed feature names
             transformed_features = []
             transformed_features.extend(numeric_features)
-            
+
             # Add encoded categorical feature names
             for feature in categorical_features:
                 if feature == 'Category':
@@ -248,11 +248,11 @@ class SalesPredictor:
                     values = ['Low', 'Medium', 'High']
                 else:
                     continue
-                
+
                 transformed_features.extend([f"{feature}_{val}" for val in values[1:]])
-            
+
             importances = final_estimator.feature_importances_
-            
+
             if len(importances) != len(transformed_features):
                 logger.warning(f"Feature importance length mismatch: {len(importances)} vs {len(transformed_features)}")
                 min_len = min(len(importances), len(transformed_features))
@@ -263,12 +263,12 @@ class SalesPredictor:
                 'feature': transformed_features,
                 'importance': importances
             })
-            
+
             importance_df = importance_df.sort_values('importance', ascending=False)
             importance_df['importance_percentage'] = importance_df['importance'] * 100
-            
+
             return importance_df
-            
+
         except Exception as e:
             logger.error(f"Error extracting feature importance: {str(e)}")
             return None
@@ -276,13 +276,13 @@ class SalesPredictor:
     def train_model(self):
         """Train the model with all improvements."""
         logger.info("Starting enhanced model training process...")
-        
+
         try:
             # Load and prepare data
             df = self.load_data()
             df = self.create_advanced_features(df)
             logger.info(f"Created advanced features. Shape: {df.shape}")
-            
+
             # Define features
             numeric_features = [
                 'AveragePrice', 'AvgDiscountPercentage', 'AvgRating', 'AvgReviews',
@@ -296,57 +296,57 @@ class SalesPredictor:
                 'Normalized_AveragePrice'
             ]
             categorical_features = ['Category', 'PriceCategory', 'DiscountROICategory']
-            
+
             logger.info(f"Number of numeric features: {len(numeric_features)}")
             logger.info(f"Number of categorical features: {len(categorical_features)}")
-            
+
             # Prepare features and target
             X = df[numeric_features + categorical_features]
             y = df['TotalSales']
-            
+
             # Split data
             self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
                 X, y, test_size=0.2, random_state=42)
-            
+
             # Create and train model
             preprocessor = self.prepare_advanced_features(df, numeric_features, categorical_features)
             stacked_model = self.create_stacked_model()
-            
+
             pipeline = Pipeline([
                 ('preprocessor', preprocessor),
                 ('regressor', stacked_model)
             ])
-            
+
             logger.info("Training stacked model...")
             pipeline.fit(self.X_train, self.y_train)
-            
+
             # Evaluate model
             self.y_pred = pipeline.predict(self.X_test)
-            
+
             r2 = r2_score(self.y_test, self.y_pred)
             mse = mean_squared_error(self.y_test, self.y_pred)
             mae = mean_absolute_error(self.y_test, self.y_pred)
             rmse = np.sqrt(mse)
-            
+
             logger.info("Model Performance:")
             logger.info(f"R² score: {r2:.4f}")
             logger.info(f"MSE: {mse:.4f}")
             logger.info(f"RMSE: {rmse:.4f}")
             logger.info(f"MAE: {mae:.4f}")
-            
+
             self.model = pipeline
-            
+
             # Extract feature importance
             self.feature_importance = self.extract_feature_importance(
                 self.model, numeric_features, categorical_features
             )
-            
+
             if self.feature_importance is not None:
                 logger.info("\nTop 10 Most Important Features:")
                 logger.info(self.feature_importance.head(10))
-            
+
             return self.model
-            
+
         except Exception as e:
             logger.error(f"Error in model training: {str(e)}")
             raise
@@ -357,7 +357,7 @@ class SalesPredictor:
             model_dir = os.path.join(os.path.dirname(__file__), 'trained_models')
             os.makedirs(model_dir, exist_ok=True)
             model_path = os.path.join(model_dir, filename)
-            
+
             model_data = {
                 'model': self.model,
                 'feature_importance': self.feature_importance,
@@ -368,10 +368,10 @@ class SalesPredictor:
                     'mae': mean_absolute_error(self.y_test, self.y_pred)
                 }
             }
-            
+
             joblib.dump(model_data, model_path)
             logger.info(f"Model saved to {model_path}")
-            
+
         except Exception as e:
             logger.error(f"Error saving model: {str(e)}")
             raise
