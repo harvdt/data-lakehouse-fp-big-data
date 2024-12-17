@@ -1,8 +1,10 @@
 venv
 
 # Simulation Dataset
-ecommerce_product_dataset3.csv
-ecommerce_product_dataset4.csv
+ecommerce_product_dataset3
+ecommerce_product_dataset4
+src/data/raw/ecommerce_product_dataset3.csv
+src/data/raw/ecommerce_product_dataset4.csv
 
 # Data Storage
 src/data/bronze/*
