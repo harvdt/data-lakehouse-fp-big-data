@@ -164,7 +164,7 @@ bash run.sh
 
 # Mulai pelatihan model (pilih salah satu):
 # Opsi 1: Mode Berkelanjutan
-python3 src/models/training/training_coordinator.py
+bash scripts/run_training.sh
 
 # Opsi 2: Mode Terjadwal
 crontab -e
