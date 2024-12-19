@@ -1,0 +1,1087 @@
+2024-12-19 11:53:52,423 - __main__ - INFO - Starting enhanced model training process...
+2024-12-19 11:54:05,444 - __main__ - INFO - Successfully loaded tables:
+2024-12-19 11:54:05,445 - __main__ - INFO - Revenue: (25, 6)
+2024-12-19 11:54:05,445 - __main__ - INFO - Discount: (25, 7)
+2024-12-19 11:54:05,445 - __main__ - INFO - Price Correlation: (25, 6)
+2024-12-19 11:54:05,445 - __main__ - INFO - Reviews: (25, 7)
+2024-12-19 11:54:05,448 - __main__ - INFO - Found categories: ['ART AND CRAFTING MATERIALS', 'BATH AND BODY', 'BEDSHEETS', 'BICYCLES', 'BLANKETS', 'BOOKS', 'CANDLES', 'CLOTHING', 'COATS AND JACKETS', 'COOKWARE', 'DRINKWARE', 'ELECTRONICS', 'HOME & KITCHEN', 'MAKEUP', 'MOBILE PHONE ACCESSORIES', 'MOTOR VEHICLE PARTS', 'NAIL CARE', 'PERFUME AND COLOGNE', 'POSTERS AND ARTWORK', 'SKIN CARE', 'SOCKS', 'TOYS & GAMES', 'UNDERWEAR', 'VITAMINS AND SUPPLEMENTS', 'WINE']
+2024-12-19 11:54:05,461 - __main__ - INFO - Final merged dataset shape: (25, 23)
+2024-12-19 11:54:05,461 - __main__ - INFO - Available columns: ['Category', 'TotalRevenue', 'TotalSales', 'AveragePrice', 'ProductCount', 'AvgDiscountPercentage', 'AvgDiscountPercentage_disc', 'TotalDiscountedRevenue', 'PotentialRevenue', 'AvgSales', 'RevenueLossFromDiscount', 'DiscountROI', 'PriceRatingCorrelation', 'AvgPrice', 'AvgRating', 'AvgReviews', 'PriceRatingRelationship', 'TotalReviews', 'TotalSales_review', 'AvgRating_review', 'HighRatingCount', 'ReviewToSalesRatio', 'CustomerEngagementLevel']
+2024-12-19 11:54:05,807 - __main__ - INFO - Created advanced features. Shape: (25, 44)
+2024-12-19 11:54:05,807 - __main__ - INFO - Number of numeric features: 23
+2024-12-19 11:54:05,807 - __main__ - INFO - Number of categorical features: 3
+2024-12-19 11:54:05,811 - __main__ - INFO - Training stacked model...
+2024-12-19 11:54:05,845 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:05,858 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:05,864 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:05,870 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:05,876 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:05,883 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:05,890 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:05,896 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:05,902 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:05,913 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:05,922 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:05,946 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:05,956 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:05,956 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:05,976 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:05,991 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:06,010 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:06,351 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-19 11:54:06,354 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:06,355 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-19 11:54:06,362 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:54:09,808 - __main__ - INFO - Model Performance:
+2024-12-19 11:54:09,808 - __main__ - INFO - R² score: 0.9832
+2024-12-19 11:54:09,808 - __main__ - INFO - MSE: 5020.8544
+2024-12-19 11:54:09,809 - __main__ - INFO - RMSE: 70.8580
+2024-12-19 11:54:09,809 - __main__ - INFO - MAE: 60.7211
+2024-12-19 11:54:09,810 - __main__ - WARNING - Feature importance length mismatch: 3 vs 53
+2024-12-19 11:54:09,812 - __main__ - INFO - 
+Top 10 Most Important Features:
+2024-12-19 11:54:09,812 - __main__ - INFO -                  feature  importance  importance_percentage
+1  AvgDiscountPercentage    0.541399              54.139880
+0           AveragePrice    0.408668              40.866799
+2              AvgRating    0.049933               4.993321
+2024-12-19 11:54:09,966 - __main__ - INFO - Model saved to /home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/src/models/training/trained_models/sales_predictor.joblib
+2024-12-19 11:54:10,529 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:18,507 - __main__ - INFO - Starting enhanced model training process...
+2024-12-19 11:55:26,750 - __main__ - INFO - Successfully loaded tables:
+2024-12-19 11:55:26,750 - __main__ - INFO - Revenue: (25, 6)
+2024-12-19 11:55:26,751 - __main__ - INFO - Discount: (25, 7)
+2024-12-19 11:55:26,751 - __main__ - INFO - Price Correlation: (25, 6)
+2024-12-19 11:55:26,752 - __main__ - INFO - Reviews: (25, 7)
+2024-12-19 11:55:26,753 - __main__ - INFO - Found categories: ['ART AND CRAFTING MATERIALS', 'BATH AND BODY', 'BEDSHEETS', 'BICYCLES', 'BLANKETS', 'BOOKS', 'CANDLES', 'CLOTHING', 'COATS AND JACKETS', 'COOKWARE', 'DRINKWARE', 'ELECTRONICS', 'HOME & KITCHEN', 'MAKEUP', 'MOBILE PHONE ACCESSORIES', 'MOTOR VEHICLE PARTS', 'NAIL CARE', 'PERFUME AND COLOGNE', 'POSTERS AND ARTWORK', 'SKIN CARE', 'SOCKS', 'TOYS & GAMES', 'UNDERWEAR', 'VITAMINS AND SUPPLEMENTS', 'WINE']
+2024-12-19 11:55:26,764 - __main__ - INFO - Final merged dataset shape: (25, 23)
+2024-12-19 11:55:26,764 - __main__ - INFO - Available columns: ['Category', 'TotalRevenue', 'TotalSales', 'AveragePrice', 'ProductCount', 'AvgDiscountPercentage', 'AvgDiscountPercentage_disc', 'TotalDiscountedRevenue', 'PotentialRevenue', 'AvgSales', 'RevenueLossFromDiscount', 'DiscountROI', 'PriceRatingCorrelation', 'AvgPrice', 'AvgRating', 'AvgReviews', 'PriceRatingRelationship', 'TotalReviews', 'TotalSales_review', 'AvgRating_review', 'HighRatingCount', 'ReviewToSalesRatio', 'CustomerEngagementLevel']
+2024-12-19 11:55:26,867 - __main__ - INFO - Created advanced features. Shape: (25, 44)
+2024-12-19 11:55:26,867 - __main__ - INFO - Number of numeric features: 23
+2024-12-19 11:55:26,867 - __main__ - INFO - Number of categorical features: 3
+2024-12-19 11:55:26,871 - __main__ - INFO - Training stacked model...
+2024-12-19 11:55:26,905 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:26,917 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:26,924 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:26,930 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:26,937 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:26,944 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:26,957 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:26,964 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:26,976 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:27,000 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:27,021 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:27,029 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:27,030 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:27,049 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:27,093 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:27,136 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:27,183 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:28,767 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-19 11:55:28,768 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:28,768 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-19 11:55:28,771 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 11:55:30,823 - __main__ - INFO - Model Performance:
+2024-12-19 11:55:30,823 - __main__ - INFO - R² score: 0.9832
+2024-12-19 11:55:30,823 - __main__ - INFO - MSE: 5020.8544
+2024-12-19 11:55:30,824 - __main__ - INFO - RMSE: 70.8580
+2024-12-19 11:55:30,824 - __main__ - INFO - MAE: 60.7211
+2024-12-19 11:55:30,825 - __main__ - WARNING - Feature importance length mismatch: 3 vs 53
+2024-12-19 11:55:30,827 - __main__ - INFO - 
+Top 10 Most Important Features:
+2024-12-19 11:55:30,827 - __main__ - INFO -                  feature  importance  importance_percentage
+1  AvgDiscountPercentage    0.541399              54.139880
+0           AveragePrice    0.408668              40.866799
+2              AvgRating    0.049933               4.993321
+2024-12-19 11:55:31,053 - __main__ - INFO - Model saved to /home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/src/models/training/trained_models/sales_predictor.joblib
+2024-12-19 11:55:31,577 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:26,205 - __main__ - INFO - Starting enhanced model training process...
+2024-12-19 12:19:39,475 - __main__ - INFO - Successfully loaded tables:
+2024-12-19 12:19:39,476 - __main__ - INFO - Revenue: (25, 6)
+2024-12-19 12:19:39,476 - __main__ - INFO - Discount: (25, 7)
+2024-12-19 12:19:39,476 - __main__ - INFO - Price Correlation: (25, 6)
+2024-12-19 12:19:39,476 - __main__ - INFO - Reviews: (25, 7)
+2024-12-19 12:19:39,480 - __main__ - INFO - Found categories: ['ART AND CRAFTING MATERIALS', 'BATH AND BODY', 'BEDSHEETS', 'BICYCLES', 'BLANKETS', 'BOOKS', 'CANDLES', 'CLOTHING', 'COATS AND JACKETS', 'COOKWARE', 'DRINKWARE', 'ELECTRONICS', 'HOME & KITCHEN', 'MAKEUP', 'MOBILE PHONE ACCESSORIES', 'MOTOR VEHICLE PARTS', 'NAIL CARE', 'PERFUME AND COLOGNE', 'POSTERS AND ARTWORK', 'SKIN CARE', 'SOCKS', 'TOYS & GAMES', 'UNDERWEAR', 'VITAMINS AND SUPPLEMENTS', 'WINE']
+2024-12-19 12:19:39,508 - __main__ - INFO - Final merged dataset shape: (25, 23)
+2024-12-19 12:19:39,508 - __main__ - INFO - Available columns: ['Category', 'TotalRevenue', 'TotalSales', 'AveragePrice', 'ProductCount', 'AvgDiscountPercentage', 'AvgDiscountPercentage_disc', 'TotalDiscountedRevenue', 'PotentialRevenue', 'AvgSales', 'RevenueLossFromDiscount', 'DiscountROI', 'PriceRatingCorrelation', 'AvgPrice', 'AvgRating', 'AvgReviews', 'PriceRatingRelationship', 'TotalReviews', 'TotalSales_review', 'AvgRating_review', 'HighRatingCount', 'ReviewToSalesRatio', 'CustomerEngagementLevel']
+2024-12-19 12:19:40,368 - __main__ - INFO - Created advanced features. Shape: (25, 44)
+2024-12-19 12:19:40,369 - __main__ - INFO - Number of numeric features: 23
+2024-12-19 12:19:40,369 - __main__ - INFO - Number of categorical features: 3
+2024-12-19 12:19:40,378 - __main__ - INFO - Training stacked model...
+2024-12-19 12:19:40,435 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:40,467 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:40,486 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:40,517 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:40,535 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:40,547 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:40,567 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:40,574 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:40,601 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:40,615 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:40,624 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:40,691 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:40,704 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:40,753 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:40,855 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:40,857 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:40,869 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:43,986 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-19 12:19:44,035 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:44,035 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-19 12:19:44,048 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:19:46,617 - __main__ - INFO - Model Performance:
+2024-12-19 12:19:46,617 - __main__ - INFO - R² score: 0.9832
+2024-12-19 12:19:46,617 - __main__ - INFO - MSE: 5020.8544
+2024-12-19 12:19:46,617 - __main__ - INFO - RMSE: 70.8580
+2024-12-19 12:19:46,618 - __main__ - INFO - MAE: 60.7211
+2024-12-19 12:19:46,621 - __main__ - WARNING - Feature importance length mismatch: 3 vs 53
+2024-12-19 12:19:46,631 - __main__ - INFO - 
+Top 10 Most Important Features:
+2024-12-19 12:19:46,631 - __main__ - INFO -                  feature  importance  importance_percentage
+1  AvgDiscountPercentage    0.541399              54.139880
+0           AveragePrice    0.408668              40.866799
+2              AvgRating    0.049933               4.993321
+2024-12-19 12:19:46,818 - __main__ - INFO - Model saved to /home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/src/models/training/trained_models/sales_predictor.joblib
+2024-12-19 12:19:47,291 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:10,068 - __main__ - INFO - Starting enhanced model training process...
+2024-12-19 12:20:21,912 - __main__ - INFO - Successfully loaded tables:
+2024-12-19 12:20:21,913 - __main__ - INFO - Revenue: (25, 6)
+2024-12-19 12:20:21,913 - __main__ - INFO - Discount: (25, 7)
+2024-12-19 12:20:21,913 - __main__ - INFO - Price Correlation: (25, 6)
+2024-12-19 12:20:21,913 - __main__ - INFO - Reviews: (25, 7)
+2024-12-19 12:20:21,914 - __main__ - INFO - Found categories: ['ART AND CRAFTING MATERIALS', 'BATH AND BODY', 'BEDSHEETS', 'BICYCLES', 'BLANKETS', 'BOOKS', 'CANDLES', 'CLOTHING', 'COATS AND JACKETS', 'COOKWARE', 'DRINKWARE', 'ELECTRONICS', 'HOME & KITCHEN', 'MAKEUP', 'MOBILE PHONE ACCESSORIES', 'MOTOR VEHICLE PARTS', 'NAIL CARE', 'PERFUME AND COLOGNE', 'POSTERS AND ARTWORK', 'SKIN CARE', 'SOCKS', 'TOYS & GAMES', 'UNDERWEAR', 'VITAMINS AND SUPPLEMENTS', 'WINE']
+2024-12-19 12:20:21,922 - __main__ - INFO - Final merged dataset shape: (25, 23)
+2024-12-19 12:20:21,922 - __main__ - INFO - Available columns: ['Category', 'TotalRevenue', 'TotalSales', 'AveragePrice', 'ProductCount', 'AvgDiscountPercentage', 'AvgDiscountPercentage_disc', 'TotalDiscountedRevenue', 'PotentialRevenue', 'AvgSales', 'RevenueLossFromDiscount', 'DiscountROI', 'PriceRatingCorrelation', 'AvgPrice', 'AvgRating', 'AvgReviews', 'PriceRatingRelationship', 'TotalReviews', 'TotalSales_review', 'AvgRating_review', 'HighRatingCount', 'ReviewToSalesRatio', 'CustomerEngagementLevel']
+2024-12-19 12:20:22,041 - __main__ - INFO - Created advanced features. Shape: (25, 44)
+2024-12-19 12:20:22,042 - __main__ - INFO - Number of numeric features: 23
+2024-12-19 12:20:22,042 - __main__ - INFO - Number of categorical features: 3
+2024-12-19 12:20:22,049 - __main__ - INFO - Training stacked model...
+2024-12-19 12:20:22,098 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:22,119 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:22,128 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:22,137 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:22,151 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:22,156 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:22,168 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:22,177 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:22,211 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:22,211 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:22,216 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:22,237 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:22,241 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:22,264 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:22,289 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:22,293 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:22,321 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:22,647 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-19 12:20:22,661 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:22,661 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-19 12:20:22,672 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:20:25,988 - __main__ - INFO - Model Performance:
+2024-12-19 12:20:25,988 - __main__ - INFO - R² score: 0.9832
+2024-12-19 12:20:25,988 - __main__ - INFO - MSE: 5020.8544
+2024-12-19 12:20:25,988 - __main__ - INFO - RMSE: 70.8580
+2024-12-19 12:20:25,988 - __main__ - INFO - MAE: 60.7211
+2024-12-19 12:20:25,989 - __main__ - WARNING - Feature importance length mismatch: 3 vs 53
+2024-12-19 12:20:25,991 - __main__ - INFO - 
+Top 10 Most Important Features:
+2024-12-19 12:20:25,991 - __main__ - INFO -                  feature  importance  importance_percentage
+1  AvgDiscountPercentage    0.541399              54.139880
+0           AveragePrice    0.408668              40.866799
+2              AvgRating    0.049933               4.993321
+2024-12-19 12:20:26,129 - __main__ - INFO - Model saved to /home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/src/models/training/trained_models/sales_predictor.joblib
+2024-12-19 12:20:26,542 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:34,844 - __main__ - INFO - Starting enhanced model training process...
+2024-12-19 12:21:44,607 - __main__ - INFO - Successfully loaded tables:
+2024-12-19 12:21:44,607 - __main__ - INFO - Revenue: (25, 6)
+2024-12-19 12:21:44,607 - __main__ - INFO - Discount: (25, 7)
+2024-12-19 12:21:44,608 - __main__ - INFO - Price Correlation: (25, 6)
+2024-12-19 12:21:44,608 - __main__ - INFO - Reviews: (25, 7)
+2024-12-19 12:21:44,608 - __main__ - INFO - Found categories: ['ART AND CRAFTING MATERIALS', 'BATH AND BODY', 'BEDSHEETS', 'BICYCLES', 'BLANKETS', 'BOOKS', 'CANDLES', 'CLOTHING', 'COATS AND JACKETS', 'COOKWARE', 'DRINKWARE', 'ELECTRONICS', 'HOME & KITCHEN', 'MAKEUP', 'MOBILE PHONE ACCESSORIES', 'MOTOR VEHICLE PARTS', 'NAIL CARE', 'PERFUME AND COLOGNE', 'POSTERS AND ARTWORK', 'SKIN CARE', 'SOCKS', 'TOYS & GAMES', 'UNDERWEAR', 'VITAMINS AND SUPPLEMENTS', 'WINE']
+2024-12-19 12:21:44,614 - __main__ - INFO - Final merged dataset shape: (25, 23)
+2024-12-19 12:21:44,614 - __main__ - INFO - Available columns: ['Category', 'TotalRevenue', 'TotalSales', 'AveragePrice', 'ProductCount', 'AvgDiscountPercentage', 'AvgDiscountPercentage_disc', 'TotalDiscountedRevenue', 'PotentialRevenue', 'AvgSales', 'RevenueLossFromDiscount', 'DiscountROI', 'PriceRatingCorrelation', 'AvgPrice', 'AvgRating', 'AvgReviews', 'PriceRatingRelationship', 'TotalReviews', 'TotalSales_review', 'AvgRating_review', 'HighRatingCount', 'ReviewToSalesRatio', 'CustomerEngagementLevel']
+2024-12-19 12:21:45,052 - __main__ - INFO - Created advanced features. Shape: (25, 44)
+2024-12-19 12:21:45,052 - __main__ - INFO - Number of numeric features: 23
+2024-12-19 12:21:45,052 - __main__ - INFO - Number of categorical features: 3
+2024-12-19 12:21:45,055 - __main__ - INFO - Training stacked model...
+2024-12-19 12:21:45,084 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:45,097 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:45,103 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:45,109 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:45,114 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:45,119 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:45,127 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:45,134 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:45,141 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:45,149 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:45,157 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:45,166 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:45,194 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:45,208 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:45,214 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:45,230 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:45,258 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:46,009 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-19 12:21:46,010 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:46,010 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-19 12:21:46,012 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:21:49,401 - __main__ - INFO - Model Performance:
+2024-12-19 12:21:49,401 - __main__ - INFO - R² score: 0.9832
+2024-12-19 12:21:49,401 - __main__ - INFO - MSE: 5020.8544
+2024-12-19 12:21:49,401 - __main__ - INFO - RMSE: 70.8580
+2024-12-19 12:21:49,401 - __main__ - INFO - MAE: 60.7211
+2024-12-19 12:21:49,402 - __main__ - WARNING - Feature importance length mismatch: 3 vs 53
+2024-12-19 12:21:49,404 - __main__ - INFO - 
+Top 10 Most Important Features:
+2024-12-19 12:21:49,404 - __main__ - INFO -                  feature  importance  importance_percentage
+1  AvgDiscountPercentage    0.541399              54.139880
+0           AveragePrice    0.408668              40.866799
+2              AvgRating    0.049933               4.993321
+2024-12-19 12:21:49,542 - __main__ - INFO - Model saved to /home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/src/models/training/trained_models/sales_predictor.joblib
+2024-12-19 12:21:49,942 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:22:59,944 - __main__ - INFO - Starting enhanced model training process...
+2024-12-19 12:23:11,303 - __main__ - INFO - Successfully loaded tables:
+2024-12-19 12:23:11,304 - __main__ - INFO - Revenue: (25, 6)
+2024-12-19 12:23:11,304 - __main__ - INFO - Discount: (25, 7)
+2024-12-19 12:23:11,304 - __main__ - INFO - Price Correlation: (25, 6)
+2024-12-19 12:23:11,304 - __main__ - INFO - Reviews: (25, 7)
+2024-12-19 12:23:11,305 - __main__ - INFO - Found categories: ['ART AND CRAFTING MATERIALS', 'BATH AND BODY', 'BEDSHEETS', 'BICYCLES', 'BLANKETS', 'BOOKS', 'CANDLES', 'CLOTHING', 'COATS AND JACKETS', 'COOKWARE', 'DRINKWARE', 'ELECTRONICS', 'HOME & KITCHEN', 'MAKEUP', 'MOBILE PHONE ACCESSORIES', 'MOTOR VEHICLE PARTS', 'NAIL CARE', 'PERFUME AND COLOGNE', 'POSTERS AND ARTWORK', 'SKIN CARE', 'SOCKS', 'TOYS & GAMES', 'UNDERWEAR', 'VITAMINS AND SUPPLEMENTS', 'WINE']
+2024-12-19 12:23:11,313 - __main__ - INFO - Final merged dataset shape: (25, 23)
+2024-12-19 12:23:11,314 - __main__ - INFO - Available columns: ['Category', 'TotalRevenue', 'TotalSales', 'AveragePrice', 'ProductCount', 'AvgDiscountPercentage', 'AvgDiscountPercentage_disc', 'TotalDiscountedRevenue', 'PotentialRevenue', 'AvgSales', 'RevenueLossFromDiscount', 'DiscountROI', 'PriceRatingCorrelation', 'AvgPrice', 'AvgRating', 'AvgReviews', 'PriceRatingRelationship', 'TotalReviews', 'TotalSales_review', 'AvgRating_review', 'HighRatingCount', 'ReviewToSalesRatio', 'CustomerEngagementLevel']
+2024-12-19 12:23:11,703 - __main__ - INFO - Created advanced features. Shape: (25, 44)
+2024-12-19 12:23:11,703 - __main__ - INFO - Number of numeric features: 23
+2024-12-19 12:23:11,703 - __main__ - INFO - Number of categorical features: 3
+2024-12-19 12:23:11,706 - __main__ - INFO - Training stacked model...
+2024-12-19 12:23:11,735 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:23:11,746 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:23:11,752 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:23:11,758 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:23:11,772 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:23:11,772 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:23:11,783 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:23:11,790 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:23:11,796 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:23:11,813 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-19 12:23:11,817 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:23:11,817 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-19 12:23:11,823 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:23:11,829 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:23:11,836 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:23:11,912 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:23:11,913 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:23:11,941 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:23:13,887 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-19 12:23:13,888 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:23:13,889 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-19 12:23:13,891 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:23:15,936 - __main__ - INFO - Model Performance:
+2024-12-19 12:23:15,936 - __main__ - INFO - R² score: 0.9832
+2024-12-19 12:23:15,936 - __main__ - INFO - MSE: 5020.8544
+2024-12-19 12:23:15,936 - __main__ - INFO - RMSE: 70.8580
+2024-12-19 12:23:15,936 - __main__ - INFO - MAE: 60.7211
+2024-12-19 12:23:15,937 - __main__ - WARNING - Feature importance length mismatch: 3 vs 53
+2024-12-19 12:23:15,938 - __main__ - INFO - 
+Top 10 Most Important Features:
+2024-12-19 12:23:15,938 - __main__ - INFO -                  feature  importance  importance_percentage
+1  AvgDiscountPercentage    0.541399              54.139880
+0           AveragePrice    0.408668              40.866799
+2              AvgRating    0.049933               4.993321
+2024-12-19 12:23:16,080 - __main__ - INFO - Model saved to /home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/src/models/training/trained_models/sales_predictor.joblib
+2024-12-19 12:23:16,465 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:15,315 - __main__ - INFO - Starting enhanced model training process...
+2024-12-19 12:24:26,399 - __main__ - INFO - Successfully loaded tables:
+2024-12-19 12:24:26,400 - __main__ - INFO - Revenue: (25, 6)
+2024-12-19 12:24:26,400 - __main__ - INFO - Discount: (25, 7)
+2024-12-19 12:24:26,400 - __main__ - INFO - Price Correlation: (25, 6)
+2024-12-19 12:24:26,400 - __main__ - INFO - Reviews: (25, 7)
+2024-12-19 12:24:26,400 - __main__ - INFO - Found categories: ['ART AND CRAFTING MATERIALS', 'BATH AND BODY', 'BEDSHEETS', 'BICYCLES', 'BLANKETS', 'BOOKS', 'CANDLES', 'CLOTHING', 'COATS AND JACKETS', 'COOKWARE', 'DRINKWARE', 'ELECTRONICS', 'HOME & KITCHEN', 'MAKEUP', 'MOBILE PHONE ACCESSORIES', 'MOTOR VEHICLE PARTS', 'NAIL CARE', 'PERFUME AND COLOGNE', 'POSTERS AND ARTWORK', 'SKIN CARE', 'SOCKS', 'TOYS & GAMES', 'UNDERWEAR', 'VITAMINS AND SUPPLEMENTS', 'WINE']
+2024-12-19 12:24:26,408 - __main__ - INFO - Final merged dataset shape: (25, 23)
+2024-12-19 12:24:26,408 - __main__ - INFO - Available columns: ['Category', 'TotalRevenue', 'TotalSales', 'AveragePrice', 'ProductCount', 'AvgDiscountPercentage', 'AvgDiscountPercentage_disc', 'TotalDiscountedRevenue', 'PotentialRevenue', 'AvgSales', 'RevenueLossFromDiscount', 'DiscountROI', 'PriceRatingCorrelation', 'AvgPrice', 'AvgRating', 'AvgReviews', 'PriceRatingRelationship', 'TotalReviews', 'TotalSales_review', 'AvgRating_review', 'HighRatingCount', 'ReviewToSalesRatio', 'CustomerEngagementLevel']
+2024-12-19 12:24:26,524 - __main__ - INFO - Created advanced features. Shape: (25, 44)
+2024-12-19 12:24:26,524 - __main__ - INFO - Number of numeric features: 23
+2024-12-19 12:24:26,524 - __main__ - INFO - Number of categorical features: 3
+2024-12-19 12:24:26,529 - __main__ - INFO - Training stacked model...
+2024-12-19 12:24:26,569 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:26,582 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:26,588 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:26,593 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:26,598 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:26,604 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:26,623 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:26,624 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:26,649 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:26,655 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:26,659 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:26,679 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:26,693 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:26,699 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:26,716 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:26,759 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:26,784 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:26,972 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-19 12:24:26,976 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:26,976 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-19 12:24:26,991 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:24:30,157 - __main__ - INFO - Model Performance:
+2024-12-19 12:24:30,157 - __main__ - INFO - R² score: 0.9832
+2024-12-19 12:24:30,157 - __main__ - INFO - MSE: 5020.8544
+2024-12-19 12:24:30,157 - __main__ - INFO - RMSE: 70.8580
+2024-12-19 12:24:30,157 - __main__ - INFO - MAE: 60.7211
+2024-12-19 12:24:30,159 - __main__ - WARNING - Feature importance length mismatch: 3 vs 53
+2024-12-19 12:24:30,161 - __main__ - INFO - 
+Top 10 Most Important Features:
+2024-12-19 12:24:30,161 - __main__ - INFO -                  feature  importance  importance_percentage
+1  AvgDiscountPercentage    0.541399              54.139880
+0           AveragePrice    0.408668              40.866799
+2              AvgRating    0.049933               4.993321
+2024-12-19 12:24:30,430 - __main__ - INFO - Model saved to /home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/src/models/training/trained_models/sales_predictor.joblib
+2024-12-19 12:24:30,854 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:11,789 - __main__ - INFO - Starting enhanced model training process...
+2024-12-19 12:25:22,541 - __main__ - INFO - Successfully loaded tables:
+2024-12-19 12:25:22,541 - __main__ - INFO - Revenue: (25, 6)
+2024-12-19 12:25:22,541 - __main__ - INFO - Discount: (25, 7)
+2024-12-19 12:25:22,541 - __main__ - INFO - Price Correlation: (25, 6)
+2024-12-19 12:25:22,541 - __main__ - INFO - Reviews: (25, 7)
+2024-12-19 12:25:22,542 - __main__ - INFO - Found categories: ['ART AND CRAFTING MATERIALS', 'BATH AND BODY', 'BEDSHEETS', 'BICYCLES', 'BLANKETS', 'BOOKS', 'CANDLES', 'CLOTHING', 'COATS AND JACKETS', 'COOKWARE', 'DRINKWARE', 'ELECTRONICS', 'HOME & KITCHEN', 'MAKEUP', 'MOBILE PHONE ACCESSORIES', 'MOTOR VEHICLE PARTS', 'NAIL CARE', 'PERFUME AND COLOGNE', 'POSTERS AND ARTWORK', 'SKIN CARE', 'SOCKS', 'TOYS & GAMES', 'UNDERWEAR', 'VITAMINS AND SUPPLEMENTS', 'WINE']
+2024-12-19 12:25:22,547 - __main__ - INFO - Final merged dataset shape: (25, 23)
+2024-12-19 12:25:22,548 - __main__ - INFO - Available columns: ['Category', 'TotalRevenue', 'TotalSales', 'AveragePrice', 'ProductCount', 'AvgDiscountPercentage', 'AvgDiscountPercentage_disc', 'TotalDiscountedRevenue', 'PotentialRevenue', 'AvgSales', 'RevenueLossFromDiscount', 'DiscountROI', 'PriceRatingCorrelation', 'AvgPrice', 'AvgRating', 'AvgReviews', 'PriceRatingRelationship', 'TotalReviews', 'TotalSales_review', 'AvgRating_review', 'HighRatingCount', 'ReviewToSalesRatio', 'CustomerEngagementLevel']
+2024-12-19 12:25:23,060 - __main__ - INFO - Created advanced features. Shape: (25, 44)
+2024-12-19 12:25:23,060 - __main__ - INFO - Number of numeric features: 23
+2024-12-19 12:25:23,060 - __main__ - INFO - Number of categorical features: 3
+2024-12-19 12:25:23,063 - __main__ - INFO - Training stacked model...
+2024-12-19 12:25:23,102 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:23,118 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:23,124 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:23,131 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:23,139 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:23,147 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:23,155 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:23,163 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:23,169 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:23,176 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:23,183 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:23,193 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:23,207 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:23,218 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:23,246 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:23,257 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:23,289 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:24,854 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-19 12:25:24,856 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:24,856 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-19 12:25:24,859 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:25:26,079 - __main__ - INFO - Model Performance:
+2024-12-19 12:25:26,079 - __main__ - INFO - R² score: 0.9832
+2024-12-19 12:25:26,079 - __main__ - INFO - MSE: 5020.8544
+2024-12-19 12:25:26,079 - __main__ - INFO - RMSE: 70.8580
+2024-12-19 12:25:26,079 - __main__ - INFO - MAE: 60.7211
+2024-12-19 12:25:26,080 - __main__ - WARNING - Feature importance length mismatch: 3 vs 53
+2024-12-19 12:25:26,081 - __main__ - INFO - 
+Top 10 Most Important Features:
+2024-12-19 12:25:26,081 - __main__ - INFO -                  feature  importance  importance_percentage
+1  AvgDiscountPercentage    0.541399              54.139880
+0           AveragePrice    0.408668              40.866799
+2              AvgRating    0.049933               4.993321
+2024-12-19 12:25:26,197 - __main__ - INFO - Model saved to /home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/src/models/training/trained_models/sales_predictor.joblib
+2024-12-19 12:25:26,586 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:35,052 - __main__ - INFO - Starting enhanced model training process...
+2024-12-19 12:26:43,362 - __main__ - INFO - Successfully loaded tables:
+2024-12-19 12:26:43,362 - __main__ - INFO - Revenue: (25, 6)
+2024-12-19 12:26:43,363 - __main__ - INFO - Discount: (25, 7)
+2024-12-19 12:26:43,363 - __main__ - INFO - Price Correlation: (25, 6)
+2024-12-19 12:26:43,363 - __main__ - INFO - Reviews: (25, 7)
+2024-12-19 12:26:43,363 - __main__ - INFO - Found categories: ['ART AND CRAFTING MATERIALS', 'BATH AND BODY', 'BEDSHEETS', 'BICYCLES', 'BLANKETS', 'BOOKS', 'CANDLES', 'CLOTHING', 'COATS AND JACKETS', 'COOKWARE', 'DRINKWARE', 'ELECTRONICS', 'HOME & KITCHEN', 'MAKEUP', 'MOBILE PHONE ACCESSORIES', 'MOTOR VEHICLE PARTS', 'NAIL CARE', 'PERFUME AND COLOGNE', 'POSTERS AND ARTWORK', 'SKIN CARE', 'SOCKS', 'TOYS & GAMES', 'UNDERWEAR', 'VITAMINS AND SUPPLEMENTS', 'WINE']
+2024-12-19 12:26:43,368 - __main__ - INFO - Final merged dataset shape: (25, 23)
+2024-12-19 12:26:43,368 - __main__ - INFO - Available columns: ['Category', 'TotalRevenue', 'TotalSales', 'AveragePrice', 'ProductCount', 'AvgDiscountPercentage', 'AvgDiscountPercentage_disc', 'TotalDiscountedRevenue', 'PotentialRevenue', 'AvgSales', 'RevenueLossFromDiscount', 'DiscountROI', 'PriceRatingCorrelation', 'AvgPrice', 'AvgRating', 'AvgReviews', 'PriceRatingRelationship', 'TotalReviews', 'TotalSales_review', 'AvgRating_review', 'HighRatingCount', 'ReviewToSalesRatio', 'CustomerEngagementLevel']
+2024-12-19 12:26:43,539 - __main__ - INFO - Created advanced features. Shape: (25, 44)
+2024-12-19 12:26:43,539 - __main__ - INFO - Number of numeric features: 23
+2024-12-19 12:26:43,539 - __main__ - INFO - Number of categorical features: 3
+2024-12-19 12:26:43,541 - __main__ - INFO - Training stacked model...
+2024-12-19 12:26:43,568 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:43,580 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:43,585 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:43,590 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:43,596 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:43,602 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:43,607 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:43,613 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:43,620 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:43,627 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:43,634 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:43,642 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:43,660 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:43,670 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:43,680 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:43,687 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:43,690 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:43,802 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-19 12:26:43,804 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:43,804 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-19 12:26:43,830 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:26:50,171 - __main__ - INFO - Model Performance:
+2024-12-19 12:26:50,171 - __main__ - INFO - R² score: 0.9832
+2024-12-19 12:26:50,171 - __main__ - INFO - MSE: 5020.8544
+2024-12-19 12:26:50,171 - __main__ - INFO - RMSE: 70.8580
+2024-12-19 12:26:50,171 - __main__ - INFO - MAE: 60.7211
+2024-12-19 12:26:50,172 - __main__ - WARNING - Feature importance length mismatch: 3 vs 53
+2024-12-19 12:26:50,174 - __main__ - INFO - 
+Top 10 Most Important Features:
+2024-12-19 12:26:50,174 - __main__ - INFO -                  feature  importance  importance_percentage
+1  AvgDiscountPercentage    0.541399              54.139880
+0           AveragePrice    0.408668              40.866799
+2              AvgRating    0.049933               4.993321
+2024-12-19 12:26:50,332 - __main__ - INFO - Model saved to /home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/src/models/training/trained_models/sales_predictor.joblib
+2024-12-19 12:26:50,717 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:27:44,378 - __main__ - INFO - Starting enhanced model training process...
+2024-12-19 12:27:57,420 - __main__ - INFO - Successfully loaded tables:
+2024-12-19 12:27:57,421 - __main__ - INFO - Revenue: (25, 6)
+2024-12-19 12:27:57,421 - __main__ - INFO - Discount: (25, 7)
+2024-12-19 12:27:57,421 - __main__ - INFO - Price Correlation: (25, 6)
+2024-12-19 12:27:57,421 - __main__ - INFO - Reviews: (25, 7)
+2024-12-19 12:27:57,422 - __main__ - INFO - Found categories: ['ART AND CRAFTING MATERIALS', 'BATH AND BODY', 'BEDSHEETS', 'BICYCLES', 'BLANKETS', 'BOOKS', 'CANDLES', 'CLOTHING', 'COATS AND JACKETS', 'COOKWARE', 'DRINKWARE', 'ELECTRONICS', 'HOME & KITCHEN', 'MAKEUP', 'MOBILE PHONE ACCESSORIES', 'MOTOR VEHICLE PARTS', 'NAIL CARE', 'PERFUME AND COLOGNE', 'POSTERS AND ARTWORK', 'SKIN CARE', 'SOCKS', 'TOYS & GAMES', 'UNDERWEAR', 'VITAMINS AND SUPPLEMENTS', 'WINE']
+2024-12-19 12:27:57,428 - __main__ - INFO - Final merged dataset shape: (25, 23)
+2024-12-19 12:27:57,428 - __main__ - INFO - Available columns: ['Category', 'TotalRevenue', 'TotalSales', 'AveragePrice', 'ProductCount', 'AvgDiscountPercentage', 'AvgDiscountPercentage_disc', 'TotalDiscountedRevenue', 'PotentialRevenue', 'AvgSales', 'RevenueLossFromDiscount', 'DiscountROI', 'PriceRatingCorrelation', 'AvgPrice', 'AvgRating', 'AvgReviews', 'PriceRatingRelationship', 'TotalReviews', 'TotalSales_review', 'AvgRating_review', 'HighRatingCount', 'ReviewToSalesRatio', 'CustomerEngagementLevel']
+2024-12-19 12:27:57,668 - __main__ - INFO - Created advanced features. Shape: (25, 44)
+2024-12-19 12:27:57,668 - __main__ - INFO - Number of numeric features: 23
+2024-12-19 12:27:57,668 - __main__ - INFO - Number of categorical features: 3
+2024-12-19 12:27:57,671 - __main__ - INFO - Training stacked model...
+2024-12-19 12:27:57,709 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:27:57,728 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:27:57,734 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:27:57,741 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:27:57,742 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-19 12:27:57,753 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:27:57,763 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-19 12:27:57,788 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:27:57,883 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:27:57,909 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:27:57,919 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:27:57,949 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:27:57,960 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:27:57,979 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:27:58,853 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-19 12:27:58,854 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:27:58,854 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-19 12:27:58,856 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:28:01,361 - __main__ - INFO - Model Performance:
+2024-12-19 12:28:01,361 - __main__ - INFO - R² score: 0.9832
+2024-12-19 12:28:01,361 - __main__ - INFO - MSE: 5020.8544
+2024-12-19 12:28:01,361 - __main__ - INFO - RMSE: 70.8580
+2024-12-19 12:28:01,361 - __main__ - INFO - MAE: 60.7211
+2024-12-19 12:28:01,363 - __main__ - WARNING - Feature importance length mismatch: 3 vs 53
+2024-12-19 12:28:01,364 - __main__ - INFO - 
+Top 10 Most Important Features:
+2024-12-19 12:28:01,365 - __main__ - INFO -                  feature  importance  importance_percentage
+1  AvgDiscountPercentage    0.541399              54.139880
+0           AveragePrice    0.408668              40.866799
+2              AvgRating    0.049933               4.993321
+2024-12-19 12:28:01,531 - __main__ - INFO - Model saved to /home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/src/models/training/trained_models/sales_predictor.joblib
+2024-12-19 12:28:02,105 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:00,009 - __main__ - INFO - Starting enhanced model training process...
+2024-12-19 12:29:12,925 - __main__ - INFO - Successfully loaded tables:
+2024-12-19 12:29:12,925 - __main__ - INFO - Revenue: (25, 6)
+2024-12-19 12:29:12,925 - __main__ - INFO - Discount: (25, 7)
+2024-12-19 12:29:12,925 - __main__ - INFO - Price Correlation: (25, 6)
+2024-12-19 12:29:12,926 - __main__ - INFO - Reviews: (25, 7)
+2024-12-19 12:29:12,926 - __main__ - INFO - Found categories: ['ART AND CRAFTING MATERIALS', 'BATH AND BODY', 'BEDSHEETS', 'BICYCLES', 'BLANKETS', 'BOOKS', 'CANDLES', 'CLOTHING', 'COATS AND JACKETS', 'COOKWARE', 'DRINKWARE', 'ELECTRONICS', 'HOME & KITCHEN', 'MAKEUP', 'MOBILE PHONE ACCESSORIES', 'MOTOR VEHICLE PARTS', 'NAIL CARE', 'PERFUME AND COLOGNE', 'POSTERS AND ARTWORK', 'SKIN CARE', 'SOCKS', 'TOYS & GAMES', 'UNDERWEAR', 'VITAMINS AND SUPPLEMENTS', 'WINE']
+2024-12-19 12:29:12,931 - __main__ - INFO - Final merged dataset shape: (25, 23)
+2024-12-19 12:29:12,931 - __main__ - INFO - Available columns: ['Category', 'TotalRevenue', 'TotalSales', 'AveragePrice', 'ProductCount', 'AvgDiscountPercentage', 'AvgDiscountPercentage_disc', 'TotalDiscountedRevenue', 'PotentialRevenue', 'AvgSales', 'RevenueLossFromDiscount', 'DiscountROI', 'PriceRatingCorrelation', 'AvgPrice', 'AvgRating', 'AvgReviews', 'PriceRatingRelationship', 'TotalReviews', 'TotalSales_review', 'AvgRating_review', 'HighRatingCount', 'ReviewToSalesRatio', 'CustomerEngagementLevel']
+2024-12-19 12:29:13,020 - __main__ - INFO - Created advanced features. Shape: (25, 44)
+2024-12-19 12:29:13,020 - __main__ - INFO - Number of numeric features: 23
+2024-12-19 12:29:13,020 - __main__ - INFO - Number of categorical features: 3
+2024-12-19 12:29:13,024 - __main__ - INFO - Training stacked model...
+2024-12-19 12:29:13,052 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:13,066 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:13,073 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:13,079 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:13,088 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:13,097 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:13,114 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:13,126 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:13,136 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:13,143 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:13,151 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:13,183 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:13,189 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:13,200 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:13,210 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:13,213 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:13,234 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:13,394 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-19 12:29:13,396 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:13,396 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-19 12:29:13,423 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:29:15,999 - __main__ - INFO - Model Performance:
+2024-12-19 12:29:15,999 - __main__ - INFO - R² score: 0.9832
+2024-12-19 12:29:16,000 - __main__ - INFO - MSE: 5020.8544
+2024-12-19 12:29:16,000 - __main__ - INFO - RMSE: 70.8580
+2024-12-19 12:29:16,000 - __main__ - INFO - MAE: 60.7211
+2024-12-19 12:29:16,001 - __main__ - WARNING - Feature importance length mismatch: 3 vs 53
+2024-12-19 12:29:16,002 - __main__ - INFO - 
+Top 10 Most Important Features:
+2024-12-19 12:29:16,002 - __main__ - INFO -                  feature  importance  importance_percentage
+1  AvgDiscountPercentage    0.541399              54.139880
+0           AveragePrice    0.408668              40.866799
+2              AvgRating    0.049933               4.993321
+2024-12-19 12:29:16,121 - __main__ - INFO - Model saved to /home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/src/models/training/trained_models/sales_predictor.joblib
+2024-12-19 12:29:16,460 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:10,845 - __main__ - INFO - Starting enhanced model training process...
+2024-12-19 12:30:22,309 - __main__ - INFO - Successfully loaded tables:
+2024-12-19 12:30:22,309 - __main__ - INFO - Revenue: (25, 6)
+2024-12-19 12:30:22,310 - __main__ - INFO - Discount: (25, 7)
+2024-12-19 12:30:22,310 - __main__ - INFO - Price Correlation: (25, 6)
+2024-12-19 12:30:22,310 - __main__ - INFO - Reviews: (25, 7)
+2024-12-19 12:30:22,311 - __main__ - INFO - Found categories: ['ART AND CRAFTING MATERIALS', 'BATH AND BODY', 'BEDSHEETS', 'BICYCLES', 'BLANKETS', 'BOOKS', 'CANDLES', 'CLOTHING', 'COATS AND JACKETS', 'COOKWARE', 'DRINKWARE', 'ELECTRONICS', 'HOME & KITCHEN', 'MAKEUP', 'MOBILE PHONE ACCESSORIES', 'MOTOR VEHICLE PARTS', 'NAIL CARE', 'PERFUME AND COLOGNE', 'POSTERS AND ARTWORK', 'SKIN CARE', 'SOCKS', 'TOYS & GAMES', 'UNDERWEAR', 'VITAMINS AND SUPPLEMENTS', 'WINE']
+2024-12-19 12:30:22,319 - __main__ - INFO - Final merged dataset shape: (25, 23)
+2024-12-19 12:30:22,319 - __main__ - INFO - Available columns: ['Category', 'TotalRevenue', 'TotalSales', 'AveragePrice', 'ProductCount', 'AvgDiscountPercentage', 'AvgDiscountPercentage_disc', 'TotalDiscountedRevenue', 'PotentialRevenue', 'AvgSales', 'RevenueLossFromDiscount', 'DiscountROI', 'PriceRatingCorrelation', 'AvgPrice', 'AvgRating', 'AvgReviews', 'PriceRatingRelationship', 'TotalReviews', 'TotalSales_review', 'AvgRating_review', 'HighRatingCount', 'ReviewToSalesRatio', 'CustomerEngagementLevel']
+2024-12-19 12:30:22,408 - __main__ - INFO - Created advanced features. Shape: (25, 44)
+2024-12-19 12:30:22,409 - __main__ - INFO - Number of numeric features: 23
+2024-12-19 12:30:22,409 - __main__ - INFO - Number of categorical features: 3
+2024-12-19 12:30:22,411 - __main__ - INFO - Training stacked model...
+2024-12-19 12:30:22,447 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:22,460 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:22,465 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:22,471 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:22,481 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:22,487 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:22,494 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:22,501 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:22,508 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:22,519 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:22,531 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:22,542 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:22,568 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:22,599 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:22,614 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:22,628 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:22,649 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:24,334 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-19 12:30:24,336 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:24,336 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-19 12:30:24,339 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:30:25,700 - __main__ - INFO - Model Performance:
+2024-12-19 12:30:25,700 - __main__ - INFO - R² score: 0.9832
+2024-12-19 12:30:25,701 - __main__ - INFO - MSE: 5020.8544
+2024-12-19 12:30:25,701 - __main__ - INFO - RMSE: 70.8580
+2024-12-19 12:30:25,701 - __main__ - INFO - MAE: 60.7211
+2024-12-19 12:30:25,702 - __main__ - WARNING - Feature importance length mismatch: 3 vs 53
+2024-12-19 12:30:25,704 - __main__ - INFO - 
+Top 10 Most Important Features:
+2024-12-19 12:30:25,705 - __main__ - INFO -                  feature  importance  importance_percentage
+1  AvgDiscountPercentage    0.541399              54.139880
+0           AveragePrice    0.408668              40.866799
+2              AvgRating    0.049933               4.993321
+2024-12-19 12:30:25,859 - __main__ - INFO - Model saved to /home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/src/models/training/trained_models/sales_predictor.joblib
+2024-12-19 12:30:26,279 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:18,508 - __main__ - INFO - Starting enhanced model training process...
+2024-12-19 12:31:30,104 - __main__ - INFO - Successfully loaded tables:
+2024-12-19 12:31:30,104 - __main__ - INFO - Revenue: (25, 6)
+2024-12-19 12:31:30,104 - __main__ - INFO - Discount: (25, 7)
+2024-12-19 12:31:30,104 - __main__ - INFO - Price Correlation: (25, 6)
+2024-12-19 12:31:30,105 - __main__ - INFO - Reviews: (25, 7)
+2024-12-19 12:31:30,105 - __main__ - INFO - Found categories: ['ART AND CRAFTING MATERIALS', 'BATH AND BODY', 'BEDSHEETS', 'BICYCLES', 'BLANKETS', 'BOOKS', 'CANDLES', 'CLOTHING', 'COATS AND JACKETS', 'COOKWARE', 'DRINKWARE', 'ELECTRONICS', 'HOME & KITCHEN', 'MAKEUP', 'MOBILE PHONE ACCESSORIES', 'MOTOR VEHICLE PARTS', 'NAIL CARE', 'PERFUME AND COLOGNE', 'POSTERS AND ARTWORK', 'SKIN CARE', 'SOCKS', 'TOYS & GAMES', 'UNDERWEAR', 'VITAMINS AND SUPPLEMENTS', 'WINE']
+2024-12-19 12:31:30,117 - __main__ - INFO - Final merged dataset shape: (25, 23)
+2024-12-19 12:31:30,117 - __main__ - INFO - Available columns: ['Category', 'TotalRevenue', 'TotalSales', 'AveragePrice', 'ProductCount', 'AvgDiscountPercentage', 'AvgDiscountPercentage_disc', 'TotalDiscountedRevenue', 'PotentialRevenue', 'AvgSales', 'RevenueLossFromDiscount', 'DiscountROI', 'PriceRatingCorrelation', 'AvgPrice', 'AvgRating', 'AvgReviews', 'PriceRatingRelationship', 'TotalReviews', 'TotalSales_review', 'AvgRating_review', 'HighRatingCount', 'ReviewToSalesRatio', 'CustomerEngagementLevel']
+2024-12-19 12:31:30,502 - __main__ - INFO - Created advanced features. Shape: (25, 44)
+2024-12-19 12:31:30,502 - __main__ - INFO - Number of numeric features: 23
+2024-12-19 12:31:30,502 - __main__ - INFO - Number of categorical features: 3
+2024-12-19 12:31:30,505 - __main__ - INFO - Training stacked model...
+2024-12-19 12:31:30,535 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:30,546 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:30,552 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:30,559 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:30,565 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:30,571 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:30,576 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:30,582 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:30,588 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:30,595 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:30,600 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:30,608 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:30,621 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:30,654 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:30,664 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:30,664 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:30,676 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:32,374 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-19 12:31:32,378 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:32,378 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-19 12:31:32,391 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:31:34,773 - __main__ - INFO - Model Performance:
+2024-12-19 12:31:34,774 - __main__ - INFO - R² score: 0.9832
+2024-12-19 12:31:34,774 - __main__ - INFO - MSE: 5020.8544
+2024-12-19 12:31:34,774 - __main__ - INFO - RMSE: 70.8580
+2024-12-19 12:31:34,774 - __main__ - INFO - MAE: 60.7211
+2024-12-19 12:31:34,775 - __main__ - WARNING - Feature importance length mismatch: 3 vs 53
+2024-12-19 12:31:34,777 - __main__ - INFO - 
+Top 10 Most Important Features:
+2024-12-19 12:31:34,778 - __main__ - INFO -                  feature  importance  importance_percentage
+1  AvgDiscountPercentage    0.541399              54.139880
+0           AveragePrice    0.408668              40.866799
+2              AvgRating    0.049933               4.993321
+2024-12-19 12:31:34,935 - __main__ - INFO - Model saved to /home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/src/models/training/trained_models/sales_predictor.joblib
+2024-12-19 12:31:35,369 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:32:29,993 - __main__ - INFO - Starting enhanced model training process...
+2024-12-19 12:32:40,338 - __main__ - INFO - Successfully loaded tables:
+2024-12-19 12:32:40,338 - __main__ - INFO - Revenue: (25, 6)
+2024-12-19 12:32:40,338 - __main__ - INFO - Discount: (25, 7)
+2024-12-19 12:32:40,339 - __main__ - INFO - Price Correlation: (25, 6)
+2024-12-19 12:32:40,339 - __main__ - INFO - Reviews: (25, 7)
+2024-12-19 12:32:40,343 - __main__ - INFO - Found categories: ['ART AND CRAFTING MATERIALS', 'BATH AND BODY', 'BEDSHEETS', 'BICYCLES', 'BLANKETS', 'BOOKS', 'CANDLES', 'CLOTHING', 'COATS AND JACKETS', 'COOKWARE', 'DRINKWARE', 'ELECTRONICS', 'HOME & KITCHEN', 'MAKEUP', 'MOBILE PHONE ACCESSORIES', 'MOTOR VEHICLE PARTS', 'NAIL CARE', 'PERFUME AND COLOGNE', 'POSTERS AND ARTWORK', 'SKIN CARE', 'SOCKS', 'TOYS & GAMES', 'UNDERWEAR', 'VITAMINS AND SUPPLEMENTS', 'WINE']
+2024-12-19 12:32:40,363 - __main__ - INFO - Final merged dataset shape: (25, 23)
+2024-12-19 12:32:40,363 - __main__ - INFO - Available columns: ['Category', 'TotalRevenue', 'TotalSales', 'AveragePrice', 'ProductCount', 'AvgDiscountPercentage', 'AvgDiscountPercentage_disc', 'TotalDiscountedRevenue', 'PotentialRevenue', 'AvgSales', 'RevenueLossFromDiscount', 'DiscountROI', 'PriceRatingCorrelation', 'AvgPrice', 'AvgRating', 'AvgReviews', 'PriceRatingRelationship', 'TotalReviews', 'TotalSales_review', 'AvgRating_review', 'HighRatingCount', 'ReviewToSalesRatio', 'CustomerEngagementLevel']
+2024-12-19 12:32:40,993 - __main__ - INFO - Created advanced features. Shape: (25, 44)
+2024-12-19 12:32:40,993 - __main__ - INFO - Number of numeric features: 23
+2024-12-19 12:32:40,993 - __main__ - INFO - Number of categorical features: 3
+2024-12-19 12:32:40,998 - __main__ - INFO - Training stacked model...
+2024-12-19 12:32:41,038 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:32:41,052 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:32:41,058 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:32:41,065 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:32:41,072 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:32:41,079 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:32:41,087 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:32:41,095 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:32:41,103 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:32:41,111 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:32:41,120 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:32:41,128 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:32:41,145 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:32:41,151 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-19 12:32:41,156 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:32:41,156 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:32:41,156 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-19 12:32:41,198 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:32:44,753 - __main__ - INFO - Model Performance:
+2024-12-19 12:32:44,753 - __main__ - INFO - R² score: 0.9832
+2024-12-19 12:32:44,754 - __main__ - INFO - MSE: 5020.8544
+2024-12-19 12:32:44,754 - __main__ - INFO - RMSE: 70.8580
+2024-12-19 12:32:44,754 - __main__ - INFO - MAE: 60.7211
+2024-12-19 12:32:44,755 - __main__ - WARNING - Feature importance length mismatch: 3 vs 53
+2024-12-19 12:32:44,757 - __main__ - INFO - 
+Top 10 Most Important Features:
+2024-12-19 12:32:44,758 - __main__ - INFO -                  feature  importance  importance_percentage
+1  AvgDiscountPercentage    0.541399              54.139880
+0           AveragePrice    0.408668              40.866799
+2              AvgRating    0.049933               4.993321
+2024-12-19 12:32:44,960 - __main__ - INFO - Model saved to /home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/src/models/training/trained_models/sales_predictor.joblib
+2024-12-19 12:32:45,507 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:44,273 - __main__ - INFO - Starting enhanced model training process...
+2024-12-19 12:33:57,503 - __main__ - INFO - Successfully loaded tables:
+2024-12-19 12:33:57,503 - __main__ - INFO - Revenue: (25, 6)
+2024-12-19 12:33:57,504 - __main__ - INFO - Discount: (25, 7)
+2024-12-19 12:33:57,504 - __main__ - INFO - Price Correlation: (25, 6)
+2024-12-19 12:33:57,504 - __main__ - INFO - Reviews: (25, 7)
+2024-12-19 12:33:57,504 - __main__ - INFO - Found categories: ['ART AND CRAFTING MATERIALS', 'BATH AND BODY', 'BEDSHEETS', 'BICYCLES', 'BLANKETS', 'BOOKS', 'CANDLES', 'CLOTHING', 'COATS AND JACKETS', 'COOKWARE', 'DRINKWARE', 'ELECTRONICS', 'HOME & KITCHEN', 'MAKEUP', 'MOBILE PHONE ACCESSORIES', 'MOTOR VEHICLE PARTS', 'NAIL CARE', 'PERFUME AND COLOGNE', 'POSTERS AND ARTWORK', 'SKIN CARE', 'SOCKS', 'TOYS & GAMES', 'UNDERWEAR', 'VITAMINS AND SUPPLEMENTS', 'WINE']
+2024-12-19 12:33:57,511 - __main__ - INFO - Final merged dataset shape: (25, 23)
+2024-12-19 12:33:57,511 - __main__ - INFO - Available columns: ['Category', 'TotalRevenue', 'TotalSales', 'AveragePrice', 'ProductCount', 'AvgDiscountPercentage', 'AvgDiscountPercentage_disc', 'TotalDiscountedRevenue', 'PotentialRevenue', 'AvgSales', 'RevenueLossFromDiscount', 'DiscountROI', 'PriceRatingCorrelation', 'AvgPrice', 'AvgRating', 'AvgReviews', 'PriceRatingRelationship', 'TotalReviews', 'TotalSales_review', 'AvgRating_review', 'HighRatingCount', 'ReviewToSalesRatio', 'CustomerEngagementLevel']
+2024-12-19 12:33:57,862 - __main__ - INFO - Created advanced features. Shape: (25, 44)
+2024-12-19 12:33:57,863 - __main__ - INFO - Number of numeric features: 23
+2024-12-19 12:33:57,863 - __main__ - INFO - Number of categorical features: 3
+2024-12-19 12:33:57,871 - __main__ - INFO - Training stacked model...
+2024-12-19 12:33:57,934 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:57,957 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:57,966 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:57,974 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:57,997 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:58,005 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:58,010 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:58,033 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:58,044 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:58,059 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:58,060 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:58,073 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:58,109 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:58,124 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:58,173 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:58,224 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:58,231 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:58,440 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-19 12:33:58,442 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:33:58,443 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-19 12:33:58,468 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:34:05,155 - __main__ - INFO - Model Performance:
+2024-12-19 12:34:05,155 - __main__ - INFO - R² score: 0.9832
+2024-12-19 12:34:05,156 - __main__ - INFO - MSE: 5020.8544
+2024-12-19 12:34:05,156 - __main__ - INFO - RMSE: 70.8580
+2024-12-19 12:34:05,156 - __main__ - INFO - MAE: 60.7211
+2024-12-19 12:34:05,158 - __main__ - WARNING - Feature importance length mismatch: 3 vs 53
+2024-12-19 12:34:05,160 - __main__ - INFO - 
+Top 10 Most Important Features:
+2024-12-19 12:34:05,160 - __main__ - INFO -                  feature  importance  importance_percentage
+1  AvgDiscountPercentage    0.541399              54.139880
+0           AveragePrice    0.408668              40.866799
+2              AvgRating    0.049933               4.993321
+2024-12-19 12:34:05,299 - __main__ - INFO - Model saved to /home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/src/models/training/trained_models/sales_predictor.joblib
+2024-12-19 12:34:05,696 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:34:53,900 - __main__ - INFO - Starting enhanced model training process...
+2024-12-19 12:35:04,673 - __main__ - INFO - Successfully loaded tables:
+2024-12-19 12:35:04,673 - __main__ - INFO - Revenue: (25, 6)
+2024-12-19 12:35:04,673 - __main__ - INFO - Discount: (25, 7)
+2024-12-19 12:35:04,674 - __main__ - INFO - Price Correlation: (25, 6)
+2024-12-19 12:35:04,674 - __main__ - INFO - Reviews: (25, 7)
+2024-12-19 12:35:04,674 - __main__ - INFO - Found categories: ['ART AND CRAFTING MATERIALS', 'BATH AND BODY', 'BEDSHEETS', 'BICYCLES', 'BLANKETS', 'BOOKS', 'CANDLES', 'CLOTHING', 'COATS AND JACKETS', 'COOKWARE', 'DRINKWARE', 'ELECTRONICS', 'HOME & KITCHEN', 'MAKEUP', 'MOBILE PHONE ACCESSORIES', 'MOTOR VEHICLE PARTS', 'NAIL CARE', 'PERFUME AND COLOGNE', 'POSTERS AND ARTWORK', 'SKIN CARE', 'SOCKS', 'TOYS & GAMES', 'UNDERWEAR', 'VITAMINS AND SUPPLEMENTS', 'WINE']
+2024-12-19 12:35:04,680 - __main__ - INFO - Final merged dataset shape: (25, 23)
+2024-12-19 12:35:04,680 - __main__ - INFO - Available columns: ['Category', 'TotalRevenue', 'TotalSales', 'AveragePrice', 'ProductCount', 'AvgDiscountPercentage', 'AvgDiscountPercentage_disc', 'TotalDiscountedRevenue', 'PotentialRevenue', 'AvgSales', 'RevenueLossFromDiscount', 'DiscountROI', 'PriceRatingCorrelation', 'AvgPrice', 'AvgRating', 'AvgReviews', 'PriceRatingRelationship', 'TotalReviews', 'TotalSales_review', 'AvgRating_review', 'HighRatingCount', 'ReviewToSalesRatio', 'CustomerEngagementLevel']
+2024-12-19 12:35:05,192 - __main__ - INFO - Created advanced features. Shape: (25, 44)
+2024-12-19 12:35:05,192 - __main__ - INFO - Number of numeric features: 23
+2024-12-19 12:35:05,193 - __main__ - INFO - Number of categorical features: 3
+2024-12-19 12:35:05,198 - __main__ - INFO - Training stacked model...
+2024-12-19 12:35:06,449 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:06,466 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:06,473 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:06,481 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:06,488 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:06,503 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:06,511 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:06,541 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:06,553 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:06,554 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:06,568 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:06,584 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:06,584 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:06,604 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:08,738 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:08,763 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:08,770 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:08,778 - py4j.clientserver - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-19 12:35:08,781 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:08,781 - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/venv/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-19 12:35:08,788 - py4j.clientserver - INFO - Closing down clientserver connection
+2024-12-19 12:35:13,290 - __main__ - INFO - Model Performance:
+2024-12-19 12:35:13,291 - __main__ - INFO - R² score: 0.9832
+2024-12-19 12:35:13,291 - __main__ - INFO - MSE: 5020.8544
+2024-12-19 12:35:13,291 - __main__ - INFO - RMSE: 70.8580
+2024-12-19 12:35:13,291 - __main__ - INFO - MAE: 60.7211
+2024-12-19 12:35:13,292 - __main__ - WARNING - Feature importance length mismatch: 3 vs 53
+2024-12-19 12:35:13,294 - __main__ - INFO - 
+Top 10 Most Important Features:
+2024-12-19 12:35:13,294 - __main__ - INFO -                  feature  importance  importance_percentage
+1  AvgDiscountPercentage    0.541399              54.139880
+0           AveragePrice    0.408668              40.866799
+2              AvgRating    0.049933               4.993321
+2024-12-19 12:35:13,456 - __main__ - INFO - Model saved to /home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/src/models/training/trained_models/sales_predictor.joblib
+2024-12-19 12:35:13,929 - py4j.clientserver - INFO - Closing down clientserver connection

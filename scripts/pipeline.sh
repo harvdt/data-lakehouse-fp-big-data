@@ -31,17 +31,4 @@ python3.11 $CONSUMER_SCRIPT &
 CONSUMER_PID=$!
 check_start "Consumer"
 
-# # Start bronze to silver transformation
-python3.11 $BRONZE_TO_SILVER_SCRIPT &
-BRONZE_TO_SILVER_PID=$!
-check_start "Bronze to Silver transformation"
-
-# # Start silver to gold transformation
-python3.11 $SILVER_TO_GOLD_SCRIPT &
-SILVER_TO_GOLD_PID=$!
-check_start "Silver to Gold transformation"
-
-# Start data pre-processing & create the models
-bash scripts/model.sh
-
 wait

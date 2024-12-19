@@ -1,0 +1,1001 @@
+ProductID,ProductName,Category,Price,Rating,NumReviews,StockQuantity,Discount,Sales,DateAdded,City
+1,Body Scrub,Bath and body,411.66,1.8,3640,966,0.24,525,2024-02-08,Fort Worth
+2,Toner,Skin care,338.14,4.6,4083,883,0.5,1419,2024-05-02,Worcester
+3,Screen Protector,Mobile phone accessories,143.7,1.2,190,453,0.31,1760,2024-01-12,Rochester
+4,Shower Gel,Bath and body,93.6,1.5,2778,370,0.36,1345,2023-10-18,Providence
+5,Sparkling Wine,Wine,450.36,2.5,515,600,0.34,1753,2023-11-27,Memphis
+6,Denim Jacket,Coats and jackets,430.19,1.3,526,757,0.48,1796,2024-05-02,Oklahoma City
+7,Rose Wine,Wine,43.5,4.1,3409,489,0.37,894,2024-03-20,Provo
+8,Foundation,Makeup,25.86,2.1,3366,745,0.44,1440,2024-03-14,Des Moines
+9,Screen Protector,Mobile phone accessories,312.25,5.0,1731,895,0.29,540,2024-01-29,Long Beach
+10,Frying Pan,Cookware,248.9,3.9,2082,79,0.49,1985,2024-02-27,Oakland
+11,Jeans,Clothing,427.02,1.6,764,893,0.35,1701,2024-02-23,Louisville
+12,Boxers,Underwear,302.58,1.7,585,575,0.04,1569,2023-11-28,Boston
+13,Brake Pads,Motor vehicle parts,423.85,1.8,1895,184,0.5,1293,2023-09-12,Colorado Springs
+14,Oil Filter,Motor vehicle parts,305.02,2.6,4774,982,0.34,940,2024-04-30,Little Rock
+15,Leather Jacket,Coats and jackets,150.73,3.3,436,439,0.29,58,2024-06-11,Akron
+16,Headphones,Electronics,361.37,2.5,2855,700,0.02,1525,2023-08-08,Birmingham
+17,Vitamin D,Vitamins and supplements,70.74,2.1,1172,74,0.44,513,2023-08-21,Tucson
+18,Bath Salts,Bath and body,167.91,2.3,2200,600,0.41,144,2023-11-28,San Jose
+19,Pillar Candle,Candles,235.82,1.8,1437,225,0.4,1976,2023-07-23,Oakland
+20,Blush,Makeup,365.0,4.3,3533,644,0.09,322,2024-05-10,Detroit
+21,Body Spray,Perfume and cologne,488.75,2.7,2136,280,0.03,556,2023-12-26,Birmingham
+22,Electric Blanket,Blankets,250.78,1.5,1222,168,0.27,1749,2024-02-28,Bridgeport
+23,Spark Plugs,Motor vehicle parts,141.35,2.5,4089,64,0.46,1514,2024-03-14,Pittsburgh
+24,Mascara,Makeup,320.67,2.8,2600,883,0.4,96,2024-02-29,Virginia Beach
+25,Novel,Books,298.63,1.0,2294,215,0.36,953,2023-09-06,Palm Bay
+26,Shower Gel,Bath and body,377.49,4.6,3827,209,0.22,1143,2023-10-27,Virginia Beach
+27,Fish Oil,Vitamins and supplements,289.24,1.6,2404,332,0.25,895,2024-06-08,New Haven
+28,Multivitamin,Vitamins and supplements,319.72,1.6,1434,390,0.46,1589,2024-02-23,Riverside
+29,Brushes,Art and crafting materials,153.37,2.7,2683,822,0.24,196,2023-10-10,Boston
+30,Phone Case,Mobile phone accessories,320.09,3.1,4137,138,0.14,1797,2023-06-24,Queens
+31,Cleanser,Skin care,101.34,1.2,4434,988,0.39,773,2023-10-02,Charleston
+32,Dutch Oven,Cookware,125.59,2.9,3145,294,0.3,1407,2023-08-01,Bonita Springs
+33,Digital Art,Posters and artwork,207.18,3.5,1147,272,0.25,1275,2024-01-12,Denton
+34,Body Lotion,Bath and body,347.74,4.1,4063,563,0.33,1594,2023-09-15,Hartford
+35,Jeans,Clothing,122.57,1.9,3591,425,0.5,214,2023-06-18,Ogden
+36,Charger,Mobile phone accessories,378.61,2.3,4663,656,0.18,1203,2024-03-25,Mission Viejo
+37,Sunscreen,Skin care,194.24,3.4,3760,473,0.49,1337,2024-04-20,Miami
+38,Novel,Books,342.61,1.6,713,60,0.26,1412,2024-05-23,Austin
+39,Beeswax Candle,Candles,334.0,4.4,742,130,0.44,605,2024-03-29,Tulsa
+40,Sparkling Wine,Wine,84.37,3.9,3549,858,0.17,386,2024-03-26,Bonita Springs
+41,Brushes,Art and crafting materials,160.08,2.7,623,73,0.04,929,2024-02-12,Oklahoma City
+42,T-Shirt,Clothing,65.8,3.0,2121,159,0.2,425,2023-10-08,Kansas City
+43,Eau de Parfum,Perfume and cologne,484.31,4.6,2029,639,0.27,430,2023-06-14,Minneapolis
+44,Rose Wine,Wine,379.99,3.7,2444,640,0.46,681,2024-01-01,Tucson
+45,Brushes,Art and crafting materials,485.74,3.6,4677,817,0.14,1724,2024-05-21,Tucson
+46,Sunscreen,Skin care,492.63,3.5,1272,641,0.18,1928,2023-12-14,Columbus
+47,Car Battery,Motor vehicle parts,33.73,3.4,3110,36,0.06,1341,2023-08-24,Dallas
+48,Body Scrub,Bath and body,258.24,3.8,2819,479,0.04,71,2023-08-12,Raleigh
+49,Grill Pan,Cookware,110.62,4.5,2269,175,0.09,1959,2024-04-07,Queens
+50,Scented Candle,Candles,300.85,1.6,3395,447,0.42,302,2023-10-14,Riverside
+51,Toaster,Home & Kitchen,266.39,4.6,1743,15,0.12,1209,2023-11-09,San Francisco
+52,Weighted Blanket,Blankets,386.25,2.7,2157,532,0.26,1596,2023-06-18,Oklahoma City
+53,Toner,Skin care,475.45,4.4,1725,200,0.0,692,2023-12-02,El Paso
+54,Foundation,Makeup,300.1,1.3,4102,318,0.41,1676,2023-07-31,Little Rock
+55,Rose Wine,Wine,402.14,4.7,3370,147,0.16,1584,2024-04-02,Staten Island
+56,Dutch Oven,Cookware,47.03,3.9,2760,663,0.17,1863,2023-06-29,Springfield
+57,Headphones,Electronics,342.81,3.5,2886,941,0.32,1375,2023-11-03,Tampa
+58,Beeswax Candle,Candles,211.6,3.7,4423,729,0.27,415,2023-10-28,Sacramento
+59,Protein Powder,Vitamins and supplements,157.92,1.9,258,373,0.34,140,2023-07-19,Riverside
+60,Throw Blanket,Blankets,367.71,3.8,1740,439,0.4,1081,2024-01-28,Little Rock
+61,Multivitamin,Vitamins and supplements,130.33,3.4,1146,853,0.37,1826,2024-04-25,Las Vegas
+62,Eau de Toilette,Perfume and cologne,250.65,3.2,1866,520,0.42,1842,2023-08-16,El Paso
+63,Biography,Books,50.52,1.4,1417,13,0.26,510,2023-08-22,Bridgeport
+64,Wool Socks,Socks,53.94,2.8,1082,477,0.11,1183,2024-03-05,Wichita
+65,Tea Cup,Drinkware,109.79,2.0,3012,314,0.33,1488,2024-03-02,Orlando
+66,Scented Candle,Candles,281.5,2.0,2316,635,0.22,1630,2024-03-01,Pittsburgh
+67,Screen Protector,Mobile phone accessories,330.91,4.7,4655,195,0.37,1370,2023-11-19,Mesa
+68,Moisturizer,Skin care,264.37,1.7,2195,411,0.27,1365,2023-08-25,Jacksonville
+69,Dutch Oven,Cookware,256.47,1.6,4206,507,0.21,988,2023-12-18,St. Louis
+70,Blender,Home & Kitchen,144.17,2.6,4683,973,0.16,491,2024-05-18,Miami
+71,Microwave,Home & Kitchen,271.27,4.6,3806,94,0.34,1746,2024-04-04,Little Rock
+72,Eau de Parfum,Perfume and cologne,292.16,2.8,4492,145,0.21,807,2024-02-22,Albany
+73,Body Spray,Perfume and cologne,481.05,3.2,303,34,0.16,1276,2024-03-31,Staten Island
+74,Saucepan,Cookware,91.1,1.9,58,932,0.31,802,2024-01-08,Richmond
+75,Jeans,Clothing,329.76,2.1,3211,119,0.4,1241,2023-06-24,Charleston
+76,Frying Pan,Cookware,416.16,4.7,4892,264,0.49,43,2024-05-30,Virginia Beach
+77,Spark Plugs,Motor vehicle parts,222.85,2.0,1588,606,0.41,1926,2024-05-02,Brooklyn
+78,White Wine,Wine,233.26,4.5,90,505,0.37,774,2023-12-24,Houston
+79,Water Bottle,Drinkware,68.17,2.2,788,328,0.11,982,2024-04-26,Detroit
+80,Foundation,Makeup,379.7,4.9,1527,161,0.05,126,2023-08-27,Cincinnati
+81,Fleece Blanket,Blankets,303.93,2.2,4153,812,0.34,239,2023-09-07,Palm Bay
+82,Laptop,Electronics,161.34,1.7,829,723,0.13,1050,2024-01-20,Oklahoma City
+83,Throw Blanket,Blankets,439.18,4.0,4786,518,0.43,1089,2023-08-15,Phoenix
+84,Jeans,Clothing,90.29,2.7,4486,814,0.1,546,2023-08-16,Albany
+85,Car Battery,Motor vehicle parts,229.73,1.8,1513,158,0.19,1380,2023-11-06,Des Moines
+86,Nail File,Nail care,134.06,4.5,4047,202,0.24,274,2023-11-04,Minneapolis
+87,Shower Gel,Bath and body,440.24,3.3,1021,868,0.37,721,2023-06-16,Charlotte
+88,Cuticle Oil,Nail care,278.8,1.9,2199,420,0.12,1197,2024-05-30,Bronx
+89,Sunscreen,Skin care,491.36,4.2,3610,653,0.06,1137,2024-03-04,Dayton
+90,Knee-High Socks,Socks,377.69,4.1,2746,468,0.4,1791,2023-12-28,Boise
+91,Digital Art,Posters and artwork,243.51,4.9,4402,630,0.2,325,2023-11-09,Hartford
+92,Soy Candle,Candles,33.91,1.2,678,91,0.12,1241,2024-05-13,Columbia
+93,Hybrid Bike,Bicycles,155.24,1.2,1035,755,0.09,1949,2024-05-06,Concord
+94,Rose Wine,Wine,439.9,1.7,2756,221,0.45,11,2024-01-03,Boston
+95,Panties,Underwear,464.15,1.9,187,267,0.25,1151,2024-02-07,Omaha
+96,Microwave,Home & Kitchen,426.43,4.2,2380,11,0.19,468,2024-05-12,Los Angeles
+97,Red Wine,Wine,330.76,1.3,2147,123,0.5,1849,2023-12-04,Pittsburgh
+98,Brushes,Art and crafting materials,391.57,2.3,283,471,0.31,1429,2023-11-03,Seattle
+99,Novel,Books,96.53,2.2,3759,62,0.13,3,2024-02-19,San Jose
+100,Linen Sheets,Bedsheets,69.26,4.8,4812,131,0.15,1022,2024-03-11,Palm Bay
+101,Scented Candle,Candles,387.23,3.5,3312,969,0.44,555,2024-03-11,Memphis
+102,Science Book,Books,497.33,4.1,78,565,0.19,928,2024-03-10,Queens
+103,Moisturizer,Skin care,35.83,2.5,3877,96,0.49,392,2023-07-17,Salt Lake City
+104,Cuticle Oil,Nail care,367.24,4.2,4094,568,0.2,612,2024-04-27,Spokane
+105,Coffee Mug,Drinkware,416.03,1.7,2440,869,0.49,1949,2024-05-30,Buffalo
+106,Body Scrub,Bath and body,440.46,3.7,808,227,0.47,146,2024-06-11,Pittsburgh
+107,Knee-High Socks,Socks,254.37,1.8,1479,366,0.1,159,2024-05-23,Tucson
+108,Road Bike,Bicycles,37.08,2.5,4283,788,0.11,1559,2023-12-12,Ogden
+109,Linen Sheets,Bedsheets,32.58,3.0,966,884,0.12,1018,2023-10-10,Fort Worth
+110,Protein Powder,Vitamins and supplements,282.67,1.0,1060,705,0.0,1634,2023-10-15,Columbus
+111,Road Bike,Bicycles,110.73,3.9,938,615,0.49,548,2023-08-11,San Jose
+112,Biography,Books,167.45,4.5,4868,619,0.2,1101,2024-02-28,New York
+113,T-Shirt,Clothing,338.03,4.6,4497,774,0.34,1422,2023-11-26,Nashville
+114,Canvas,Art and crafting materials,104.28,3.9,4723,749,0.39,125,2024-01-08,Rochester
+115,Coffee Mug,Drinkware,183.3,3.9,4726,36,0.36,1604,2023-08-30,Rochester
+116,T-Shirt,Clothing,214.61,3.3,3611,932,0.37,1051,2024-03-07,San Diego
+117,Board Game,Toys & Games,301.89,2.3,3656,735,0.16,390,2024-06-06,Hartford
+118,Fantasy Book,Books,132.2,1.4,2186,21,0.22,449,2024-05-20,Birmingham
+119,Charger,Mobile phone accessories,418.84,4.4,1750,725,0.14,1175,2023-08-08,Knoxville
+120,Thongs,Underwear,252.93,3.0,3997,442,0.19,1986,2023-11-19,Denver
+121,Laptop,Electronics,204.35,2.8,1840,527,0.08,1787,2023-10-07,Philadelphia
+122,Coffee Maker,Home & Kitchen,399.07,1.3,2883,823,0.11,834,2023-08-13,Seattle
+123,Weighted Blanket,Blankets,292.64,1.1,1620,313,0.44,1394,2023-10-09,Buffalo
+124,Red Wine,Wine,332.48,1.1,786,12,0.47,120,2023-12-04,Portland
+125,Digital Art,Posters and artwork,289.41,3.1,690,956,0.45,1696,2023-11-25,Buffalo
+126,Ankle Socks,Socks,471.34,2.8,2136,731,0.45,406,2024-06-05,Orlando
+127,Biography,Books,125.33,1.8,3802,140,0.4,1862,2023-09-20,Wichita
+128,Action Figure,Toys & Games,302.21,3.3,803,964,0.03,552,2024-04-10,Queens
+129,Headphones,Electronics,344.09,1.3,1963,320,0.27,893,2024-03-01,Long Beach
+130,Fleece Blanket,Blankets,176.46,2.1,1594,517,0.38,1176,2024-04-15,Omaha
+131,Fantasy Book,Books,153.68,4.8,3947,401,0.08,1342,2023-11-01,Toledo
+132,Cotton Socks,Socks,133.85,3.7,2942,940,0.49,1095,2024-02-19,San Jose
+133,T-Shirt,Clothing,393.92,4.9,820,979,0.32,1122,2024-04-01,Cleveland
+134,Briefs,Underwear,30.35,2.9,4399,549,0.03,736,2023-07-06,Little Rock
+135,Cotton Sheets,Bedsheets,450.42,3.4,3008,859,0.21,785,2024-02-12,Portland
+136,Blush,Makeup,123.81,2.4,4262,285,0.42,1248,2024-04-30,Provo
+137,Saucepan,Cookware,86.08,1.1,3478,559,0.46,817,2024-02-20,San Juan
+138,Perfume Oil,Perfume and cologne,108.55,2.3,3743,905,0.34,202,2023-12-01,Rochester
+139,Microwave,Home & Kitchen,90.05,3.8,326,564,0.25,1155,2023-11-24,Cape Coral
+140,Briefs,Underwear,281.19,1.6,3306,569,0.12,359,2023-06-24,Albuquerque
+141,Foundation,Makeup,29.74,3.6,4965,125,0.43,156,2023-06-16,San Antonio
+142,Body Scrub,Bath and body,229.35,3.6,3912,170,0.31,378,2023-12-07,Bakersfield
+143,Pillar Candle,Candles,53.18,1.0,2215,414,0.1,987,2024-05-31,Jacksonville
+144,Science Book,Books,335.84,3.6,2637,756,0.44,77,2024-04-13,San Juan
+145,Soy Candle,Candles,486.27,1.6,2395,700,0.39,1790,2024-02-07,Los Angeles
+146,Smartwatch,Electronics,212.04,1.6,779,518,0.08,102,2023-11-13,Dayton
+147,Multivitamin,Vitamins and supplements,114.26,2.9,4259,80,0.14,470,2024-05-25,St. Louis
+148,Nail Polish,Nail care,168.4,2.8,2939,732,0.03,1184,2024-02-28,Austin
+149,Dutch Oven,Cookware,95.47,3.5,4727,115,0.1,1677,2023-11-29,Tulsa
+150,Fantasy Book,Books,21.03,1.0,1466,493,0.33,1940,2023-07-17,Springfield
+151,Pillar Candle,Candles,378.5,4.5,2436,612,0.27,508,2023-09-21,Cleveland
+152,Throw Blanket,Blankets,172.88,1.8,1713,199,0.06,1235,2024-03-04,Indianapolis
+153,Cotton Sheets,Bedsheets,91.28,2.7,2090,420,0.04,22,2023-09-30,San Antonio
+154,Smartphone,Electronics,425.37,4.5,475,333,0.3,950,2023-07-10,Springfield
+155,Cotton Sheets,Bedsheets,291.5,3.4,1869,559,0.26,930,2024-02-17,Mesa
+156,Action Figure,Toys & Games,401.19,3.3,2654,667,0.01,1107,2024-02-01,Birmingham
+157,Paint Set,Art and crafting materials,167.49,3.6,4841,117,0.48,8,2023-07-05,Louisville
+158,Paint Set,Art and crafting materials,273.67,2.0,807,876,0.07,1460,2023-12-06,Des Moines
+159,Weighted Blanket,Blankets,11.11,3.6,786,659,0.08,1117,2023-08-23,Jacksonville
+160,Car Battery,Motor vehicle parts,457.2,4.0,1431,888,0.02,1347,2024-05-10,Rochester
+161,Smartphone,Electronics,443.42,1.2,1127,497,0.34,912,2024-04-11,Wichita
+162,Laptop,Electronics,147.19,1.2,2348,191,0.44,410,2024-02-04,Denver
+163,Throw Blanket,Blankets,208.09,1.0,1245,194,0.01,1585,2024-02-21,Boise
+164,Phone Case,Mobile phone accessories,43.64,1.6,4463,144,0.32,1792,2024-02-17,Allentown
+165,Sketchbook,Art and crafting materials,236.47,4.9,4384,832,0.46,8,2024-04-19,Omaha
+166,Multivitamin,Vitamins and supplements,72.78,4.4,561,572,0.37,1121,2023-12-18,Charleston
+167,Multivitamin,Vitamins and supplements,106.29,3.4,3214,582,0.33,387,2024-06-06,Providence
+168,Blush,Makeup,232.56,2.3,2073,172,0.44,1483,2024-04-16,Miami
+169,Scented Candle,Candles,90.35,3.6,4777,514,0.37,1964,2024-06-08,Raleigh
+170,Biography,Books,10.11,1.2,3564,400,0.21,512,2023-12-05,San Diego
+171,Protein Powder,Vitamins and supplements,391.37,4.0,732,360,0.28,1769,2024-04-01,Albuquerque
+172,Earbuds,Mobile phone accessories,229.08,1.7,4087,532,0.21,1494,2024-04-02,Dallas
+173,Spark Plugs,Motor vehicle parts,487.66,5.0,3281,732,0.09,11,2024-05-16,Des Moines
+174,Nail File,Nail care,181.93,1.9,2299,476,0.27,995,2023-10-12,Miami
+175,Leather Jacket,Coats and jackets,11.0,3.8,2465,670,0.21,1934,2024-06-10,Pittsburgh
+176,Sweater,Clothing,447.66,3.4,872,749,0.02,761,2023-12-10,Chicago
+177,Water Bottle,Drinkware,420.01,2.1,1629,149,0.02,797,2023-11-07,Concord
+178,Smartphone,Electronics,341.93,3.0,2769,297,0.48,71,2023-07-06,Pittsburgh
+179,Shower Gel,Bath and body,479.06,3.6,770,288,0.5,77,2024-02-27,Oklahoma City
+180,Ankle Socks,Socks,249.03,2.0,3011,421,0.39,1276,2024-03-14,St. Louis
+181,Wine Glass,Drinkware,486.88,2.3,3641,66,0.22,1202,2023-06-26,Springfield
+182,Throw Blanket,Blankets,219.84,2.2,2096,948,0.47,148,2024-03-26,Portland
+183,Brushes,Art and crafting materials,54.87,4.2,356,595,0.06,1240,2023-09-12,Nashville
+184,Knee-High Socks,Socks,421.56,3.8,4475,354,0.37,1122,2024-06-05,Bonita Springs
+185,Board Game,Toys & Games,406.24,2.7,4856,731,0.4,816,2023-11-28,Mission Viejo
+186,Toaster,Home & Kitchen,486.26,4.4,2519,737,0.23,1631,2023-06-22,Dayton
+187,Linen Sheets,Bedsheets,87.84,2.7,2821,499,0.02,1935,2024-01-07,Minneapolis
+188,Coffee Mug,Drinkware,168.37,1.8,2482,458,0.11,1158,2023-07-17,Worcester
+189,Eau de Toilette,Perfume and cologne,486.86,3.1,4341,66,0.17,373,2023-07-09,Madison
+190,Bamboo Sheets,Bedsheets,84.75,1.1,666,200,0.3,402,2023-12-28,Port St. Lucie
+191,Digital Art,Posters and artwork,257.81,1.9,706,893,0.13,293,2023-09-02,Knoxville
+192,Lipstick,Makeup,12.28,1.8,750,65,0.41,877,2023-09-14,Richmond
+193,Laptop,Electronics,486.87,4.6,4525,305,0.41,259,2024-02-04,Reno
+194,Canvas,Art and crafting materials,225.88,2.0,4726,262,0.44,1695,2023-08-27,Milwaukee
+195,Knee-High Socks,Socks,412.42,2.6,1853,166,0.24,77,2023-07-28,Jacksonville
+196,Ankle Socks,Socks,90.67,1.0,2407,102,0.49,1468,2023-10-28,Washington
+197,Electric Blanket,Blankets,364.71,1.5,4464,34,0.37,482,2023-11-14,Orlando
+198,Panties,Underwear,245.49,5.0,4919,541,0.44,1167,2023-08-29,Provo
+199,Jacket,Clothing,82.99,5.0,1753,82,0.41,1807,2023-12-01,Charleston
+200,Rain Jacket,Coats and jackets,193.88,2.1,2904,159,0.34,548,2024-05-02,Miami
+201,Earbuds,Mobile phone accessories,287.22,1.7,248,481,0.11,1742,2023-12-09,Milwaukee
+202,Throw Blanket,Blankets,490.66,4.4,2408,506,0.34,1610,2023-07-01,Little Rock
+203,Lipstick,Makeup,386.3,3.9,2045,799,0.26,570,2024-05-14,Des Moines
+204,Framed Poster,Posters and artwork,291.61,5.0,2781,754,0.04,989,2023-07-17,Atlanta
+205,Brake Pads,Motor vehicle parts,429.92,1.2,1926,759,0.36,1312,2023-08-21,Wichita
+206,Phone Case,Mobile phone accessories,254.67,4.2,4758,179,0.34,1602,2024-05-01,Houston
+207,Wool Socks,Socks,43.6,3.4,2367,8,0.01,284,2023-08-02,Los Angeles
+208,Action Figure,Toys & Games,232.3,2.8,658,488,0.06,41,2024-04-10,Las Vegas
+209,Wool Socks,Socks,141.94,2.8,2045,264,0.16,817,2023-10-18,San Diego
+210,Road Bike,Bicycles,123.8,4.6,4117,972,0.31,1795,2023-10-14,Allentown
+211,Rose Wine,Wine,100.19,1.4,458,451,0.06,1781,2023-12-28,Brooklyn
+212,Soy Candle,Candles,261.87,2.9,3133,814,0.19,213,2024-01-15,St. Louis
+213,Hybrid Bike,Bicycles,450.31,2.8,2938,677,0.31,1050,2024-04-16,Columbia
+214,Headphones,Electronics,137.83,1.5,4489,821,0.18,597,2024-02-05,Knoxville
+215,Art Print,Posters and artwork,85.21,2.7,3994,188,0.14,549,2023-11-08,Queens
+216,Brake Pads,Motor vehicle parts,195.3,1.0,4829,779,0.4,1953,2024-03-12,Bridgeport
+217,T-Shirt,Clothing,95.8,4.4,1228,761,0.13,1895,2023-12-13,Albany
+218,T-Shirt,Clothing,221.61,3.4,1577,738,0.12,1492,2023-11-17,Colorado Springs
+219,Art Print,Posters and artwork,409.67,1.4,3212,650,0.05,1911,2024-03-28,New Haven
+220,Wool Socks,Socks,444.58,4.8,3566,949,0.45,1612,2023-09-12,Salt Lake City
+221,Toy Car,Toys & Games,180.98,2.1,4141,972,0.23,1375,2023-10-06,Albany
+222,Puzzle,Toys & Games,352.36,3.6,4273,397,0.12,1342,2023-11-01,San Francisco
+223,Brake Pads,Motor vehicle parts,235.08,3.1,3362,836,0.37,1490,2024-01-21,Harrisburg
+224,Charger,Mobile phone accessories,153.29,1.9,3920,749,0.26,1590,2023-12-23,Grand Rapids
+225,Winter Coat,Coats and jackets,109.34,1.7,2236,769,0.44,903,2023-10-02,Jacksonville
+226,Body Spray,Perfume and cologne,201.05,1.7,3859,178,0.19,1622,2024-01-29,Reno
+227,Knee-High Socks,Socks,183.17,1.8,4579,431,0.5,512,2024-06-03,Tucson
+228,Winter Coat,Coats and jackets,255.02,3.3,2769,273,0.26,1405,2024-06-11,Birmingham
+229,Digital Art,Posters and artwork,28.57,3.9,3004,115,0.36,643,2023-06-17,Birmingham
+230,Sunscreen,Skin care,404.32,1.1,1006,483,0.24,1072,2023-08-11,Oklahoma City
+231,Jeans,Clothing,185.09,3.0,2759,215,0.49,1454,2023-10-04,Kansas City
+232,Panties,Underwear,477.44,3.3,130,466,0.21,722,2023-12-22,Phoenix
+233,Vitamin D,Vitamins and supplements,151.46,1.7,2811,826,0.3,786,2024-03-12,Charleston
+234,Boxers,Underwear,56.4,2.7,3262,373,0.28,183,2023-09-06,Albuquerque
+235,Mascara,Makeup,68.01,1.5,4353,720,0.47,244,2024-05-03,Sacramento
+236,Denim Jacket,Coats and jackets,32.58,2.2,65,135,0.4,64,2024-02-04,Colorado Springs
+237,Eau de Parfum,Perfume and cologne,67.82,4.7,2087,294,0.43,1140,2024-06-08,Fresno
+238,Eau de Toilette,Perfume and cologne,369.92,2.1,4067,958,0.39,364,2024-03-26,Port St. Lucie
+239,Jeans,Clothing,357.3,2.5,4799,652,0.01,281,2024-03-12,Oklahoma City
+240,Eau de Parfum,Perfume and cologne,452.07,4.1,2861,782,0.2,1311,2023-12-18,Omaha
+241,Body Spray,Perfume and cologne,95.92,2.7,1750,886,0.39,1472,2024-06-11,Akron
+242,Weighted Blanket,Blankets,420.62,4.7,2719,475,0.03,1482,2024-05-27,Omaha
+243,Boxers,Underwear,356.48,4.3,2769,652,0.0,177,2023-11-06,Boise
+244,Charger,Mobile phone accessories,34.58,3.3,3099,367,0.07,1269,2024-02-02,El Paso
+245,Bath Salts,Bath and body,109.78,4.5,4020,149,0.43,300,2024-03-19,Las Vegas
+246,Eau de Parfum,Perfume and cologne,260.37,2.8,1570,582,0.15,715,2024-06-06,Charlotte
+247,Canvas Print,Posters and artwork,453.02,1.9,578,26,0.42,756,2023-07-27,New Haven
+248,Smartwatch,Electronics,422.26,3.2,1712,385,0.17,1457,2023-11-09,Cape Coral
+249,Jacket,Clothing,389.57,3.0,1973,132,0.2,1659,2023-08-20,Hartford
+250,Rose Wine,Wine,191.88,2.6,4428,376,0.44,952,2024-01-07,Nashville
+251,Red Wine,Wine,431.54,3.5,3418,906,0.03,923,2023-06-27,Hartford
+252,White Wine,Wine,246.49,4.6,570,599,0.16,1140,2023-12-15,Dallas
+253,Digital Art,Posters and artwork,139.73,3.7,138,955,0.5,231,2024-05-01,Little Rock
+254,Cotton Socks,Socks,363.36,1.8,4593,421,0.44,776,2024-06-11,Salt Lake City
+255,Panties,Underwear,467.52,1.1,220,949,0.31,1137,2023-08-31,Columbia
+256,Wine Glass,Drinkware,174.53,4.3,3915,695,0.22,982,2023-09-18,Dayton
+257,Denim Jacket,Coats and jackets,210.01,2.4,3430,653,0.38,1021,2023-08-21,Kansas City
+258,Road Bike,Bicycles,172.04,1.2,4953,173,0.32,1218,2024-03-12,Allentown
+259,Grill Pan,Cookware,130.59,3.8,3269,503,0.26,67,2024-05-15,Los Angeles
+260,Toy Car,Toys & Games,45.9,1.9,3786,694,0.45,141,2023-11-27,Charleston
+261,Weighted Blanket,Blankets,430.41,4.9,2710,153,0.26,1599,2024-02-12,Washington
+262,Smartwatch,Electronics,224.5,4.1,4400,688,0.44,992,2024-06-03,San Juan
+263,Coffee Mug,Drinkware,493.46,2.0,2734,38,0.25,1224,2024-04-02,Knoxville
+264,Panties,Underwear,66.94,3.0,2657,31,0.26,1804,2024-01-07,Knoxville
+265,Coffee Mug,Drinkware,150.78,4.7,3539,543,0.14,1211,2024-03-19,Little Rock
+266,Bath Salts,Bath and body,328.62,1.4,2457,434,0.43,1225,2023-06-20,Madison
+267,Thongs,Underwear,180.41,3.9,3886,307,0.11,274,2024-04-25,Riverside
+268,Brake Pads,Motor vehicle parts,196.69,2.6,4514,7,0.41,638,2024-03-12,Albany
+269,Canvas,Art and crafting materials,156.9,4.5,3840,737,0.05,999,2023-11-17,Wichita
+270,Toner,Skin care,445.87,3.9,96,72,0.28,1106,2023-12-18,Mission Viejo
+271,Smartwatch,Electronics,478.53,2.7,4730,470,0.27,1392,2024-02-04,San Jose
+272,Leather Jacket,Coats and jackets,315.45,2.3,3181,252,0.03,1166,2023-11-04,New Orleans
+273,Phone Case,Mobile phone accessories,377.92,4.2,209,35,0.3,629,2024-05-29,Nashville
+274,Jeans,Clothing,297.85,1.0,1072,949,0.0,1795,2023-10-22,Concord
+275,Tea Cup,Drinkware,267.92,2.5,27,628,0.07,824,2023-11-13,Wichita
+276,Vitamin D,Vitamins and supplements,280.75,4.7,1063,582,0.44,90,2024-05-13,Manhattan
+277,Wool Socks,Socks,193.58,2.7,2188,868,0.4,553,2023-11-15,Charleston
+278,Nail File,Nail care,19.87,1.1,4578,802,0.37,463,2023-07-21,McAllen
+279,Blush,Makeup,240.85,4.8,2496,80,0.06,1580,2024-02-07,Jacksonville
+280,Foundation,Makeup,84.07,4.1,4307,469,0.12,167,2024-02-23,Madison
+281,Beeswax Candle,Candles,350.41,1.4,2140,252,0.22,1588,2024-01-06,Brooklyn
+282,Board Game,Toys & Games,114.36,3.6,4584,163,0.39,845,2023-10-05,Mission Viejo
+283,Cotton Sheets,Bedsheets,448.31,2.9,1968,756,0.31,668,2024-01-09,Rochester
+284,Winter Coat,Coats and jackets,93.94,1.9,3999,121,0.14,740,2024-06-05,Grand Rapids
+285,Art Print,Posters and artwork,143.64,4.1,3062,541,0.05,791,2023-09-17,Memphis
+286,Red Wine,Wine,205.96,2.9,3941,607,0.32,1217,2023-12-03,Nashville
+287,Canvas,Art and crafting materials,328.1,4.4,3197,570,0.35,1079,2024-04-26,Manhattan
+288,Blush,Makeup,405.6,3.7,3666,111,0.3,748,2023-10-21,Little Rock
+289,Action Figure,Toys & Games,53.78,4.9,3772,698,0.1,1008,2024-03-02,Cape Coral
+290,Weighted Blanket,Blankets,499.7,2.5,334,408,0.47,1482,2023-10-16,Houston
+291,Mascara,Makeup,37.37,2.1,1293,78,0.34,1594,2024-04-17,Des Moines
+292,Car Battery,Motor vehicle parts,265.06,1.7,1645,341,0.45,196,2024-04-03,Mesa
+293,Boxers,Underwear,204.28,4.5,1071,603,0.2,753,2023-08-12,Ogden
+294,Oil Filter,Motor vehicle parts,391.27,2.1,2821,49,0.1,1962,2023-08-01,Knoxville
+295,Road Bike,Bicycles,187.51,1.4,4836,852,0.29,1324,2024-03-19,Boston
+296,Sweater,Clothing,387.65,2.7,4756,324,0.12,755,2024-02-16,Atlanta
+297,Eau de Parfum,Perfume and cologne,20.57,1.8,3183,508,0.07,555,2023-06-30,Los Angeles
+298,Ankle Socks,Socks,482.11,1.4,2974,789,0.17,222,2024-03-14,Denver
+299,Sunscreen,Skin care,265.77,3.9,2332,176,0.47,51,2024-05-05,Omaha
+300,Toy Car,Toys & Games,203.18,1.6,2935,475,0.06,1961,2023-11-09,Harrisburg
+301,Sparkling Wine,Wine,450.12,1.6,2850,224,0.02,162,2024-02-24,Manhattan
+302,Nail Clippers,Nail care,303.33,4.8,318,186,0.03,1182,2024-04-30,Queens
+303,Protein Powder,Vitamins and supplements,291.39,3.2,1605,668,0.19,440,2023-12-26,Concord
+304,Scented Candle,Candles,266.7,3.6,2120,591,0.18,416,2024-03-23,Bronx
+305,Nail Polish,Nail care,448.4,3.6,4417,746,0.45,5,2023-10-24,Tampa
+306,Body Spray,Perfume and cologne,265.3,2.0,4217,220,0.39,1360,2023-06-18,Bakersfield
+307,Biography,Books,50.14,2.1,3032,624,0.29,1674,2023-08-20,Kansas City
+308,Biography,Books,89.47,2.2,3682,754,0.17,1168,2024-05-18,Denton
+309,Beeswax Candle,Candles,279.47,1.8,2025,738,0.29,1934,2023-06-25,Columbia
+310,Boxers,Underwear,424.26,4.9,102,959,0.34,1762,2023-09-14,St. Louis
+311,Rose Wine,Wine,106.86,2.5,4382,913,0.05,948,2024-01-31,Cape Coral
+312,Wine Glass,Drinkware,369.45,3.5,3395,228,0.26,373,2023-07-16,Denton
+313,Puzzle,Toys & Games,141.24,4.7,4185,936,0.2,447,2023-08-27,Jacksonville
+314,Jeans,Clothing,495.55,3.3,3239,683,0.08,1628,2024-05-28,Denver
+315,Coffee Maker,Home & Kitchen,157.41,3.1,804,935,0.35,1775,2024-01-30,New York
+316,Frying Pan,Cookware,405.84,2.0,4137,833,0.14,1555,2023-07-16,Columbia
+317,Science Book,Books,19.25,1.3,2951,121,0.08,63,2024-04-11,Oakland
+318,Road Bike,Bicycles,15.64,4.2,1616,249,0.36,36,2024-03-18,Allentown
+319,Bath Salts,Bath and body,43.07,4.1,90,413,0.16,1400,2023-07-16,Knoxville
+320,Earbuds,Mobile phone accessories,334.36,1.4,3195,681,0.14,168,2023-12-19,Madison
+321,Microwave,Home & Kitchen,131.78,2.9,3736,662,0.45,719,2023-09-02,Ogden
+322,Throw Blanket,Blankets,89.32,2.3,373,42,0.43,1601,2023-12-20,Atlanta
+323,Beeswax Candle,Candles,245.11,4.2,1367,634,0.32,1642,2023-10-16,McAllen
+324,Silk Sheets,Bedsheets,316.73,1.6,3038,233,0.35,1095,2024-05-16,Baltimore
+325,Jeans,Clothing,420.69,2.7,1006,358,0.49,1446,2024-01-20,Staten Island
+326,Cleanser,Skin care,435.23,1.1,3240,320,0.15,112,2023-09-11,San Diego
+327,Beeswax Candle,Candles,146.95,1.2,3280,216,0.37,741,2023-12-21,Kansas City
+328,Framed Poster,Posters and artwork,415.43,3.5,215,705,0.3,1177,2023-10-15,Springfield
+329,Briefs,Underwear,125.19,2.2,1141,923,0.05,388,2023-11-25,Atlanta
+330,Coffee Maker,Home & Kitchen,26.13,2.5,2871,557,0.29,1099,2024-02-05,Tucson
+331,Hybrid Bike,Bicycles,415.91,4.1,2454,39,0.02,917,2023-10-09,Phoenix
+332,Bath Salts,Bath and body,150.08,4.5,2403,265,0.13,1993,2023-07-07,Philadelphia
+333,Thongs,Underwear,431.74,4.6,4889,433,0.05,1620,2023-11-24,Boise
+334,Grill Pan,Cookware,490.38,2.9,4908,29,0.27,1295,2024-03-01,McAllen
+335,Toaster,Home & Kitchen,22.63,3.9,3748,716,0.14,1745,2024-01-31,Boise
+336,Canvas Print,Posters and artwork,66.01,4.6,4705,479,0.45,1457,2024-05-31,Tulsa
+337,Blender,Home & Kitchen,189.36,1.2,2524,562,0.19,484,2023-09-27,Indianapolis
+338,Ankle Socks,Socks,139.38,4.2,1787,415,0.0,96,2024-04-25,Riverside
+339,Knee-High Socks,Socks,343.85,2.4,4893,826,0.48,1948,2024-04-12,Louisville
+340,Vitamin D,Vitamins and supplements,486.72,1.3,439,286,0.24,528,2024-02-07,Buffalo
+341,Dutch Oven,Cookware,38.27,1.6,699,915,0.34,1361,2024-02-14,Salt Lake City
+342,Phone Case,Mobile phone accessories,283.27,3.6,2499,796,0.37,1709,2024-06-08,McAllen
+343,Multivitamin,Vitamins and supplements,443.94,2.1,1196,420,0.01,1896,2024-04-11,Cape Coral
+344,Sweater,Clothing,370.52,1.1,3247,975,0.21,1853,2024-02-26,Providence
+345,Eau de Parfum,Perfume and cologne,262.41,3.9,4041,612,0.03,1184,2023-08-26,Brooklyn
+346,Denim Jacket,Coats and jackets,265.34,2.5,269,962,0.48,1517,2024-02-20,Minneapolis
+347,Multivitamin,Vitamins and supplements,392.76,4.2,866,345,0.17,480,2023-11-22,Sacramento
+348,Coffee Mug,Drinkware,142.58,1.0,3415,953,0.38,1060,2024-05-09,Memphis
+349,Nail Polish,Nail care,306.43,2.7,1520,305,0.39,668,2023-10-29,Salt Lake City
+350,Nail Polish,Nail care,59.63,4.1,4651,115,0.1,89,2024-01-22,Cincinnati
+351,Brake Pads,Motor vehicle parts,123.51,1.5,1519,163,0.33,1953,2023-08-07,McAllen
+352,Ankle Socks,Socks,329.34,1.5,2608,432,0.49,1278,2024-02-21,Charlotte
+353,Toy Car,Toys & Games,213.48,2.7,528,134,0.26,235,2024-02-02,Springfield
+354,Sketchbook,Art and crafting materials,439.4,3.7,4666,827,0.01,1094,2023-10-30,Provo
+355,Bath Salts,Bath and body,400.73,1.6,521,881,0.29,678,2024-04-09,Philadelphia
+356,Grill Pan,Cookware,233.97,3.1,1834,594,0.29,1982,2023-07-19,Hartford
+357,Brake Pads,Motor vehicle parts,51.49,1.8,1069,359,0.07,1857,2024-03-04,Spokane
+358,Dutch Oven,Cookware,447.65,4.7,2696,686,0.03,1676,2023-10-19,Colorado Springs
+359,Laptop,Electronics,138.4,2.1,4518,953,0.02,1232,2023-07-13,Reno
+360,Nail Clippers,Nail care,281.35,2.5,590,357,0.5,1287,2023-10-17,Wichita
+361,Rose Wine,Wine,335.55,3.1,1530,653,0.22,1869,2024-01-04,Jacksonville
+362,Mountain Bike,Bicycles,408.72,3.3,2061,420,0.31,860,2023-09-07,Toledo
+363,Soy Candle,Candles,489.18,4.1,850,141,0.02,1631,2024-05-28,Harrisburg
+364,Blender,Home & Kitchen,45.19,1.1,3384,731,0.44,1660,2024-04-19,Tampa
+365,Water Bottle,Drinkware,447.65,2.8,3530,235,0.25,115,2023-09-04,New Orleans
+366,Body Scrub,Bath and body,467.18,2.1,2875,366,0.26,258,2023-08-25,Oakland
+367,Smartwatch,Electronics,32.08,4.4,4868,110,0.07,1057,2023-10-07,Mesa
+368,Biography,Books,261.18,3.4,1690,45,0.2,236,2024-03-12,Houston
+369,Ankle Socks,Socks,400.55,4.5,424,15,0.42,970,2024-06-03,Grand Rapids
+370,Briefs,Underwear,126.84,1.8,4594,681,0.07,603,2023-09-09,Baltimore
+371,Lipstick,Makeup,174.52,1.5,651,366,0.19,642,2023-08-15,Miami
+372,Nail File,Nail care,389.17,3.0,3089,430,0.17,1557,2023-12-10,Tampa
+373,Coffee Mug,Drinkware,421.56,1.7,1142,307,0.28,1741,2023-07-04,Allentown
+374,Ankle Socks,Socks,349.0,3.9,4211,79,0.31,1228,2024-03-02,Springfield
+375,Pillar Candle,Candles,324.75,1.8,1282,915,0.32,50,2023-11-27,Albany
+376,Scented Candle,Candles,123.63,4.9,3774,780,0.02,191,2024-03-14,Toledo
+377,Science Book,Books,75.5,4.9,1716,737,0.22,29,2023-12-17,Toledo
+378,Cotton Sheets,Bedsheets,148.43,2.8,1248,782,0.17,1412,2024-04-28,Wichita
+379,Board Game,Toys & Games,479.28,4.4,2948,45,0.11,460,2023-10-01,San Francisco
+380,Mountain Bike,Bicycles,498.52,4.9,1879,264,0.04,47,2023-09-28,Baton Rouge
+381,Sweater,Clothing,221.46,3.1,2828,412,0.05,33,2023-09-26,Baton Rouge
+382,Brake Pads,Motor vehicle parts,462.24,1.0,3527,532,0.34,534,2024-01-04,Rochester
+383,Smartphone,Electronics,43.97,3.0,266,205,0.23,746,2023-08-06,Las Vegas
+384,Throw Blanket,Blankets,215.68,1.4,2547,311,0.33,1101,2024-04-25,Port St. Lucie
+385,Shower Gel,Bath and body,187.55,2.9,3719,68,0.36,1449,2024-04-22,St. Louis
+386,Smartwatch,Electronics,183.19,2.5,3723,289,0.3,62,2024-02-09,Bonita Springs
+387,Toy Car,Toys & Games,283.98,4.9,4509,941,0.32,1112,2024-01-24,New Orleans
+388,White Wine,Wine,46.09,2.6,510,783,0.27,1443,2023-11-10,Long Beach
+389,Nail File,Nail care,184.94,3.8,3505,420,0.29,1054,2024-01-17,Colorado Springs
+390,Coffee Mug,Drinkware,122.21,2.8,1487,230,0.21,1717,2023-06-24,Des Moines
+391,Rose Wine,Wine,260.61,2.6,4249,463,0.19,1366,2024-01-27,Baltimore
+392,Body Lotion,Bath and body,264.13,2.4,3695,242,0.13,44,2023-06-27,San Juan
+393,Action Figure,Toys & Games,123.46,2.6,994,881,0.25,645,2023-10-10,Sacramento
+394,Cotton Sheets,Bedsheets,221.5,1.4,4463,821,0.37,1501,2023-07-05,Allentown
+395,Shower Gel,Bath and body,436.63,5.0,4868,872,0.09,1123,2023-12-24,Philadelphia
+396,Sweater,Clothing,159.9,2.4,1104,517,0.06,1184,2024-01-19,Houston
+397,Soy Candle,Candles,229.86,2.2,140,191,0.32,1100,2024-01-01,Milwaukee
+398,Foundation,Makeup,223.27,3.4,4651,780,0.13,755,2023-09-05,Knoxville
+399,Oil Filter,Motor vehicle parts,265.89,4.0,2864,499,0.41,1845,2024-03-12,Hartford
+400,Dutch Oven,Cookware,214.04,1.6,4790,651,0.46,230,2023-11-13,Provo
+401,Red Wine,Wine,118.05,3.7,3733,137,0.15,579,2024-04-08,Hartford
+402,Cotton Sheets,Bedsheets,186.21,4.3,129,87,0.48,606,2023-08-16,Bridgeport
+403,Linen Sheets,Bedsheets,104.88,1.5,598,928,0.24,1571,2023-06-16,Phoenix
+404,Tea Cup,Drinkware,356.92,4.7,705,513,0.28,1006,2024-05-02,San Diego
+405,Wine Glass,Drinkware,279.77,1.1,3821,258,0.39,1167,2024-05-09,Washington
+406,White Wine,Wine,202.76,5.0,1645,108,0.22,841,2023-09-06,Riverside
+407,Foundation,Makeup,21.69,2.3,4419,438,0.19,779,2023-08-12,Dallas
+408,Saucepan,Cookware,443.92,3.4,1655,972,0.16,388,2023-10-06,Dallas
+409,Toner,Skin care,50.63,3.4,1501,220,0.19,909,2023-09-20,Concord
+410,Bamboo Sheets,Bedsheets,164.15,1.6,3581,771,0.02,1344,2024-04-18,Salt Lake City
+411,Smartphone,Electronics,215.51,3.0,79,808,0.1,1803,2024-02-06,Providence
+412,Cotton Sheets,Bedsheets,75.98,4.4,161,264,0.16,1917,2023-09-22,Spokane
+413,Soy Candle,Candles,101.08,3.7,169,652,0.44,1949,2023-11-13,Chicago
+414,Paint Set,Art and crafting materials,75.23,1.9,1531,356,0.27,53,2023-12-24,St. Louis
+415,Fish Oil,Vitamins and supplements,71.6,1.6,2600,439,0.28,1894,2024-04-22,Buffalo
+416,Laptop,Electronics,317.25,1.3,4263,488,0.21,1900,2023-07-23,Detroit
+417,Throw Blanket,Blankets,195.93,3.3,1075,719,0.19,1039,2024-06-10,Mesa
+418,Nail Clippers,Nail care,54.48,1.0,3730,437,0.2,1847,2024-03-20,San Francisco
+419,Toner,Skin care,332.86,4.3,289,131,0.43,104,2023-07-10,Tucson
+420,Eau de Toilette,Perfume and cologne,185.45,1.4,3638,551,0.02,398,2024-01-09,Oakland
+421,Denim Jacket,Coats and jackets,490.72,4.3,3828,296,0.23,1821,2024-06-08,Sacramento
+422,Car Battery,Motor vehicle parts,418.35,3.0,114,254,0.28,1556,2024-06-05,Grand Rapids
+423,Fish Oil,Vitamins and supplements,45.57,4.5,1701,494,0.37,1243,2023-10-16,Philadelphia
+424,Fantasy Book,Books,81.41,3.8,4856,115,0.06,849,2024-01-08,Knoxville
+425,Canvas Print,Posters and artwork,482.34,3.2,3282,546,0.48,1893,2023-10-19,Providence
+426,T-Shirt,Clothing,305.41,2.5,4726,514,0.08,1919,2024-03-02,Oakland
+427,Protein Powder,Vitamins and supplements,146.06,3.2,332,336,0.4,371,2023-10-19,Mesa
+428,Briefs,Underwear,356.32,3.9,3991,602,0.26,1454,2024-02-23,McAllen
+429,Water Bottle,Drinkware,27.91,3.8,4365,342,0.15,1957,2023-12-29,Ogden
+430,Biography,Books,355.47,4.9,755,788,0.38,107,2024-03-06,Tampa
+431,T-Shirt,Clothing,147.92,1.7,606,341,0.19,85,2024-04-26,Kansas City
+432,Frying Pan,Cookware,284.89,1.8,2168,782,0.4,1344,2023-07-06,Dayton
+433,Water Bottle,Drinkware,78.4,2.0,4033,509,0.5,1233,2023-11-13,Nashville
+434,Biography,Books,301.75,2.1,1113,770,0.49,759,2023-09-08,Indianapolis
+435,Bamboo Sheets,Bedsheets,400.8,3.4,183,949,0.37,1311,2023-08-16,Manhattan
+436,Body Scrub,Bath and body,142.82,4.5,422,549,0.33,567,2024-05-11,Columbus
+437,Shower Gel,Bath and body,167.19,1.5,364,972,0.02,1427,2023-12-27,Des Moines
+438,Wool Socks,Socks,99.38,1.9,864,802,0.18,212,2024-03-02,Baton Rouge
+439,Sweater,Clothing,454.26,2.7,3230,406,0.27,1561,2023-09-11,San Antonio
+440,Sketchbook,Art and crafting materials,166.01,3.5,2082,433,0.42,674,2024-01-01,Madison
+441,Science Book,Books,212.69,2.6,1144,158,0.17,693,2024-04-18,Detroit
+442,Bamboo Sheets,Bedsheets,16.41,1.1,85,897,0.03,240,2024-03-11,Tulsa
+443,Briefs,Underwear,312.6,3.4,1158,174,0.46,265,2024-03-28,Brooklyn
+444,Sparkling Wine,Wine,39.97,2.8,3999,347,0.31,1013,2023-08-08,Washington
+445,Silk Sheets,Bedsheets,340.11,4.2,3941,703,0.43,55,2023-12-16,San Antonio
+446,Weighted Blanket,Blankets,216.97,1.5,3694,273,0.38,609,2023-08-16,Ogden
+447,Car Battery,Motor vehicle parts,329.26,1.7,3046,749,0.39,1576,2024-03-12,Memphis
+448,Ankle Socks,Socks,59.9,4.6,1376,172,0.03,617,2023-09-29,Knoxville
+449,Protein Powder,Vitamins and supplements,47.56,4.8,2968,754,0.1,796,2024-01-18,Milwaukee
+450,Coffee Maker,Home & Kitchen,69.64,2.4,1555,295,0.12,1565,2023-10-28,Bridgeport
+451,Road Bike,Bicycles,64.69,4.0,3211,268,0.49,1750,2024-04-02,Staten Island
+452,Hybrid Bike,Bicycles,26.65,3.6,499,18,0.15,303,2023-11-02,Denver
+453,Jeans,Clothing,20.76,4.3,415,931,0.31,1660,2023-06-24,Jacksonville
+454,Foundation,Makeup,258.05,3.2,286,601,0.01,1407,2024-04-26,Washington
+455,Blender,Home & Kitchen,124.34,1.8,799,934,0.49,1984,2024-02-07,Kansas City
+456,T-Shirt,Clothing,261.78,2.2,1548,658,0.03,1323,2023-06-23,Harrisburg
+457,Science Book,Books,241.84,4.8,2802,308,0.44,1071,2023-11-30,Riverside
+458,Saucepan,Cookware,88.17,1.7,4975,483,0.16,908,2024-02-25,San Juan
+459,Smartphone,Electronics,138.85,2.0,3161,699,0.08,555,2023-07-31,Charleston
+460,Body Lotion,Bath and body,269.27,3.6,363,783,0.12,1483,2023-09-16,Seattle
+461,Biography,Books,340.79,1.4,399,452,0.06,627,2024-05-09,Houston
+462,Bath Salts,Bath and body,161.56,4.9,4544,931,0.31,210,2023-12-29,Detroit
+463,T-Shirt,Clothing,18.54,3.2,2466,452,0.43,672,2024-05-26,McAllen
+464,Puzzle,Toys & Games,90.73,2.2,1407,890,0.41,130,2023-06-20,Cincinnati
+465,Cuticle Oil,Nail care,258.74,2.7,519,740,0.36,164,2024-05-31,Boston
+466,Cuticle Oil,Nail care,316.02,3.9,2076,881,0.28,1257,2024-05-15,Louisville
+467,Ankle Socks,Socks,209.32,2.7,1378,435,0.35,58,2023-11-17,Spokane
+468,Paint Set,Art and crafting materials,192.09,3.0,92,668,0.31,1348,2024-04-03,Los Angeles
+469,Bath Salts,Bath and body,53.57,2.4,2606,152,0.47,291,2024-04-24,Long Beach
+470,Screen Protector,Mobile phone accessories,345.48,2.4,3443,254,0.07,1244,2023-08-27,Kansas City
+471,Board Game,Toys & Games,393.87,1.3,4983,589,0.01,1185,2024-03-15,Cincinnati
+472,Foundation,Makeup,50.34,4.1,3467,926,0.16,1874,2023-08-06,Oakland
+473,Pillar Candle,Candles,330.99,3.5,3240,859,0.22,704,2023-10-29,Buffalo
+474,Boxers,Underwear,10.71,1.7,3152,33,0.16,1539,2023-11-29,Tampa
+475,Coffee Maker,Home & Kitchen,70.94,2.5,190,788,0.1,24,2024-03-16,Columbus
+476,Beeswax Candle,Candles,179.27,3.7,4299,189,0.29,1907,2023-10-17,Kansas City
+477,Novel,Books,181.51,2.8,4590,924,0.41,14,2023-07-28,Jacksonville
+478,Linen Sheets,Bedsheets,344.09,3.7,4438,987,0.05,276,2024-03-14,Tulsa
+479,Cuticle Oil,Nail care,343.48,3.1,2196,925,0.36,17,2023-12-15,Philadelphia
+480,Eau de Parfum,Perfume and cologne,105.9,2.5,4355,728,0.01,138,2023-07-11,Dayton
+481,Fish Oil,Vitamins and supplements,216.28,3.9,2595,634,0.22,1177,2024-04-15,Baltimore
+482,Art Print,Posters and artwork,97.75,3.5,2153,411,0.35,413,2023-10-31,Oakland
+483,Screen Protector,Mobile phone accessories,252.57,4.1,2829,376,0.04,1081,2023-10-23,Tampa
+484,Sparkling Wine,Wine,471.4,1.4,1675,164,0.1,127,2023-07-13,Knoxville
+485,Pillar Candle,Candles,415.54,1.2,1891,636,0.38,1177,2024-05-29,Cleveland
+486,Throw Blanket,Blankets,101.53,1.6,3356,912,0.36,837,2023-10-11,Miami
+487,Brushes,Art and crafting materials,459.32,4.7,1755,114,0.37,1856,2023-08-13,Denton
+488,Grill Pan,Cookware,362.46,3.2,4280,840,0.25,61,2024-05-29,Long Beach
+489,Sparkling Wine,Wine,57.75,1.8,4063,871,0.24,1362,2023-06-15,Portland
+490,Board Game,Toys & Games,23.32,1.6,345,194,0.39,800,2024-05-21,New Haven
+491,Mascara,Makeup,86.79,2.5,154,307,0.37,81,2024-02-14,Las Vegas
+492,Perfume Oil,Perfume and cologne,371.97,1.6,424,163,0.38,1453,2024-02-28,Denver
+493,Car Battery,Motor vehicle parts,31.88,1.7,4022,945,0.29,136,2024-04-13,Providence
+494,Sparkling Wine,Wine,330.25,1.7,1660,186,0.15,1475,2023-08-06,Grand Rapids
+495,Thongs,Underwear,423.24,1.1,2181,724,0.05,1224,2023-12-05,Washington
+496,Laptop,Electronics,222.08,4.6,2513,44,0.26,172,2023-11-16,Dayton
+497,Microwave,Home & Kitchen,481.03,3.3,373,989,0.47,1724,2023-12-22,McAllen
+498,Red Wine,Wine,328.98,1.9,4004,464,0.36,1708,2024-01-24,Dayton
+499,Earbuds,Mobile phone accessories,244.47,2.7,2484,853,0.01,406,2024-01-27,Providence
+500,Vitamin D,Vitamins and supplements,253.97,3.8,4872,129,0.48,985,2023-08-01,Ogden
+501,Nail Clippers,Nail care,190.05,1.1,2553,732,0.19,1967,2023-12-06,Fort Worth
+502,Red Wine,Wine,439.06,4.2,2531,847,0.08,1745,2024-01-04,Cincinnati
+503,Boxers,Underwear,260.41,3.5,4866,823,0.49,1083,2023-08-23,Toledo
+504,Red Wine,Wine,333.6,4.8,4221,921,0.41,1177,2024-02-27,Pittsburgh
+505,Ankle Socks,Socks,463.77,4.5,3141,240,0.32,1604,2024-04-02,Louisville
+506,Paint Set,Art and crafting materials,187.35,4.2,2202,352,0.35,876,2024-04-21,Bronx
+507,Panties,Underwear,97.73,1.6,4814,906,0.33,413,2024-05-18,Portland
+508,Smartphone,Electronics,89.26,3.1,2773,989,0.14,1780,2024-06-05,Bakersfield
+509,Fantasy Book,Books,20.06,2.2,4112,232,0.48,58,2024-03-08,Concord
+510,Toy Car,Toys & Games,167.7,4.1,4061,800,0.13,628,2024-04-05,Little Rock
+511,Action Figure,Toys & Games,195.82,3.9,1254,256,0.35,318,2024-01-12,Brooklyn
+512,Novel,Books,79.3,3.6,3843,440,0.37,1723,2023-11-08,Denton
+513,Shower Gel,Bath and body,268.21,1.9,4477,888,0.08,1773,2023-12-03,Columbus
+514,Scented Candle,Candles,130.59,3.6,551,328,0.22,291,2024-04-05,Staten Island
+515,Water Bottle,Drinkware,25.29,3.3,1486,751,0.24,1597,2023-06-18,Mission Viejo
+516,Bath Salts,Bath and body,311.37,1.7,4520,19,0.15,1713,2023-08-26,Houston
+517,Boxers,Underwear,86.06,4.6,2649,190,0.14,1406,2023-07-19,Cleveland
+518,Saucepan,Cookware,267.2,4.0,3117,511,0.25,1405,2023-08-15,San Diego
+519,Mountain Bike,Bicycles,12.62,3.1,3293,573,0.06,353,2024-05-24,Nashville
+520,Phone Case,Mobile phone accessories,93.51,3.3,4396,767,0.38,717,2023-12-01,Columbus
+521,Perfume Oil,Perfume and cologne,188.99,3.4,2239,513,0.41,112,2024-02-22,Atlanta
+522,Cleanser,Skin care,346.35,4.8,3532,340,0.16,1796,2024-03-10,Salt Lake City
+523,Foundation,Makeup,250.79,1.4,1396,643,0.13,1015,2024-04-21,Reno
+524,Rose Wine,Wine,29.31,3.2,358,392,0.35,819,2023-06-23,Virginia Beach
+525,Blush,Makeup,194.84,3.4,1847,985,0.01,1445,2024-02-12,Oakland
+526,Wool Socks,Socks,341.24,4.5,2232,837,0.09,872,2023-09-19,Birmingham
+527,Water Bottle,Drinkware,419.87,3.6,4344,721,0.38,1927,2023-10-02,Orlando
+528,Shower Gel,Bath and body,365.77,2.1,2590,646,0.26,128,2024-03-03,Detroit
+529,Body Scrub,Bath and body,158.71,3.0,791,883,0.0,881,2024-01-09,Providence
+530,Rain Jacket,Coats and jackets,83.19,1.8,3192,48,0.29,824,2023-09-09,Springfield
+531,Digital Art,Posters and artwork,459.09,2.5,1888,548,0.48,1234,2024-01-28,Queens
+532,Fish Oil,Vitamins and supplements,449.7,1.4,4425,909,0.33,1628,2023-10-20,Bonita Springs
+533,Charger,Mobile phone accessories,166.4,2.3,158,52,0.13,1519,2023-12-20,Little Rock
+534,Eau de Toilette,Perfume and cologne,270.22,1.5,3549,566,0.48,332,2023-12-28,Spokane
+535,Protein Powder,Vitamins and supplements,492.43,2.5,4472,900,0.35,1753,2024-04-24,Sacramento
+536,Perfume Oil,Perfume and cologne,434.17,2.7,85,129,0.03,1449,2024-05-28,Riverside
+537,Tea Cup,Drinkware,118.21,2.3,2945,845,0.42,623,2023-07-22,Spokane
+538,Microwave,Home & Kitchen,265.85,2.8,3601,431,0.1,753,2024-05-19,Colorado Springs
+539,Weighted Blanket,Blankets,291.0,2.3,4385,441,0.44,486,2024-03-13,Milwaukee
+540,Board Game,Toys & Games,167.16,3.5,2954,298,0.02,1354,2024-06-09,Little Rock
+541,Body Lotion,Bath and body,151.33,2.1,1661,166,0.15,738,2024-02-10,Seattle
+542,Brake Pads,Motor vehicle parts,373.59,3.1,3337,829,0.01,1624,2023-12-17,Cleveland
+543,Silk Sheets,Bedsheets,194.61,2.3,1490,540,0.08,1089,2023-07-27,Springfield
+544,Protein Powder,Vitamins and supplements,269.16,2.2,2582,235,0.08,1291,2023-08-29,Worcester
+545,Toner,Skin care,447.09,2.2,1901,189,0.05,1621,2024-04-07,Concord
+546,Winter Coat,Coats and jackets,23.31,3.5,1287,66,0.34,1268,2024-05-12,Kansas City
+547,Coffee Mug,Drinkware,130.84,1.2,840,951,0.3,1984,2024-04-22,Madison
+548,Fish Oil,Vitamins and supplements,470.84,4.8,1360,206,0.43,531,2023-11-16,Bonita Springs
+549,Blender,Home & Kitchen,100.94,3.9,1747,769,0.11,1936,2023-10-03,Kansas City
+550,Scented Candle,Candles,146.19,2.5,2493,19,0.19,614,2023-10-08,Bakersfield
+551,Beeswax Candle,Candles,274.77,3.2,1825,264,0.38,1213,2023-09-19,Bakersfield
+552,Oil Filter,Motor vehicle parts,292.52,1.5,248,114,0.47,673,2024-03-16,Boston
+553,Brake Pads,Motor vehicle parts,76.76,4.1,3045,128,0.03,1142,2024-01-03,Toledo
+554,Mascara,Makeup,301.3,4.0,1380,496,0.04,1236,2023-08-25,Denver
+555,Vitamin D,Vitamins and supplements,420.37,4.4,2546,544,0.12,439,2024-05-29,New Haven
+556,Sunscreen,Skin care,256.18,1.6,1875,203,0.36,1022,2023-11-28,Memphis
+557,Red Wine,Wine,387.9,4.5,986,322,0.36,1985,2023-11-26,Raleigh
+558,Art Print,Posters and artwork,358.36,1.2,2325,770,0.3,761,2024-03-13,Wichita
+559,Shower Gel,Bath and body,118.11,3.3,62,320,0.03,757,2023-10-09,Fort Worth
+560,Ankle Socks,Socks,393.0,4.5,3367,592,0.01,593,2023-11-23,Long Beach
+561,Smartphone,Electronics,427.5,4.3,1044,141,0.22,1568,2024-06-10,New Orleans
+562,Frying Pan,Cookware,149.66,3.3,2364,379,0.4,438,2024-06-01,Richmond
+563,Water Bottle,Drinkware,98.72,1.4,32,944,0.12,523,2024-03-15,Kansas City
+564,Electric Blanket,Blankets,101.8,3.9,2071,556,0.38,1892,2023-09-09,Houston
+565,Weighted Blanket,Blankets,86.51,1.2,123,132,0.14,1858,2023-09-08,Bakersfield
+566,Biography,Books,146.23,2.6,2944,550,0.36,926,2024-05-13,Washington
+567,Nail Polish,Nail care,250.24,3.1,3016,160,0.02,1393,2024-03-11,Reno
+568,Multivitamin,Vitamins and supplements,144.16,2.1,2840,527,0.39,687,2023-07-15,El Paso
+569,Screen Protector,Mobile phone accessories,292.88,1.5,2356,583,0.25,318,2024-03-13,Bronx
+570,Cuticle Oil,Nail care,75.72,2.9,276,66,0.28,768,2023-11-17,Memphis
+571,Coffee Maker,Home & Kitchen,285.18,1.5,95,168,0.19,1059,2024-03-13,New Orleans
+572,Panties,Underwear,269.45,3.3,4545,754,0.05,1983,2024-02-28,Reno
+573,Charger,Mobile phone accessories,353.63,2.2,3038,575,0.27,1743,2024-05-10,Harrisburg
+574,Linen Sheets,Bedsheets,251.89,2.3,3044,446,0.42,710,2024-03-10,Jacksonville
+575,Silk Sheets,Bedsheets,326.7,3.1,3374,206,0.3,1897,2023-10-11,St. Louis
+576,Hybrid Bike,Bicycles,488.95,2.5,4510,269,0.3,663,2024-01-06,Baltimore
+577,Action Figure,Toys & Games,485.56,3.2,434,889,0.23,1042,2023-11-27,Columbus
+578,Canvas Print,Posters and artwork,76.9,3.4,1703,744,0.03,783,2024-03-24,Baltimore
+579,Cotton Sheets,Bedsheets,465.46,4.5,812,581,0.07,725,2023-07-16,Austin
+580,Toaster,Home & Kitchen,118.87,4.4,560,94,0.49,1426,2024-01-04,Boise
+581,Ankle Socks,Socks,408.4,2.4,3710,407,0.25,501,2023-12-06,Ogden
+582,Bath Salts,Bath and body,93.9,3.1,4861,833,0.1,396,2023-12-28,Allentown
+583,Earbuds,Mobile phone accessories,497.27,5.0,3712,290,0.07,1889,2024-05-15,Boston
+584,Mascara,Makeup,450.09,2.9,4812,734,0.31,1412,2023-07-04,Baltimore
+585,Lipstick,Makeup,380.95,3.1,1635,306,0.05,1073,2023-07-07,Houston
+586,Shower Gel,Bath and body,278.47,2.1,3456,283,0.33,1573,2023-09-16,Grand Rapids
+587,Wool Socks,Socks,302.3,1.7,2838,909,0.08,1946,2024-04-17,Richmond
+588,Wool Socks,Socks,488.87,2.4,4795,536,0.38,1465,2023-08-03,Indianapolis
+589,Briefs,Underwear,345.3,2.6,4788,734,0.16,986,2024-03-03,Pittsburgh
+590,Brake Pads,Motor vehicle parts,105.32,4.7,1957,584,0.15,1780,2023-10-17,San Juan
+591,Jacket,Clothing,499.45,1.3,4157,356,0.48,511,2023-06-26,Spokane
+592,White Wine,Wine,79.07,2.0,3980,784,0.41,662,2023-09-22,Riverside
+593,Boxers,Underwear,14.38,1.1,3171,919,0.19,1583,2023-09-12,Queens
+594,Saucepan,Cookware,392.11,4.3,1851,2,0.5,146,2024-05-08,Minneapolis
+595,White Wine,Wine,468.44,2.0,425,254,0.24,1156,2023-12-10,Washington
+596,Red Wine,Wine,392.88,4.5,4632,534,0.06,542,2023-11-23,Memphis
+597,Car Battery,Motor vehicle parts,446.94,4.7,771,587,0.06,212,2023-10-01,San Juan
+598,Saucepan,Cookware,114.47,3.0,3770,626,0.24,1269,2023-09-17,Oklahoma City
+599,Brushes,Art and crafting materials,250.66,2.7,3211,777,0.0,1155,2024-05-20,Birmingham
+600,Brushes,Art and crafting materials,124.18,3.7,3085,734,0.32,1757,2024-01-23,Mesa
+601,Ankle Socks,Socks,364.42,4.8,4206,197,0.23,722,2024-05-15,Spokane
+602,Foundation,Makeup,268.69,2.3,3275,441,0.08,1566,2024-04-29,Virginia Beach
+603,Jacket,Clothing,417.03,3.7,2283,894,0.11,877,2023-07-30,Worcester
+604,Blender,Home & Kitchen,347.92,1.3,1506,688,0.38,946,2023-07-15,Chicago
+605,Art Print,Posters and artwork,492.72,3.8,3877,116,0.36,1655,2024-01-30,Philadelphia
+606,Linen Sheets,Bedsheets,162.31,3.1,4284,158,0.1,1415,2023-11-18,Port St. Lucie
+607,Framed Poster,Posters and artwork,76.81,2.0,2988,43,0.43,759,2023-07-12,Wichita
+608,Toy Car,Toys & Games,439.22,1.4,1895,239,0.31,558,2024-05-28,San Juan
+609,Electric Bike,Bicycles,32.83,2.4,4133,362,0.29,1000,2023-12-29,Bakersfield
+610,Electric Bike,Bicycles,423.07,2.4,4358,202,0.07,1463,2024-05-15,Boise
+611,Saucepan,Cookware,255.64,4.7,4938,937,0.36,1462,2024-01-07,Louisville
+612,Eau de Toilette,Perfume and cologne,479.1,4.8,4647,927,0.08,1446,2024-02-10,Buffalo
+613,Spark Plugs,Motor vehicle parts,393.13,4.0,3615,228,0.14,565,2023-07-12,Denver
+614,Biography,Books,156.42,4.1,2550,687,0.44,37,2024-02-27,Knoxville
+615,Panties,Underwear,426.32,3.2,2825,477,0.47,1200,2023-09-20,Worcester
+616,Headphones,Electronics,83.4,2.4,909,471,0.44,1166,2024-04-16,Rochester
+617,Eau de Parfum,Perfume and cologne,236.35,1.1,2715,211,0.31,1142,2023-09-09,Manhattan
+618,Canvas Print,Posters and artwork,456.87,4.2,440,289,0.05,1825,2023-07-10,Los Angeles
+619,Toaster,Home & Kitchen,189.16,3.0,4436,108,0.28,1846,2023-12-24,Sacramento
+620,Cotton Socks,Socks,155.24,3.2,3812,983,0.29,1234,2023-11-02,New Orleans
+621,Fish Oil,Vitamins and supplements,433.1,3.5,3646,156,0.28,1393,2023-12-23,Fort Worth
+622,Weighted Blanket,Blankets,44.43,1.3,4368,981,0.48,1032,2024-01-04,Fort Worth
+623,Puzzle,Toys & Games,314.85,1.4,4837,107,0.31,1588,2024-05-29,Dayton
+624,Dutch Oven,Cookware,315.46,2.9,1327,208,0.04,1372,2023-07-16,Tucson
+625,Smartphone,Electronics,335.42,2.1,4161,807,0.21,1187,2024-04-25,Nashville
+626,Multivitamin,Vitamins and supplements,160.37,3.0,578,192,0.39,899,2023-08-06,Atlanta
+627,Car Battery,Motor vehicle parts,442.12,2.1,691,477,0.42,59,2023-10-20,Memphis
+628,Boxers,Underwear,493.55,4.1,1888,729,0.11,1510,2024-03-27,Cleveland
+629,Sweater,Clothing,416.14,1.5,1098,771,0.2,256,2023-07-31,Albany
+630,Toaster,Home & Kitchen,370.33,1.7,2867,796,0.42,45,2024-04-17,St. Louis
+631,Silk Sheets,Bedsheets,439.34,2.6,3121,987,0.35,599,2024-02-16,Albuquerque
+632,Body Spray,Perfume and cologne,218.59,3.6,3976,293,0.29,831,2023-08-12,Jacksonville
+633,Wool Socks,Socks,347.66,1.9,701,35,0.47,779,2024-01-20,Colorado Springs
+634,Pillar Candle,Candles,379.19,4.8,29,247,0.18,1856,2023-10-05,Boise
+635,Shower Gel,Bath and body,254.08,4.8,1898,119,0.04,463,2024-01-26,New Orleans
+636,Winter Coat,Coats and jackets,158.9,4.8,4469,482,0.43,1962,2024-04-07,Dallas
+637,Body Scrub,Bath and body,376.94,1.7,2939,796,0.46,937,2023-10-13,Colorado Springs
+638,Sweater,Clothing,304.64,1.7,986,967,0.34,605,2024-03-23,Tampa
+639,Body Scrub,Bath and body,319.05,2.0,3782,84,0.34,1536,2024-02-22,Tulsa
+640,Dutch Oven,Cookware,433.88,2.1,1065,326,0.17,1492,2023-06-28,Allentown
+641,Rose Wine,Wine,287.09,1.8,3625,483,0.1,213,2023-09-14,Minneapolis
+642,Toaster,Home & Kitchen,96.61,2.4,4309,284,0.01,753,2024-03-27,Concord
+643,Smartwatch,Electronics,398.13,4.7,1901,252,0.07,1200,2023-08-21,Cape Coral
+644,Coffee Mug,Drinkware,443.11,3.7,489,20,0.43,463,2023-11-21,Allentown
+645,Mountain Bike,Bicycles,118.34,3.1,3390,480,0.11,669,2024-04-25,Detroit
+646,Fleece Blanket,Blankets,417.05,2.9,4013,826,0.18,1307,2023-12-29,Knoxville
+647,Lipstick,Makeup,66.41,1.2,3164,342,0.39,323,2023-12-17,Salt Lake City
+648,Science Book,Books,193.48,1.9,3692,938,0.3,511,2024-01-04,Dayton
+649,Rose Wine,Wine,490.24,2.4,4442,494,0.34,787,2023-11-29,Columbus
+650,Protein Powder,Vitamins and supplements,74.15,1.7,65,399,0.32,2,2024-05-09,Washington
+651,Action Figure,Toys & Games,116.7,4.8,3530,929,0.14,94,2024-03-15,Nashville
+652,Toner,Skin care,298.77,2.6,1855,893,0.47,1794,2023-07-25,Albany
+653,Water Bottle,Drinkware,79.52,1.5,165,68,0.29,424,2024-02-17,Worcester
+654,Weighted Blanket,Blankets,449.72,2.8,1176,555,0.16,686,2024-01-02,Kansas City
+655,Wine Glass,Drinkware,478.42,2.3,2066,679,0.11,1081,2024-01-17,Little Rock
+656,Eau de Toilette,Perfume and cologne,251.79,2.4,3329,914,0.34,1278,2024-01-05,Provo
+657,Scented Candle,Candles,417.63,1.2,821,490,0.18,739,2023-12-04,Baltimore
+658,Fleece Blanket,Blankets,323.91,2.2,3557,235,0.03,1452,2023-08-31,Jacksonville
+659,Perfume Oil,Perfume and cologne,473.55,3.2,1533,487,0.24,783,2023-12-27,Sacramento
+660,Denim Jacket,Coats and jackets,215.13,4.6,1435,43,0.25,389,2024-05-09,Washington
+661,Knee-High Socks,Socks,471.64,4.2,4671,297,0.45,976,2023-11-05,Palm Bay
+662,Boxers,Underwear,406.49,2.5,3910,737,0.22,918,2024-02-10,Toledo
+663,Bath Salts,Bath and body,374.11,2.4,1357,85,0.3,1244,2024-04-24,Port St. Lucie
+664,Fish Oil,Vitamins and supplements,385.21,3.5,708,467,0.18,1600,2023-09-09,Birmingham
+665,Paint Set,Art and crafting materials,388.85,4.3,2907,199,0.22,1507,2023-12-02,Orlando
+666,Science Book,Books,498.12,3.3,4347,49,0.44,1051,2024-06-11,San Francisco
+667,Pillar Candle,Candles,223.73,3.8,3091,250,0.35,617,2024-01-27,Miami
+668,Beeswax Candle,Candles,369.18,2.4,4331,420,0.21,539,2023-09-26,Providence
+669,Nail File,Nail care,294.33,2.2,465,237,0.33,677,2023-12-26,Grand Rapids
+670,Jacket,Clothing,121.51,2.5,1974,492,0.29,1552,2024-02-27,Hartford
+671,Nail Clippers,Nail care,207.73,4.6,2072,792,0.31,1231,2024-01-23,San Francisco
+672,Throw Blanket,Blankets,106.0,4.4,831,615,0.16,1041,2024-05-09,Springfield
+673,Laptop,Electronics,378.36,3.8,429,956,0.27,365,2023-12-21,Memphis
+674,Canvas Print,Posters and artwork,262.04,2.7,1532,131,0.42,1386,2024-01-16,Los Angeles
+675,Beeswax Candle,Candles,465.16,4.9,3939,196,0.4,792,2024-04-13,Springfield
+676,Bath Salts,Bath and body,306.99,4.2,2598,209,0.01,1795,2023-08-22,Washington
+677,Coffee Maker,Home & Kitchen,483.14,3.4,2357,681,0.04,1611,2024-03-01,Charlotte
+678,Sparkling Wine,Wine,285.85,3.5,1874,236,0.03,1870,2024-03-02,Knoxville
+679,Tea Cup,Drinkware,173.12,4.8,4931,328,0.04,628,2024-01-15,Colorado Springs
+680,Scented Candle,Candles,463.33,3.7,3315,930,0.21,1930,2024-02-25,San Francisco
+681,Rain Jacket,Coats and jackets,91.28,1.9,4830,713,0.26,1475,2024-04-22,Port St. Lucie
+682,Saucepan,Cookware,449.37,3.6,2706,531,0.19,1209,2023-08-02,San Juan
+683,Throw Blanket,Blankets,351.55,2.0,2986,494,0.25,1489,2023-08-26,Denton
+684,Shower Gel,Bath and body,351.35,3.0,2288,965,0.1,493,2023-11-11,Philadelphia
+685,Novel,Books,80.19,3.3,4433,111,0.1,1545,2023-10-26,Mission Viejo
+686,Dutch Oven,Cookware,152.59,3.4,2908,127,0.08,38,2024-05-07,McAllen
+687,Soy Candle,Candles,472.81,2.8,3063,240,0.21,265,2023-08-20,Charleston
+688,Puzzle,Toys & Games,330.36,4.4,2843,671,0.28,123,2024-04-19,Jacksonville
+689,Nail Clippers,Nail care,167.72,3.9,3731,938,0.39,1265,2024-05-21,Baltimore
+690,Body Spray,Perfume and cologne,441.53,2.7,1943,626,0.39,1128,2023-10-03,Kansas City
+691,Spark Plugs,Motor vehicle parts,379.95,2.3,2389,709,0.24,104,2023-12-23,Denver
+692,Water Bottle,Drinkware,162.2,1.9,2313,908,0.2,357,2024-06-02,Atlanta
+693,Weighted Blanket,Blankets,31.85,2.4,1403,391,0.42,1188,2024-04-10,Boston
+694,Digital Art,Posters and artwork,227.77,2.9,2885,315,0.28,19,2023-12-20,New Haven
+695,Wool Socks,Socks,107.42,2.7,2520,676,0.32,1389,2023-09-06,Baton Rouge
+696,Sunscreen,Skin care,391.83,2.9,3972,909,0.06,1793,2024-03-17,Rochester
+697,Winter Coat,Coats and jackets,102.84,2.9,4864,217,0.1,1335,2024-01-31,Denver
+698,Moisturizer,Skin care,206.99,4.5,3148,588,0.02,1943,2023-07-10,Cape Coral
+699,Sparkling Wine,Wine,270.23,2.0,2152,185,0.14,391,2024-05-22,San Francisco
+700,Sweater,Clothing,132.45,4.6,3371,726,0.02,1209,2024-01-05,Little Rock
+701,Fish Oil,Vitamins and supplements,374.88,2.9,4854,500,0.01,445,2023-06-18,Port St. Lucie
+702,Digital Art,Posters and artwork,153.37,4.2,1521,112,0.11,780,2023-12-31,Albany
+703,Nail Polish,Nail care,322.5,3.9,2017,479,0.38,1138,2023-09-16,San Juan
+704,Foundation,Makeup,249.41,2.8,2274,404,0.12,1312,2024-05-16,Dallas
+705,Board Game,Toys & Games,389.01,2.3,3507,528,0.36,1427,2024-03-26,Wichita
+706,Brushes,Art and crafting materials,318.45,3.4,2976,961,0.19,1134,2023-07-31,Nashville
+707,Fantasy Book,Books,116.18,2.6,1522,550,0.36,9,2023-09-08,Milwaukee
+708,Digital Art,Posters and artwork,103.13,3.7,880,4,0.3,93,2023-09-10,Charlotte
+709,Linen Sheets,Bedsheets,256.89,1.6,3557,919,0.05,180,2024-05-17,Mesa
+710,Sparkling Wine,Wine,79.76,3.4,4152,329,0.45,1870,2023-11-06,St. Louis
+711,Coffee Mug,Drinkware,142.66,3.4,2747,267,0.39,1128,2023-06-20,Los Angeles
+712,Coffee Mug,Drinkware,187.67,2.1,1398,418,0.05,1972,2024-02-14,Port St. Lucie
+713,Sunscreen,Skin care,147.42,4.1,2271,532,0.5,1964,2023-10-10,Dallas
+714,Sketchbook,Art and crafting materials,123.28,1.1,1048,879,0.46,1917,2024-03-27,Memphis
+715,Nail Polish,Nail care,209.83,3.4,4260,911,0.31,592,2023-10-13,Salt Lake City
+716,Electric Blanket,Blankets,221.51,3.7,1587,842,0.09,473,2024-01-24,San Francisco
+717,Sparkling Wine,Wine,427.48,3.1,670,854,0.38,896,2024-03-25,Oakland
+718,Knee-High Socks,Socks,36.96,1.8,484,645,0.04,1543,2024-02-08,Louisville
+719,Red Wine,Wine,344.08,3.8,1320,270,0.3,1752,2023-12-05,Sacramento
+720,Beeswax Candle,Candles,70.19,3.5,4057,226,0.46,710,2024-04-18,Colorado Springs
+721,Mountain Bike,Bicycles,26.96,1.2,883,250,0.25,1407,2024-06-01,Rochester
+722,Toner,Skin care,496.46,1.7,3398,734,0.26,1380,2024-03-21,San Juan
+723,Biography,Books,407.67,2.0,3746,258,0.23,1505,2024-02-15,New Orleans
+724,Hybrid Bike,Bicycles,228.23,1.7,4346,733,0.03,197,2023-11-27,Buffalo
+725,Foundation,Makeup,330.3,3.6,196,201,0.03,578,2024-04-24,Louisville
+726,Eau de Toilette,Perfume and cologne,160.45,3.2,1388,545,0.07,820,2023-08-06,Port St. Lucie
+727,Fish Oil,Vitamins and supplements,28.55,2.8,2481,505,0.05,1765,2024-03-03,Des Moines
+728,Wool Socks,Socks,429.38,1.4,1664,171,0.34,654,2023-12-08,Fort Worth
+729,Rose Wine,Wine,372.72,2.7,2978,512,0.36,649,2024-05-21,Akron
+730,Spark Plugs,Motor vehicle parts,78.9,5.0,4470,56,0.34,1141,2023-06-15,Bridgeport
+731,Briefs,Underwear,436.13,4.4,3044,941,0.23,1077,2024-06-11,Minneapolis
+732,Knee-High Socks,Socks,305.84,1.3,2667,274,0.01,720,2023-10-04,Ogden
+733,Cotton Sheets,Bedsheets,229.2,2.0,384,284,0.36,935,2024-01-19,Kansas City
+734,T-Shirt,Clothing,77.36,4.6,4763,62,0.49,1475,2023-08-24,Akron
+735,Puzzle,Toys & Games,81.74,1.9,2491,945,0.18,597,2024-02-08,McAllen
+736,Laptop,Electronics,296.83,1.0,3751,478,0.43,141,2024-03-05,New York
+737,Wool Socks,Socks,270.69,4.3,1035,1,0.06,1411,2023-11-21,Charlotte
+738,Coffee Maker,Home & Kitchen,97.86,3.9,2943,778,0.28,1478,2023-12-08,Knoxville
+739,Jeans,Clothing,65.23,4.2,860,129,0.44,1488,2023-09-03,Columbus
+740,Electric Blanket,Blankets,56.98,1.5,2893,938,0.26,630,2023-07-22,Charleston
+741,Body Spray,Perfume and cologne,152.29,1.9,1138,715,0.33,137,2023-08-25,Wichita
+742,Boxers,Underwear,76.27,2.3,1884,67,0.01,641,2023-07-24,New Orleans
+743,Wool Socks,Socks,66.83,1.2,326,625,0.2,1840,2024-05-11,Phoenix
+744,Biography,Books,241.06,2.5,399,332,0.26,1921,2023-07-18,Little Rock
+745,Brushes,Art and crafting materials,452.98,2.5,3670,138,0.42,709,2023-07-21,Brooklyn
+746,Linen Sheets,Bedsheets,19.13,3.7,4048,176,0.47,1555,2024-01-13,Portland
+747,Toy Car,Toys & Games,424.77,4.6,1048,543,0.35,1578,2023-12-28,Minneapolis
+748,Wine Glass,Drinkware,380.08,3.6,4859,595,0.22,1018,2024-04-17,San Francisco
+749,Sunscreen,Skin care,88.09,2.1,2158,325,0.2,354,2023-08-24,Boston
+750,Frying Pan,Cookware,138.81,4.0,1519,525,0.23,1025,2024-06-06,Brooklyn
+751,Silk Sheets,Bedsheets,66.64,2.3,1093,78,0.22,832,2023-12-13,Albuquerque
+752,Cuticle Oil,Nail care,334.94,1.3,3417,3,0.39,508,2023-07-10,Albany
+753,Protein Powder,Vitamins and supplements,327.63,4.3,357,285,0.19,1681,2024-05-10,Orlando
+754,Brake Pads,Motor vehicle parts,197.74,3.9,221,408,0.3,609,2023-10-21,Raleigh
+755,Coffee Maker,Home & Kitchen,239.35,3.7,1812,775,0.36,167,2024-04-14,Bakersfield
+756,Wool Socks,Socks,292.42,4.5,3501,774,0.33,1001,2023-06-14,San Jose
+757,Biography,Books,494.06,3.8,4971,334,0.24,1754,2024-01-05,Washington
+758,Board Game,Toys & Games,275.61,2.8,814,701,0.27,713,2024-06-04,Miami
+759,Action Figure,Toys & Games,190.95,4.1,4194,17,0.26,1783,2023-07-22,Ogden
+760,Toaster,Home & Kitchen,50.26,3.1,4512,202,0.26,1116,2023-11-05,Pittsburgh
+761,Wine Glass,Drinkware,451.42,4.1,3469,945,0.46,153,2024-03-28,Albuquerque
+762,Multivitamin,Vitamins and supplements,481.9,2.7,2778,592,0.15,1723,2023-11-22,Denver
+763,Blender,Home & Kitchen,475.68,1.4,1122,615,0.25,681,2024-06-07,Albuquerque
+764,Car Battery,Motor vehicle parts,13.76,1.2,217,759,0.46,235,2023-08-20,Mission Viejo
+765,Oil Filter,Motor vehicle parts,119.69,1.9,3409,699,0.04,589,2023-11-28,Boston
+766,Cotton Sheets,Bedsheets,369.93,3.3,846,55,0.19,1611,2024-04-01,Atlanta
+767,Red Wine,Wine,237.42,1.4,1751,779,0.13,1383,2023-10-07,Portland
+768,Sketchbook,Art and crafting materials,477.0,4.3,1690,704,0.23,1479,2024-05-02,Little Rock
+769,Canvas,Art and crafting materials,200.07,3.4,1788,173,0.16,515,2023-11-23,Hartford
+770,Bath Salts,Bath and body,68.04,4.2,558,443,0.32,537,2023-11-15,Grand Rapids
+771,Body Spray,Perfume and cologne,453.78,2.4,4454,6,0.1,1284,2024-01-31,Columbia
+772,Wool Socks,Socks,256.61,3.5,1219,886,0.29,659,2023-06-28,Omaha
+773,Smartwatch,Electronics,401.26,3.9,1685,605,0.49,1084,2023-12-01,Phoenix
+774,Protein Powder,Vitamins and supplements,380.15,1.9,2172,32,0.29,1612,2024-02-25,San Jose
+775,Frying Pan,Cookware,323.42,4.0,4733,604,0.18,502,2024-03-10,Milwaukee
+776,Toaster,Home & Kitchen,304.32,1.4,4209,116,0.1,948,2023-09-26,Bronx
+777,Rain Jacket,Coats and jackets,148.22,3.0,1014,535,0.14,971,2024-04-02,Mesa
+778,Road Bike,Bicycles,232.94,1.1,3427,284,0.43,809,2024-05-22,Birmingham
+779,Body Scrub,Bath and body,451.27,4.2,2359,898,0.23,486,2024-05-13,Brooklyn
+780,Cotton Socks,Socks,19.29,4.3,3210,604,0.27,1130,2024-04-29,Concord
+781,Eau de Parfum,Perfume and cologne,269.95,2.2,927,691,0.35,1661,2023-08-17,Ogden
+782,Mountain Bike,Bicycles,413.23,1.9,4810,140,0.18,272,2023-07-28,Detroit
+783,Perfume Oil,Perfume and cologne,199.04,2.0,1008,900,0.12,1690,2024-04-21,McAllen
+784,Coffee Mug,Drinkware,499.46,2.5,4773,621,0.44,1580,2023-08-20,Orlando
+785,Laptop,Electronics,395.82,1.9,2952,295,0.42,1129,2023-07-13,St. Louis
+786,Thongs,Underwear,491.25,1.7,2697,733,0.05,1785,2023-06-28,Charleston
+787,Nail Clippers,Nail care,193.42,1.8,1540,136,0.03,389,2023-10-26,Nashville
+788,Phone Case,Mobile phone accessories,285.7,4.6,1012,510,0.24,187,2023-07-20,McAllen
+789,Rain Jacket,Coats and jackets,227.84,1.7,4263,199,0.27,567,2024-02-06,Des Moines
+790,Canvas Print,Posters and artwork,114.02,4.2,2107,337,0.44,1134,2023-09-09,Concord
+791,Denim Jacket,Coats and jackets,331.9,1.2,4366,739,0.4,1539,2023-12-09,Charlotte
+792,Sunscreen,Skin care,373.34,2.7,1945,616,0.44,1113,2023-10-21,Portland
+793,Mountain Bike,Bicycles,401.37,2.9,4404,263,0.49,223,2023-10-18,Akron
+794,Cleanser,Skin care,320.98,1.1,1133,919,0.03,455,2023-10-05,Brooklyn
+795,Phone Case,Mobile phone accessories,11.37,1.9,2150,166,0.12,312,2023-10-29,Los Angeles
+796,Jacket,Clothing,157.2,1.1,2839,308,0.36,1049,2023-12-12,Virginia Beach
+797,Eau de Toilette,Perfume and cologne,105.0,1.8,3719,188,0.31,1691,2023-11-27,Bronx
+798,Brushes,Art and crafting materials,298.48,4.6,1935,544,0.34,1530,2023-07-04,Houston
+799,Electric Bike,Bicycles,122.24,3.1,1635,46,0.03,1441,2024-02-04,Madison
+800,Spark Plugs,Motor vehicle parts,42.74,1.6,2430,990,0.48,826,2024-02-11,New Orleans
+801,Briefs,Underwear,146.86,2.0,2989,844,0.2,1761,2023-06-25,New York
+802,Brake Pads,Motor vehicle parts,291.77,2.7,4173,154,0.5,1968,2023-10-06,Port St. Lucie
+803,Sketchbook,Art and crafting materials,27.08,2.5,3404,925,0.25,1455,2023-09-18,Albuquerque
+804,Canvas,Art and crafting materials,13.63,4.7,2478,272,0.33,1038,2023-12-06,Fresno
+805,Perfume Oil,Perfume and cologne,393.68,4.5,1311,447,0.19,1420,2024-02-07,Bridgeport
+806,Wine Glass,Drinkware,492.59,1.6,1371,597,0.39,258,2023-07-09,Grand Rapids
+807,Moisturizer,Skin care,396.32,1.2,3003,600,0.2,1399,2023-08-02,Milwaukee
+808,Oil Filter,Motor vehicle parts,426.01,3.1,4106,239,0.13,305,2023-12-31,Albany
+809,Body Spray,Perfume and cologne,210.56,4.0,2756,615,0.47,879,2024-05-15,Harrisburg
+810,Rose Wine,Wine,20.39,3.4,4312,497,0.44,340,2024-01-08,Spokane
+811,Grill Pan,Cookware,33.62,1.8,3737,873,0.12,775,2023-09-20,Mission Viejo
+812,Paint Set,Art and crafting materials,413.85,4.1,2847,817,0.14,1758,2023-06-21,Providence
+813,Rose Wine,Wine,54.71,3.0,2564,390,0.41,1252,2024-01-03,Queens
+814,Weighted Blanket,Blankets,148.68,2.1,3653,800,0.1,930,2024-04-19,Queens
+815,Thongs,Underwear,129.53,3.9,4971,992,0.33,536,2023-09-19,Atlanta
+816,Coffee Maker,Home & Kitchen,200.88,4.1,2905,147,0.18,399,2024-05-22,Concord
+817,Oil Filter,Motor vehicle parts,336.16,2.8,654,986,0.36,1185,2024-02-25,Salt Lake City
+818,Sunscreen,Skin care,195.28,2.2,3077,539,0.33,1027,2024-05-13,Grand Rapids
+819,Charger,Mobile phone accessories,479.13,1.9,2601,217,0.09,877,2024-02-15,Bronx
+820,Denim Jacket,Coats and jackets,455.51,4.0,605,497,0.5,1564,2023-08-17,Fort Worth
+821,Puzzle,Toys & Games,384.99,2.2,2614,652,0.39,1616,2023-08-20,Providence
+822,Boxers,Underwear,164.66,1.3,1917,593,0.32,806,2023-07-18,Portland
+823,Toy Car,Toys & Games,20.7,2.3,2730,713,0.4,723,2023-08-30,Baton Rouge
+824,Science Book,Books,43.96,3.4,4243,23,0.13,1658,2023-12-23,Harrisburg
+825,Fleece Blanket,Blankets,72.28,3.1,2935,738,0.21,307,2024-01-27,Denton
+826,Body Scrub,Bath and body,387.65,2.4,4021,791,0.19,696,2024-04-10,Des Moines
+827,Screen Protector,Mobile phone accessories,107.99,3.9,3575,416,0.28,1200,2023-12-08,St. Louis
+828,Rain Jacket,Coats and jackets,401.15,4.8,387,736,0.12,578,2023-08-09,Los Angeles
+829,Saucepan,Cookware,471.11,2.7,4291,974,0.05,1190,2024-03-15,Knoxville
+830,Thongs,Underwear,410.19,3.5,2173,510,0.16,384,2023-08-10,Wichita
+831,Tea Cup,Drinkware,355.46,2.8,3271,183,0.41,13,2024-04-22,Nashville
+832,Tea Cup,Drinkware,11.2,1.9,3998,684,0.16,1509,2023-08-09,Tucson
+833,Beeswax Candle,Candles,122.82,3.1,4340,627,0.1,1556,2024-03-04,Springfield
+834,Denim Jacket,Coats and jackets,256.6,1.4,2402,302,0.49,602,2024-05-16,Des Moines
+835,Blender,Home & Kitchen,223.8,2.3,4789,279,0.19,240,2023-11-03,Seattle
+836,Nail Polish,Nail care,487.4,3.3,1446,643,0.39,837,2024-02-21,Washington
+837,Headphones,Electronics,449.02,4.6,3992,64,0.48,36,2023-07-31,Baton Rouge
+838,Boxers,Underwear,46.04,2.7,2509,188,0.32,840,2024-04-21,Philadelphia
+839,Eau de Toilette,Perfume and cologne,90.68,4.1,359,520,0.05,1869,2023-07-11,Rochester
+840,Novel,Books,327.57,1.5,3643,729,0.25,1199,2023-06-22,Nashville
+841,Science Book,Books,329.94,4.1,616,193,0.38,439,2023-07-13,San Antonio
+842,Thongs,Underwear,14.36,5.0,4871,760,0.11,1658,2023-08-20,Miami
+843,Blender,Home & Kitchen,215.43,4.5,3757,982,0.27,1969,2023-12-17,Tulsa
+844,Body Lotion,Bath and body,361.17,2.1,358,771,0.15,1269,2023-07-03,Port St. Lucie
+845,Toy Car,Toys & Games,495.43,2.7,3139,287,0.0,509,2023-08-26,Reno
+846,Biography,Books,473.46,2.8,5,382,0.24,1548,2023-06-26,San Juan
+847,Soy Candle,Candles,421.52,4.5,4049,774,0.26,47,2024-05-08,Toledo
+848,Canvas Print,Posters and artwork,499.23,3.7,724,544,0.29,1791,2023-10-04,San Juan
+849,Canvas Print,Posters and artwork,275.65,4.3,2312,429,0.29,1934,2023-10-30,Charleston
+850,Spark Plugs,Motor vehicle parts,362.55,3.6,1235,380,0.41,1813,2023-10-10,Staten Island
+851,Coffee Maker,Home & Kitchen,83.88,4.1,1975,796,0.0,1670,2023-06-21,Sacramento
+852,Rain Jacket,Coats and jackets,183.93,3.0,1933,321,0.09,1241,2024-03-15,San Antonio
+853,Toy Car,Toys & Games,115.3,3.2,1607,882,0.25,1687,2024-05-16,Wichita
+854,Digital Art,Posters and artwork,426.98,3.6,4218,532,0.14,503,2023-08-18,Spokane
+855,Scented Candle,Candles,222.5,4.0,1972,959,0.39,227,2024-01-20,Riverside
+856,Body Lotion,Bath and body,309.62,3.7,3912,110,0.27,434,2024-05-12,Queens
+857,Jacket,Clothing,342.02,3.1,3076,138,0.32,1952,2023-08-26,Toledo
+858,Foundation,Makeup,71.45,2.7,278,367,0.49,367,2023-11-13,Milwaukee
+859,Sunscreen,Skin care,328.48,2.0,1673,396,0.2,315,2023-10-30,Columbia
+860,Biography,Books,52.54,3.8,3913,629,0.18,993,2023-07-05,San Juan
+861,Charger,Mobile phone accessories,336.84,3.1,199,562,0.26,1420,2024-05-14,Jacksonville
+862,Dutch Oven,Cookware,273.96,2.7,2220,221,0.01,394,2023-12-11,Albuquerque
+863,Body Scrub,Bath and body,286.64,4.7,3431,744,0.19,565,2023-09-27,Raleigh
+864,Fantasy Book,Books,441.07,3.2,4247,812,0.04,908,2023-08-16,Boston
+865,White Wine,Wine,309.96,2.4,4979,779,0.15,1744,2023-11-18,Des Moines
+866,Sketchbook,Art and crafting materials,52.02,2.0,4800,776,0.38,280,2023-10-28,Spokane
+867,Charger,Mobile phone accessories,11.98,4.2,3988,746,0.1,1625,2024-04-14,Bonita Springs
+868,Novel,Books,158.21,4.5,1059,918,0.14,558,2024-05-24,Tucson
+869,White Wine,Wine,79.53,3.0,2088,97,0.39,326,2023-09-12,Houston
+870,Leather Jacket,Coats and jackets,499.68,2.8,368,570,0.05,234,2023-10-16,El Paso
+871,Ankle Socks,Socks,208.64,3.3,4646,66,0.35,1243,2024-01-05,Seattle
+872,Perfume Oil,Perfume and cologne,190.17,3.4,2131,196,0.15,1923,2023-10-16,Queens
+873,Laptop,Electronics,114.47,3.4,3299,522,0.26,379,2023-10-16,Columbia
+874,Weighted Blanket,Blankets,70.49,2.1,2252,776,0.22,555,2024-03-21,Providence
+875,Knee-High Socks,Socks,398.19,3.8,4768,474,0.47,1936,2024-04-06,Queens
+876,Shower Gel,Bath and body,173.06,2.1,3078,370,0.34,1630,2023-07-10,San Juan
+877,Toy Car,Toys & Games,373.82,2.7,2822,223,0.47,772,2023-06-22,Raleigh
+878,Screen Protector,Mobile phone accessories,113.59,1.2,3098,183,0.12,412,2023-09-25,Columbus
+879,Grill Pan,Cookware,374.71,2.4,3767,107,0.21,1037,2024-03-07,San Diego
+880,Fish Oil,Vitamins and supplements,445.95,2.3,3760,363,0.48,1639,2024-05-16,Brooklyn
+881,Red Wine,Wine,57.12,2.8,205,686,0.21,567,2023-10-04,Des Moines
+882,Vitamin D,Vitamins and supplements,20.91,2.2,3338,554,0.49,300,2023-08-29,Staten Island
+883,Board Game,Toys & Games,414.35,2.4,546,725,0.24,319,2024-02-22,Tulsa
+884,Ankle Socks,Socks,50.35,2.6,1273,871,0.08,291,2023-11-07,Dayton
+885,Spark Plugs,Motor vehicle parts,14.03,4.1,2885,612,0.06,945,2023-10-18,Chicago
+886,Boxers,Underwear,144.7,3.9,1072,883,0.49,202,2023-07-19,Spokane
+887,Fantasy Book,Books,275.08,4.6,1728,877,0.21,1639,2023-11-12,Fort Worth
+888,Vitamin D,Vitamins and supplements,200.8,3.0,1782,813,0.45,1808,2024-03-02,Manhattan
+889,Tea Cup,Drinkware,12.75,3.5,2986,268,0.26,881,2024-03-19,Milwaukee
+890,Canvas,Art and crafting materials,219.74,3.3,4197,729,0.49,1114,2024-01-28,Mesa
+891,Briefs,Underwear,59.11,4.0,2760,221,0.26,620,2023-10-11,Providence
+892,Microwave,Home & Kitchen,212.17,2.4,4423,843,0.35,515,2024-06-01,Columbus
+893,Wine Glass,Drinkware,104.68,4.4,2662,392,0.05,1531,2023-07-11,Reno
+894,Grill Pan,Cookware,32.86,3.4,3061,237,0.46,1214,2024-01-16,Charleston
+895,Fish Oil,Vitamins and supplements,308.34,4.0,2172,801,0.07,526,2023-08-03,Staten Island
+896,Jeans,Clothing,292.96,2.9,2122,539,0.35,620,2024-01-23,Raleigh
+897,Briefs,Underwear,363.75,2.1,834,852,0.39,1932,2023-06-30,Long Beach
+898,Toy Car,Toys & Games,462.82,4.7,4151,147,0.13,1492,2023-10-06,Riverside
+899,Charger,Mobile phone accessories,465.01,3.2,66,160,0.18,1845,2024-01-12,Akron
+900,Beeswax Candle,Candles,477.31,3.1,3907,183,0.14,1699,2023-11-29,Spokane
+901,Nail File,Nail care,152.67,1.4,4053,349,0.21,1963,2023-06-25,Raleigh
+902,Biography,Books,288.55,2.1,3094,437,0.3,1762,2023-06-30,Knoxville
+903,Cuticle Oil,Nail care,225.17,4.0,1630,896,0.03,742,2023-10-26,Riverside
+904,Cleanser,Skin care,150.25,1.7,2160,471,0.23,78,2024-04-13,Grand Rapids
+905,Bath Salts,Bath and body,423.68,1.4,3503,480,0.4,234,2024-01-15,Denver
+906,Action Figure,Toys & Games,302.04,4.0,622,383,0.32,1074,2023-06-18,New Orleans
+907,Shower Gel,Bath and body,31.48,1.6,4407,383,0.0,1151,2024-01-27,Cleveland
+908,T-Shirt,Clothing,417.61,2.1,514,96,0.12,450,2023-07-25,Tampa
+909,Fantasy Book,Books,279.92,3.7,804,629,0.37,308,2023-09-15,Birmingham
+910,Perfume Oil,Perfume and cologne,196.67,2.4,1715,5,0.24,1196,2023-09-26,St. Louis
+911,Smartwatch,Electronics,183.94,1.5,624,25,0.2,1878,2024-04-23,Las Vegas
+912,Hybrid Bike,Bicycles,23.78,3.9,1539,431,0.04,24,2024-06-03,Long Beach
+913,Protein Powder,Vitamins and supplements,363.91,2.9,1555,237,0.25,1039,2023-09-09,Atlanta
+914,Sunscreen,Skin care,61.45,2.6,1769,667,0.05,294,2024-04-18,Riverside
+915,Toy Car,Toys & Games,343.9,3.9,1393,897,0.11,1890,2024-01-29,Worcester
+916,Shower Gel,Bath and body,249.95,3.8,3419,33,0.18,1921,2024-02-20,Palm Bay
+917,T-Shirt,Clothing,353.49,4.1,4185,302,0.25,1054,2024-01-20,Mesa
+918,Briefs,Underwear,399.49,3.6,3578,916,0.35,692,2023-07-11,Bonita Springs
+919,Moisturizer,Skin care,139.13,4.4,1084,518,0.45,661,2024-04-29,Tulsa
+920,Red Wine,Wine,458.62,1.4,47,436,0.46,1053,2024-04-23,Spokane
+921,Body Spray,Perfume and cologne,25.94,3.8,2667,486,0.4,1951,2024-04-14,Boise
+922,Eau de Parfum,Perfume and cologne,195.93,1.2,2129,248,0.43,418,2024-05-13,Boston
+923,Framed Poster,Posters and artwork,60.87,3.0,4821,148,0.17,988,2023-07-12,Brooklyn
+924,Electric Bike,Bicycles,266.09,4.1,74,409,0.32,1744,2024-01-23,Mesa
+925,Cuticle Oil,Nail care,71.2,4.2,4005,855,0.44,823,2024-03-13,Dayton
+926,Road Bike,Bicycles,370.22,1.9,1175,596,0.42,1340,2023-12-20,Springfield
+927,Saucepan,Cookware,248.68,1.1,2696,942,0.07,1652,2023-10-25,New Orleans
+928,Knee-High Socks,Socks,130.65,1.8,42,443,0.43,1181,2024-02-29,Baton Rouge
+929,Nail File,Nail care,407.86,3.2,2949,766,0.28,1721,2023-09-07,Des Moines
+930,Microwave,Home & Kitchen,477.52,4.1,2556,709,0.26,1178,2023-09-28,Tampa
+931,Wine Glass,Drinkware,427.46,2.3,4127,523,0.44,169,2024-03-21,Little Rock
+932,Board Game,Toys & Games,203.07,2.3,3888,739,0.4,1412,2023-08-04,Brooklyn
+933,Linen Sheets,Bedsheets,135.87,3.9,98,968,0.06,426,2023-12-17,Hartford
+934,Ankle Socks,Socks,474.25,1.8,3878,22,0.35,1384,2023-09-20,Mesa
+935,Action Figure,Toys & Games,178.11,4.2,922,145,0.13,1596,2024-05-31,Oakland
+936,Wool Socks,Socks,166.03,2.0,2794,535,0.24,1618,2023-07-22,Allentown
+937,Sparkling Wine,Wine,129.71,3.4,3369,801,0.06,379,2024-05-05,Bakersfield
+938,Sunscreen,Skin care,319.08,1.7,1243,367,0.42,443,2024-01-05,Bronx
+939,Lipstick,Makeup,67.54,4.1,4885,979,0.19,608,2024-05-04,Spokane
+940,Digital Art,Posters and artwork,100.38,4.2,3530,843,0.08,138,2024-06-03,Mission Viejo
+941,Fish Oil,Vitamins and supplements,300.71,4.1,3274,599,0.48,873,2023-09-26,Oklahoma City
+942,Moisturizer,Skin care,89.48,2.6,1491,426,0.08,59,2024-04-27,Worcester
+943,Toaster,Home & Kitchen,251.75,4.3,1478,187,0.45,1160,2024-01-06,Nashville
+944,Fleece Blanket,Blankets,201.19,4.4,91,611,0.1,113,2024-01-29,San Diego
+945,Cotton Socks,Socks,66.48,4.5,2677,282,0.06,673,2023-11-30,Columbus
+946,Charger,Mobile phone accessories,259.9,3.4,2450,426,0.37,1636,2023-12-24,Reno
+947,Board Game,Toys & Games,258.3,3.6,3518,87,0.3,1901,2023-08-05,Minneapolis
+948,Water Bottle,Drinkware,383.87,3.3,2595,237,0.14,826,2023-11-11,Des Moines
+949,Scented Candle,Candles,18.2,3.2,3771,976,0.25,487,2024-04-16,Rochester
+950,Nail Polish,Nail care,237.9,4.9,4714,679,0.36,1725,2023-10-14,Milwaukee
+951,Road Bike,Bicycles,486.57,2.3,2837,582,0.18,1768,2023-08-13,Detroit
+952,Nail Clippers,Nail care,400.09,1.4,4445,572,0.06,1408,2023-10-04,Staten Island
+953,Electric Bike,Bicycles,203.9,2.1,3398,97,0.2,1234,2024-05-17,Kansas City
+954,Charger,Mobile phone accessories,326.43,4.2,4574,940,0.07,1968,2023-12-13,San Diego
+955,Scented Candle,Candles,460.81,1.4,1332,492,0.2,437,2023-09-12,Philadelphia
+956,Boxers,Underwear,184.89,2.5,1687,900,0.39,1270,2023-12-04,Riverside
+957,Hybrid Bike,Bicycles,257.61,2.4,515,69,0.21,1327,2024-04-15,Pittsburgh
+958,Novel,Books,16.02,4.7,4167,136,0.26,174,2023-11-09,Minneapolis
+959,Smartwatch,Electronics,101.67,4.5,4168,33,0.36,372,2024-02-19,San Diego
+960,Digital Art,Posters and artwork,172.71,2.9,385,705,0.39,1718,2024-06-08,Mission Viejo
+961,Beeswax Candle,Candles,93.46,4.2,1750,264,0.12,1090,2023-11-22,Omaha
+962,Frying Pan,Cookware,43.12,3.4,2334,180,0.32,1146,2024-04-13,Des Moines
+963,Sketchbook,Art and crafting materials,340.29,4.5,4443,625,0.34,1939,2024-05-27,Seattle
+964,Linen Sheets,Bedsheets,163.76,2.4,539,492,0.42,245,2024-05-17,Providence
+965,Moisturizer,Skin care,436.93,2.2,3412,746,0.36,1644,2023-09-24,New Haven
+966,Coffee Mug,Drinkware,182.83,3.7,4373,773,0.33,342,2024-03-29,Baton Rouge
+967,Bamboo Sheets,Bedsheets,372.75,3.0,3894,294,0.08,889,2024-05-06,Wichita
+968,Dutch Oven,Cookware,370.55,1.8,4936,277,0.27,1902,2023-11-03,Dallas
+969,Cuticle Oil,Nail care,467.14,4.5,1505,709,0.11,1081,2024-02-07,Ogden
+970,Shower Gel,Bath and body,442.84,3.2,616,308,0.23,1238,2024-01-17,Detroit
+971,Blender,Home & Kitchen,467.33,4.0,1099,977,0.06,8,2023-09-24,El Paso
+972,Road Bike,Bicycles,72.33,2.5,4713,59,0.34,212,2023-09-01,Miami
+973,Jacket,Clothing,178.39,2.9,3275,175,0.3,1473,2024-01-28,Akron
+974,Soy Candle,Candles,363.52,2.9,443,989,0.39,320,2023-07-18,Omaha
+975,Brushes,Art and crafting materials,464.93,3.0,3701,310,0.21,783,2024-03-26,Philadelphia
+976,Bath Salts,Bath and body,349.48,1.9,3503,131,0.08,1445,2023-10-20,Madison
+977,Grill Pan,Cookware,86.18,4.0,2380,945,0.41,64,2024-05-09,Charleston
+978,Screen Protector,Mobile phone accessories,29.65,1.0,4920,160,0.32,1972,2023-06-18,Riverside
+979,Toy Car,Toys & Games,359.63,1.6,3505,294,0.08,1797,2023-12-09,Dayton
+980,Cotton Sheets,Bedsheets,263.39,1.4,4110,174,0.34,889,2024-03-14,Port St. Lucie
+981,Fantasy Book,Books,64.9,2.5,2583,568,0.29,1262,2024-02-12,Palm Bay
+982,Weighted Blanket,Blankets,151.93,2.8,4913,234,0.27,1786,2024-03-02,Concord
+983,Body Spray,Perfume and cologne,456.37,3.8,3963,657,0.41,98,2023-11-03,Louisville
+984,Knee-High Socks,Socks,421.29,2.7,1698,230,0.35,1639,2023-09-24,Reno
+985,Perfume Oil,Perfume and cologne,247.9,3.4,2862,631,0.47,395,2023-09-16,New York
+986,Nail Clippers,Nail care,458.36,1.4,1079,97,0.39,1526,2023-10-16,Akron
+987,Wool Socks,Socks,83.13,2.6,4066,260,0.1,967,2023-12-10,Concord
+988,Protein Powder,Vitamins and supplements,136.61,1.6,146,893,0.36,777,2024-05-27,Albuquerque
+989,Rain Jacket,Coats and jackets,222.69,2.8,1508,487,0.34,1643,2023-11-05,Provo
+990,Ankle Socks,Socks,183.2,2.7,3492,957,0.04,1496,2023-10-30,Columbia
+991,Smartphone,Electronics,420.27,1.4,4355,195,0.25,1313,2023-09-06,Provo
+992,Body Lotion,Bath and body,173.79,3.9,1369,276,0.16,18,2024-04-27,Baltimore
+993,Protein Powder,Vitamins and supplements,54.95,3.3,3664,225,0.48,741,2023-12-03,Cleveland
+994,Jeans,Clothing,244.41,2.3,351,188,0.25,1249,2023-10-25,El Paso
+995,Thongs,Underwear,446.17,3.4,802,975,0.39,967,2024-03-14,Portland
+996,Bamboo Sheets,Bedsheets,144.08,1.8,1654,367,0.06,1324,2023-09-20,Virginia Beach
+997,Beeswax Candle,Candles,257.34,1.2,3801,25,0.14,1373,2024-05-30,Bakersfield
+998,Multivitamin,Vitamins and supplements,417.38,1.7,1412,209,0.45,69,2023-10-26,Springfield
+999,Toner,Skin care,300.63,4.8,4769,582,0.04,1948,2024-02-25,Staten Island
+1000,Oil Filter,Motor vehicle parts,250.27,4.7,4189,793,0.25,105,2024-02-25,Houston

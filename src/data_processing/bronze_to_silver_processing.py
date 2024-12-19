@@ -14,8 +14,8 @@ from pyspark.ml.feature import VectorAssembler, StandardScaler
 from pyspark.ml import Pipeline
 from delta import *
 
-#BRONZE_DATA_PATH = "/home/zaki/kuliah/Bigdata/data-lakehouse-fp-big-data/src/data/bronze"
-BRONZE_DATA_PATH = "/home/yumx/data-lakehouse-fp-big-data/src/data/bronze"
+BRONZE_DATA_PATH = "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data/src/data/bronze"
+#BRONZE_DATA_PATH = "/home/yumx/data-lakehouse-fp-big-data/src/data/bronze"
 DATA_DIR = os.path.dirname(BRONZE_DATA_PATH)
 SILVER_DATA_PATH = os.path.join(DATA_DIR, "silver")
 

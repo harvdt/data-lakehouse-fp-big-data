@@ -1,6 +1,7 @@
 import os
 import json
 from datetime import datetime
+import subprocess
 from kafka import KafkaConsumer
 from pyspark.sql import DataFrame
 from schemas import bronze_schema
@@ -14,6 +15,22 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BRONZE_DATA_PATH = os.path.join(BASE_DIR, 'data', 'bronze')
 os.makedirs(BRONZE_DATA_PATH, exist_ok=True)
 
+def trigger_data_processing():
+    """Trigger the data processing pipeline"""
+    try:
+        # Run bronze to silver processing
+        bronze_to_silver_path = os.path.join(BASE_DIR, 'data_processing', 'bronze_to_silver_processing.py')
+        subprocess.run(['python3', bronze_to_silver_path], check=True)
+        
+        # Run silver to gold processing
+        silver_to_gold_path = os.path.join(BASE_DIR, 'data_processing', 'silver_to_gold_processing.py')
+        subprocess.run(['python3', silver_to_gold_path], check=True)
+        
+        print("[CONSUMER] Data processing completed successfully")
+    except subprocess.CalledProcessError as e:
+        print(f"[CONSUMER] Error in data processing: {str(e)}")
+    except Exception as e:
+        print(f"[CONSUMER] Unexpected error in data processing: {str(e)}")
 
 def create_dataframe_from_messages(messages, spark):
     rows = []
@@ -22,7 +39,6 @@ def create_dataframe_from_messages(messages, spark):
         msg['ProcessedTimestamp'] = current_time.isoformat()
         rows.append(msg)
     return spark.createDataFrame(rows, schema=bronze_schema)
-
 
 def save_batch(batch, spark):
     if not batch:
@@ -34,9 +50,11 @@ def save_batch(batch, spark):
             .mode("append") \
             .option("mergeSchema", "true") \
             .save(BRONZE_DATA_PATH)
+            
+        # Trigger data processing after successful batch save
+        trigger_data_processing()
     except Exception as e:
         print(f"[CONSUMER] Error saving batch: {str(e)}")
-
 
 def main():
     spark = get_spark_session()
@@ -73,7 +91,6 @@ def main():
         print(f"[CONSUMER] Shutting down. Total records processed: {total_processed}")
         consumer.close()
         spark.stop()
-
 
 if __name__ == "__main__":
     main()

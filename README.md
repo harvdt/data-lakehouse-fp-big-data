@@ -1,8 +1,8 @@
 # XYZ E-Commerce Data Lake House
 
-Proyek ini merupakan implementasi data lakehouse untuk menganalisis data penjualan dari platform e-commerce XYZ menggunakan arsitektur mediated dan teknologi Delta Lake.
+Implementasi data lakehouse real-time untuk analisis e-commerce menggunakan arsitektur mediasi dan teknologi Delta Lake, dilengkapi dengan kemampuan machine learning terintegrasi.
 
-## Anggota Kelompok 5
+## Anggota Tim - Kelompok 5
 
 | Nama                            | NRP        |
 | ------------------------------- | ---------- |
@@ -12,220 +12,241 @@ Proyek ini merupakan implementasi data lakehouse untuk menganalisis data penjual
 | Nur Azka Rahadiansyah           | 5027221064 |
 | Naufan Zaki Luqmanulhakim       | 5027221065 |
 
-## Deskripsi Proyek
+## Arsitektur Teknis
 
-Proyek ini bertujuan untuk membangun sistem analisis data e-commerce yang dilengkapi dengan machine learning untuk memprediksi penjualan. Sistem ini mengintegrasikan berbagai metrik untuk memberikan wawasan komprehensif tentang performa bisnis.
-
-## Architecture
-
+### Gambaran Sistem
 ![architecture](image/architecture.png)
 
-## Data Flow
+Sistem mengimplementasikan arsitektur data lakehouse multi-layer dengan:
+- Pengambilan data real-time menggunakan Kafka
+- Delta Lake untuk kepatuhan ACID
+- PySpark untuk pemrosesan terdistribusi
+- Machine learning dengan scikit-learn
+- FastAPI untuk endpoint REST
+- Frontend React untuk visualisasi
 
+### Alur Data
 ![data-flow](image/data-flow.png)
 
-## Output
+## Komponen Teknis
 
-![output](image/output.png)
+### 1. Layer Integrasi Data
 
-## Setup Development Environment
+#### Komponen Producer (`producer.py`)
+- Mengimplementasikan `FileSystemEventHandler` untuk monitoring file real-time
+- Memproses file CSV di direktori data mentah
+- Mengubah data ke format JSON
+- Mempublikasikan ke topik Kafka 'kafka-server'
+- Fitur konversi dan validasi tipe data otomatis
 
-1. Instal Python 3.11
+#### Komponen Consumer (`consumer.py`)
+- Berlangganan ke topik Kafka 'kafka-server'
+- Mengimplementasikan pemrosesan batch (ukuran batch: 100)
+- Menggunakan Delta Lake untuk penulisan yang patuh ACID
+- Mempertahankan timestamp pemrosesan
+- Memicu pipeline pemrosesan data setelah penulisan batch berhasil
 
+### 2. Pipeline Pemrosesan Data
+
+#### Layer Bronze
+- Pengambilan data mentah dengan validasi skema
+- Definisi skema:
+```python
+bronze_schema = StructType([
+    StructField("ProductID", IntegerType(), True),
+    StructField("ProductName", StringType(), True),
+    # ... field tambahan
+])
+```
+
+#### Layer Silver (`bronze_to_silver_processing.py`)
+- Pembersihan dan standardisasi data
+- Rekayasa fitur
+- Menerapkan aturan validasi:
+  - Rentang harga: 0-500
+  - Rentang rating: 1-5
+  - Validasi jumlah review
+  - Pemformatan tanggal
+  - Standardisasi kategori
+
+#### Layer Gold (`silver_to_gold_processing.py`)
+- Perhitungan metrik bisnis
+- Pembuatan tampilan analitis
+- Metrik utama meliputi:
+  - Analisis pendapatan
+  - Efektivitas diskon
+  - Korelasi harga-rating
+  - Metrik kepuasan pelanggan
+
+### 3. Sistem Machine Learning
+
+#### Arsitektur Model
+- Model ensemble bertumpuk yang menggabungkan:
+  - Random Forest Regressor
+  - Gradient Boosting Regressor
+  - XGBoost Regressor
+- Pipeline rekayasa fitur dengan standardisasi
+- Validasi silang (k=5)
+
+#### Opsi Pelatihan
+
+1. Mode Berkelanjutan (`training_coordinator.py`)
+```python
+# Fitur:
+- Deteksi perubahan data real-time
+- Pemicu pelatihan cerdas
+- Manajemen state
+- Pencatatan metrik kinerja
+```
+
+2. Mode Terjadwal
 ```bash
+# Konfigurasi Crontab untuk pelatihan terjadwal
+*/5 * * * * /path/to/project/scripts/run_training.sh
+```
+
+#### Metrik Kinerja Model
+- Skor R²: 0.9832
+- RMSE: 70.8580
+- MAE: 60.7211
+- Pelacakan Kepentingan Fitur
+
+### 4. Layer API (`main.py`)
+
+Implementasi FastAPI dengan endpoint:
+
+```python
+@app.post("/predict/sales")
+async def predict_sales(request: PredictionRequest):
+    # Endpoint prediksi penjualan
+    # Validasi dan pemrosesan input
+    # Inferensi model
+    # Penilaian kepercayaan
+```
+
+Endpoint tambahan:
+- Analitik pendapatan
+- Analisis diskon
+- Korelasi harga-rating
+- Metrik kepuasan pelanggan
+
+### 5. Implementasi Frontend
+
+#### Dashboard Analisis Penjualan
+![sales-page](image/sales-page.png)
+- Visualisasi data real-time
+- Antarmuka prediksi penjualan
+- Metrik kinerja per kategori
+
+#### Antarmuka Strategi Harga
+![pricing-page](image/pricing-page.png)
+- Analisis dampak diskon
+- Visualisasi korelasi harga-rating
+- Alat optimasi pendapatan
+
+#### Dashboard Metrik Pelanggan
+![customer-page](image/customer-page.png)
+- Visualisasi metrik kepuasan
+- Alat analisis ulasan
+- Pelacakan keterlibatan
+
+## Pengaturan dan Deployment
+
+### 1. Pengaturan Lingkungan
+```bash
+# Instal Python 3.11
 bash scripts/python.sh
-```
 
-2. Jalankan pipeline
-
+### 2. Inisialisasi Pipeline
 ```bash
+# Mulai pipeline data
 bash run.sh
+
+# Mulai pelatihan model (pilih salah satu):
+# Opsi 1: Mode Berkelanjutan
+python3 src/models/training/training_coordinator.py
+
+# Opsi 2: Mode Terjadwal
+crontab -e
+# Tambahkan: */5 * * * * /path/to/project/scripts/run_training.sh
 ```
 
-3. Simulasi pemrosesan data secara real-time (jalankan setelah selesai memproses 2 dataset yang tersedia)
-
+### 3. Simulasi Data Real-time
 ```bash
-bash scripts/simulation.sh 1|2|all
+bash scripts/simulation.sh [1|2|all]
 ```
 
-API akan tersedia di `http://localhost:8000` dengan dokumentasi Swagger UI di `/docs`.
-![swagger api](image/api-docs.png)
+### 4. Akses API
+- URL Dasar: `http://localhost:8000`
+- Dokumentasi Swagger: `/docs`
+- Spesifikasi OpenAPI: `/openapi.json`
 
-## API Endpoints
+## Spesifikasi Teknis
 
-### 1. Health Check
+### Persyaratan Sistem
+- Python 3.11+
+- Apache Kafka
+- Delta Lake
+- PySpark
+- Node.js (untuk frontend)
 
-```bash
-GET /health
+### Dependensi
+```
+pyspark==3.5.0
+delta-spark==3.0.0
+scikit-learn==1.3.2
+xgboost==2.0.3
+fastapi==0.108.0
 ```
 
-Mengecek status API.
+### Pertimbangan Kinerja
+- Optimasi ukuran batch untuk consumer Kafka
+- Optimasi Delta Lake untuk operasi penulisan
+- Penyesuaian frekuensi pelatihan ulang model
+- Pembatasan rate request API
 
-- Response: Status dan timestamp server
+## Dokumentasi API
 
-### 2. Prediksi Penjualan
+API REST komprehensif dengan endpoint berikut:
 
-```bash
+### Endpoint Prediksi
+```json
 POST /predict/sales
-```
-
-Memprediksi jumlah penjualan berdasarkan parameter produk.
-
-**Request Body:**
-
-```json
 {
-	"price": 299.99, // Harga produk
-	"discount_percentage": 15, // Persentase diskon (0-100)
-	"rating": 4.5, // Rating produk (1-5)
-	"num_reviews": 100, // Jumlah review
-	"category": "ELECTRONICS" // Kategori produk
+    "price": 299.99,
+    "discount_percentage": 15,
+    "rating": 4.5,
+    "num_reviews": 100,
+    "category": "ELECTRONICS"
 }
 ```
 
-**Response:**
-
-```json
-{
-	"predicted_sales": 10046.66, // Prediksi jumlah penjualan
-	"confidence_score": 0.9832 // Skor kepercayaan prediksi (0-1)
-}
-```
-
-### 3. Analisis Performa Penjualan
-
+### Endpoint Analitik
 ```bash
 GET /analytics/revenue
-GET /analytics/revenue?category=ELECTRONICS
-```
-
-Menampilkan analisis revenue per kategori.
-
-### 4. Analisis Diskon
-
-```bash
 GET /analytics/discount
-GET /analytics/discount?category=ELECTRONICS
-```
-
-Menampilkan efektivitas diskon dan dampaknya terhadap volume penjualan.
-
-### 5. Analisis Harga-Rating
-
-```bash
 GET /analytics/price-rating
-GET /analytics/price-rating?category=ELECTRONICS
-```
-
-Menampilkan korelasi antara harga dan rating produk.
-
-### 6. Metrik Kepuasan Pelanggan
-
-```bash
 GET /analytics/customer-satisfaction
-GET /analytics/customer-satisfaction?category=ELECTRONICS
 ```
 
-Menampilkan metrik kepuasan pelanggan dan rasio review terhadap penjualan.
+Setiap endpoint mendukung penyaringan kategori opsional.
 
-### 7. Daftar Kategori
+## Catatan Pengembangan
 
-```bash
-GET /categories
-```
+### Pipeline Machine Learning
+- Pemantauan kepentingan fitur
+- Pelacakan kinerja model
+- Pemicu pelatihan ulang otomatis
+- Persistensi state
 
-Menampilkan seluruh kategori produk yang tersedia.
+### Panduan Pengembangan Frontend
+- Struktur komponen React
+- Penggunaan komponen ShadCN
+- Implementasi Tailwind CSS
+- Integrasi Chart.js
 
-<!-- ## Penggunaan API untuk Frontend
-
-### Contoh Penggunaan dengan JavaScript/React
-
-```javascript
-// Fungsi untuk mendapatkan prediksi penjualan
-const getPredictionSales = async (productData) => {
-	const response = await fetch("http://localhost:8000/predict/sales", {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify({
-			price: productData.price,
-			discount_percentage: productData.discount,
-			rating: productData.rating,
-			num_reviews: productData.reviews,
-			category: productData.category,
-		}),
-	});
-
-	const data = await response.json();
-	return {
-		predictedSales: data.predicted_sales,
-		confidence: data.confidence_score,
-	};
-};
-
-// Fungsi untuk mendapatkan analisis kategori
-const getCategoryAnalytics = async (category) => {
-	const endpoints = ["revenue", "discount", "price-rating", "customer-satisfaction"];
-
-	const analytics = {};
-
-	for (const endpoint of endpoints) {
-		const url = category ? `http://localhost:8000/analytics/${endpoint}?category=${category}` : `http://localhost:8000/analytics/${endpoint}`;
-
-		const response = await fetch(url);
-		analytics[endpoint] = await response.json();
-	}
-
-	return analytics;
-};
-``` -->
-
-## Notes untuk Pengembang Frontend
-
-1. **Model Confidence Score**
-
-   - Score > 0.9: Prediksi sangat akurat
-   - Score 0.7-0.9: Prediksi cukup akurat
-   - Score < 0.7: Prediksi kurang akurat
-
-2. **Batasan Input**
-
-   - Price: Harus positif
-   - Discount: 0-100%
-   - Rating: 1-5
-   - Reviews: Harus positif
-   - Category: Harus sesuai dengan daftar kategori yang tersedia
-
-3. **Error Handling**
-
-   - Selalu periksa status response
-   - Implementasikan retry mechanism untuk kegagalan network
-   - Tampilkan pesan error yang user-friendly
-
-4. **Performa**
-   - Implementasikan caching untuk data analitik
-   - Batasi frekuensi request prediksi
-   - Gunakan loading state untuk request yang sedang berjalan
-
-## Frontend
-
-Pengembangan Frontend menggunakan Tech Stack Framework React JS dan Tailwind CSS serta component ShadCN. Halaman yang tersedia terdiri dari 3 page yaitu:
-
-### Sales Analysis Performance
-
-Halaman ini berfungsi untuk memberikan informasi mengenai performa penjualan dari berdasarkan masing-masing kategori serta terdapat fitur prediction penjualan mendatang berdasarkan beberapa faktor.
-
-![sales-page](image/sales-page.png)
-
-### Pricing Strategy Analysis
-
-Halaman ini berfungsi untuk menampilkan hasil analisis keberhasilan harga serta strateginya seperti penerapan diskon. Pada section pertama terdapat analisis diskon dan pada section kedua terdapat analisis relasi antara harga dan rating yang diberi oleh customer.
-
-![pricing-page](image/pricing-page.png)
-
-### Customer Satisfaction Metrics
-
-Halaman ini berfungsi untuk menampilkan hasil analisis dari kepuasan pelanggan berdasarkan rating yang diberikan. Terdapat beberapa metrics yang digunakan sebagai indikator tingkat kepuasa pelanggan.
-
-![customer-page](image/customer-page.png)
+### Penanganan Error
+- Degradasi bertahap
+- Mekanisme percobaan ulang request
+- Pesan error yang ramah pengguna
+- Pencatatan dan pemantauan

@@ -38,8 +38,8 @@ app.add_middleware(
 )
 
 # Global variables for paths
-#BASE_PATH = "/home/zaki/kuliah/Bigdata/data-lakehouse-fp-big-data"
-BASE_PATH = "/home/yumx/data-lakehouse-fp-big-data"
+BASE_PATH = "/home/zaki/kuliah/Bigdata/FP-5/data-lakehouse-fp-big-data"
+#BASE_PATH = "/home/yumx/data-lakehouse-fp-big-data"
 GOLD_PATH = os.path.join(BASE_PATH, "src/data/gold")
 MODEL_PATH = os.path.join(BASE_PATH, "src/models/training/trained_models/sales_predictor.joblib")
 
