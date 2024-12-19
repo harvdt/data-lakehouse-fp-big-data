@@ -171,7 +171,10 @@ crontab -e
 # Tambahkan: */5 * * * * /path/to/project/scripts/run_training.sh
 
 # Run API (pastikan terminal ada didalam venv *souce venv/bin/activate):
-bash scripts/run_api.sh 
+bash scripts/run_api.sh
+
+# Menjalankan Website
+bash scripts/web.sh
 ```
 
 ### 3. Simulasi Data Real-time
