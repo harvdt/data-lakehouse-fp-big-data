@@ -169,6 +169,9 @@ python3 src/models/training/training_coordinator.py
 # Opsi 2: Mode Terjadwal
 crontab -e
 # Tambahkan: */5 * * * * /path/to/project/scripts/run_training.sh
+
+# Run API (pastikan terminal ada didalam venv *souce venv/bin/activate):
+bash scripts/run_api.sh 
 ```
 
 ### 3. Simulasi Data Real-time

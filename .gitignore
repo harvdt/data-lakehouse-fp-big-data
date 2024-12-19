@@ -1,25 +1,90 @@
-venv
+# Python Virtual Environment
+venv/
+virtualenv/
+env/
+.env
 
-# Simulation Dataset
-ecommerce_product_dataset3
-ecommerce_product_dataset4
-src/data/raw/ecommerce_product_dataset3.csv
-src/data/raw/ecommerce_product_dataset4.csv
+# Python Cache Files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.pyc
+src/data_integration/__pycache__/
+src/models/api/__pycache__/
+*/__pycache__/
 
-# Data Storage
+# Distribution / Packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+
+# Data Storage Directories
 src/data/bronze/*
 src/data/silver/*
 src/data/gold/*
+!src/data/bronze/.gitkeep
+!src/data/silver/.gitkeep
+!src/data/gold/.gitkeep
 
-# Trained Models
+# Model Files
 src/models/training/trained_models/*
+!src/models/training/trained_models/.gitkeep
+*.joblib
+*.pkl
+*.h5
 
 # Log Files
 logs/*
+!logs/.gitkeep
+*.log
 src/models/api/api.log
 src/models/training/model_training.log
 scripts/logs
+!scripts/logs/.gitkeep
 
-# pycache
-src/data_integration/__pycache__
-src/models/api/__pycache__
+# IDE Settings
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.pydevproject
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Delta Lake files
+_delta_log/
